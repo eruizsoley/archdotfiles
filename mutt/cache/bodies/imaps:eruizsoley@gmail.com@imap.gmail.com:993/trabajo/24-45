@@ -1,0 +1,119 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:dca:0:0:0:0 with SMTP id l10csp586149ilj;
+        Tue, 16 Jun 2020 08:17:26 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJx/zbPP415O6vPRG8aMlq7mvzPT+u6PAeEMOiLubJngYV7STz79tj5zoON4sASox4DbQZAW
+X-Received: by 2002:a1c:f204:: with SMTP id s4mr3939747wmc.159.1592320646216;
+        Tue, 16 Jun 2020 08:17:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1592320646; cv=none;
+        d=google.com; s=arc-20160816;
+        b=qhUUsNVI2/zPrA03ump2cwR/acb2E0bULLaifPclBXey5xFG+a4YP/xE67KJdvlYpq
+         bzjuCzRo0fiHfSGRcGK51ki7V5INsD0zRFR9r0mh3DPdDI+ko61/IKOan4YjD/LeT9PS
+         2HSwLoUFSOJpgNTTYXhvHiC61EXdYsVBGvrnDZ4Hx6DG/W2MJRAUwifLMewKOLF74cPw
+         D7Yw2yM09bKUfdTQmip38GHf/GH7H2SmRACnmBkDdG34JuGdaDLGSwqpuYo7O1sCQObV
+         uLvDOzEe+CRynG5BROyrqLbxHSlaPxavaFshIfIERxSm2onJDBzXQs0atr5hlBExmFeg
+         Tu7Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:date:subject:from:to:mime-version:message-id;
+        bh=51Kpebdp5knxuWK51Ft9QGKjDqHSVVpVXjWZ5g18gn0=;
+        b=VOxOZHSecCqQosqa+N/+BFwmcBCOgrjWLSjGq8SROUiHXP1ft23gsZxDrNiRIyJICd
+         PKGIbitLU2tToEjsoQ3InqjshhAGIc8Eh8Iwsn5MiKWKxaZ0H6Ux8k00OQzSfefAIi1N
+         3wCDxkC4X/EAls3obYDjt90n3hfv7f2D/oFx0jyVmwRoGIyzp4i38XlZ2fPDdyjK5Jha
+         gtPXCKAbohgV+jUQXGMzNN+iMOZA3jKMzgrkGCv3ehfDQijeWMtyzo5L0UapfsPqQUJM
+         1dbBUKZj4WwYb44zgI8uBfCwrJEOMMTZD/FhcaZMUNgLRc96FLD5oecjrZtuS5vewXej
+         iCZQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of master@tbogatell.com designates 81.88.48.53 as permitted sender) smtp.mailfrom=master@tbogatell.com
+Return-Path: <master@tbogatell.com>
+Received: from authsmtp.register.it (authsmtp03.register.it. [81.88.48.53])
+        by mx.google.com with ESMTPS id i2si3054596wmc.131.2020.06.16.08.17.24
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 16 Jun 2020 08:17:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of master@tbogatell.com designates 81.88.48.53 as permitted sender) client-ip=81.88.48.53;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of master@tbogatell.com designates 81.88.48.53 as permitted sender) smtp.mailfrom=master@tbogatell.com
+Received: from [IPv6:::ffff:172.28.0.212] ([213.97.48.132])
+	by cmsmtp with ESMTPA
+	id lDL1jrCq6fextlDL1jkNQl; Tue, 16 Jun 2020 17:17:24 +0200
+Message-ID: <lDL1jrCq6fextlDL1jkNQl-authsmtp@[IPv6:::ffff:172.28.0.212]>
+X-Rid: master@tbogatell.com@213.97.48.132
+MIME-Version: 1.0
+To: "eruizsoley@gmail.com" <eruizsoley@gmail.com>
+From: Master T Bogatell <master@tbogatell.com>
+Subject: itrucks
+Date: Tue, 16 Jun 2020 17:17:23 +0200
+Importance: normal
+X-Priority: 3
+Content-Type: multipart/alternative;
+	boundary="_A823A2F0-DA7D-4360-A218-7A048CAF7736_"
+X-CMAE-Envelope: MS4wfNx95NufiOuAIkjD2yQEyz2lNm5qk04rtjm984gl0Q41zjtKAqhV6WHcioDvFPlv0/9XpduLedtkFfY/fv6IZEcepBOIg1MGyw+yzElhm1or8H5V1cW2
+ VJ0U3Ws1qvZpspOwYDmjZuUXqL7AUfbsdfPlahYhqw46m60W4nKWikQ4/D+rwM0E0MXfZ0/0j9Ckwg==
+
+--_A823A2F0-DA7D-4360-A218-7A048CAF7736_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+https://login.ford.com.tr/(S(efqen1mqe0wofwkqstncyw5m))/login.aspx?ReturnUr=
+l=3D%2fSAML%2fSSOService.aspx%3fSAMLRequest%3dfZJLT8MwEIT%252FSuR7Y%252BfRB=
+1YTKbQHKhUakcCBC3Jct7Fw7OB1oPx70qaI9lJpb579ZmfkObBGtTTrXK2fxWcnwHmHRmmgp4cE=
+dVZTw0AC1awRQB2nRfa4pqFPaGuNM9wo5GUAwjpp9MJo6BphC2G%252FJBcvz%252BsE1c61QDG=
+Wznb8A%252FydsVufm8Z3Fhe1rCqjhKt9AIOP6BDnm6JE3rK%252FRWp2pP4zlNlLfU3oV3BRbM=
+6OPoP2gLzVMkHvk8luV00DEokxmxF2F5NqywSJp1FUTfls3MsAOrHS4Jh2CQpJSEYkHoVBGUQ0D=
+v
+
+Enviado desde Correo para Windows 10
+
+
+--_A823A2F0-DA7D-4360-A218-7A048CAF7736_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta ht=
+tp-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><meta name=
+=3DGenerator content=3D"Microsoft Word 15 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DES link=3Dblue vlink=3D"#954F72"><div class=
+=3DWordSection1><p class=3DMsoNormal><a href=3D"https://login.ford.com.tr/(=
+S(efqen1mqe0wofwkqstncyw5m))/login.aspx?ReturnUrl=3D%2fSAML%2fSSOService.as=
+px%3fSAMLRequest%3dfZJLT8MwEIT%252FSuR7Y%252BfRB1YTKbQHKhUakcCBC3Jct7Fw7OB1=
+oPx70qaI9lJpb579ZmfkObBGtTTrXK2fxWcnwHmHRmmgp4cEdVZTw0AC1awRQB2nRfa4pqFPaGu=
+NM9wo5GUAwjpp9MJo6BphC2G%252FJBcvz%252BsE1c61QDGWznb8A%252FydsVufm8Z3Fhe1rC=
+qjhKt9AIOP6BDnm6JE3rK%252FRWp2pP4zlNlLfU3oV3BRbM6OPoP2gLzVMkHvk8luV00DEokxm=
+xF2F5NqywSJp1FUTfls3MsAOrHS4Jh2CQpJSEYkHoVBGUQ0Dv">https://login.ford.com.t=
+r/(S(efqen1mqe0wofwkqstncyw5m))/login.aspx?ReturnUrl=3D%2fSAML%2fSSOService=
+.aspx%3fSAMLRequest%3dfZJLT8MwEIT%252FSuR7Y%252BfRB1YTKbQHKhUakcCBC3Jct7Fw7=
+OB1oPx70qaI9lJpb579ZmfkObBGtTTrXK2fxWcnwHmHRmmgp4cEdVZTw0AC1awRQB2nRfa4pqFP=
+aGuNM9wo5GUAwjpp9MJo6BphC2G%252FJBcvz%252BsE1c61QDGWznb8A%252FydsVufm8Z3Fhe=
+1rCqjhKt9AIOP6BDnm6JE3rK%252FRWp2pP4zlNlLfU3oV3BRbM6OPoP2gLzVMkHvk8luV00DEo=
+kxmxF2F5NqywSJp1FUTfls3MsAOrHS4Jh2CQpJSEYkHoVBGUQ0Dv</a></p><p class=3DMsoN=
+ormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Enviado desde <a href=3D"ht=
+tps://go.microsoft.com/fwlink/?LinkId=3D550986">Correo</a> para Windows 10<=
+/p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>=
+
+--_A823A2F0-DA7D-4360-A218-7A048CAF7736_--
+

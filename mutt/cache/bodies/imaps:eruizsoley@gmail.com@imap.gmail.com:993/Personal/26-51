@@ -1,0 +1,1541 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:3:0:0:0:0 with SMTP id h3csp3352441ilr;
+        Fri, 31 Jul 2020 12:53:18 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxU03aY0eLr9YuNedS2KLFhcB8DXW4aBMyi8kbL249dBqsff9SHCJl3jWW5IMPBqauWhHC2
+X-Received: by 2002:adf:de08:: with SMTP id b8mr4531289wrm.4.1596225197833;
+        Fri, 31 Jul 2020 12:53:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1596225197; cv=none;
+        d=google.com; s=arc-20160816;
+        b=W6couRvH9B1Hn2M8pHtm5F/0gzbpNhFOxvAP/UP0xKDan4XCqTKGRKEI2QUSWIQvy+
+         n72BjwYyMpBRnlgZN6yWx99dUaxth7/tqgPOydZFJlbOEot3oqDN4Zg3arHNmmZLSGzw
+         bMXNvFxcgQXJ4h5lh0fL990V5Xgw+pTrNN7f/DadX2THcQig/61XmivrtHUbbGUfQOLD
+         T5ZDhh6x0sPyKMoAB0FJNAvjo16iSfcVED17X9ghtI8q4qsd9Vv04hAdrVW+xJwPBVwA
+         q6NS1PJwAOtQbisLIyqXcFsNFSo1PcDBmitCGE51ERjVdI1V4ZKrRvSM7pjfzmF7WbXU
+         ISNg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:from:date
+         :dkim-signature;
+        bh=gtvPgLFGwlPzsFgGDmnXgro2LCVAE3n7afFGYTnEQKg=;
+        b=tQaXwSEySbxQ4IA6Kp4+8Obliffp8tXM4EkuljhTsmttQCkTgY7JCrFmLkc2yvpq1F
+         KI8clYDd1rjJK3CNNBmSiv80xVrSg432zXpzDA+kfrjgpT/OhYLKhOFfGCV0IhM6sVqh
+         FwL5/8gt4Hp6/CUx30AUMfiF59es1YmWB7JIYYDtdOhOVL5m8Gp3TmWA02Q5xZV5m0F2
+         p1/3MMvxkBKAwNixdkuLK/IZ/Y/3JlcJbALTZ6IxlxPA2Mlo67QuVRFq2GM7QwqgiBdy
+         3ulBZp6NOVLMOCkMIJzxyemp/uY3VWBJR/JjoNQdObCxlFySboSX0PD7H0g5Z+dy3byQ
+         3gcw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.es header.s=s2048 header.b=LKx2fKuU;
+       spf=pass (google.com: domain of mvillama71@yahoo.es designates 77.238.178.97 as permitted sender) smtp.mailfrom=mvillama71@yahoo.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.es
+Return-Path: <mvillama71@yahoo.es>
+Received: from sonic312-26.consmr.mail.ir2.yahoo.com (sonic312-26.consmr.mail.ir2.yahoo.com. [77.238.178.97])
+        by mx.google.com with ESMTPS id f191si207486wme.47.2020.07.31.12.53.17
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 31 Jul 2020 12:53:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mvillama71@yahoo.es designates 77.238.178.97 as permitted sender) client-ip=77.238.178.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.es header.s=s2048 header.b=LKx2fKuU;
+       spf=pass (google.com: domain of mvillama71@yahoo.es designates 77.238.178.97 as permitted sender) smtp.mailfrom=mvillama71@yahoo.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.es
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.es; s=s2048; t=1596225197; bh=gtvPgLFGwlPzsFgGDmnXgro2LCVAE3n7afFGYTnEQKg=; h=Date:From:To:In-Reply-To:References:Subject:From:Subject; b=LKx2fKuU9i+0wGtlQGJ/P2q1ZcitU/RlWCDf1QRNPSzp/CHgwOkOKfVGz9SiUHB9nrWi3eTCjkmd+jwNxUB3aOjuwidUKKd2WMLjT8jdLc1UdV8N+9a4Mr6mG0KchREicXtm3AZmfG4bheEZ9rcxCF+AmRfSvPhvpcqnNewiH5I2T6KD9fMZLojzhV02qgB/Yz66yOm7rfMmiQAiVT8ZgSWJxw4rvO+5zr+S9HHomO/SV2L3r+7VgZWLxuqPg9bbrCidocS9x+cypEK2CAbnoc8AqLWKWtQmXHsCzt2mP+3tGoxneVxBybn8qCbFwkWdY0qAqUTwXEFtVfbiY6FrlQ==
+X-YMail-OSG: noAM6TUVM1mDbYUmXhC6DPukAySBnyLTNZzgVP46gmx9j._mBbQZaCRtgu2Xvmt
+ GPWzon534G9EMhmoWJY3cqT_3ozFGpfrhELyTzat.fpAbKecW__1RjV2G.tx7S3XZ95LSzehu6uN
+ eOvkKitwGJCVAP8JZA_hSqQn08ue5nkIOQTjNrWE_P.Y_CiwqcFtbBvwsonNmu04P1Gld4LGAnRV
+ eeG5CdPNmJDYftP3533LLP4zCFtxNx.q6.CvVzCXz0qJjqSyU9ToELbg9gVloTGthmYWUXXQlHbD
+ pJRQYgw5D.IsbD8g1vKuyGXX07Uwh8.wwEbpEH4MRlPY6bl92dQs9Oyf._w6g6PaRgXQD7U.ln5w
+ KzexFX42JDydTu2EVX1QkNEZJl8CEcm6X3NZEmCCDW6xoT_.aDFM1wirUkYzTk3IAPdiQgA1bmPR
+ jHCFdvMXjGa1d52bS6CcBOYckHPNhSQk23YyS8gvli_Tob39zra6CubdRCu4tCSpPHm5coJFqGJc
+ nm13dfREOe6ihMWJQVNZoFbpIiFQQNsFEIBTp7yUwmfOdxbSRFrVqL1gwzZdjrgfKpcV16JiORUG
+ 5QaUnwfUQpn4wVyOTl5yBPvAY.cVFksojHlnp17YpbEX8xB8Tk.mw2CaSCW_QcIvdZfODR13aSM.
+ EYYVApwPTdDEs9lqtqu5zVYG.KLzROWXXbm8mpqRJYlUawvPSdIWp2pjoniZywhPsqqxfnIst1wO
+ DCHVbnoSZmSKIYhrc2cTcttFfzvKs939kQCO2KFjnrlHIHTyAHjxZgvRuYTIEVBR63TFgmcNODyR
+ Bdks.N.6O7sflqsEtojX5sqNtnnMfiRb2TTXqYmi.hEPpI2FzlkLP3gJ_FZmxBnmbuzmWvEXQ2l3
+ 8FFmjJip3uSBjJ8ejkNV5p2P05DMnmHKU2OGyEopSTQnkSXOI4QcaGemDwH5gvmzGfzU6A3NYjkt
+ qBtuC3uZaqqDeZsy698mnQP._CLLRRM8bObtiSuzzX0qbszdxTzaLZS.SrfgQVh0j1ya2jYTgaSv
+ DleLp.nPENHq2_Iqr6DxQmlEIxN7iww52_N4YJ_0O6dO7vOQ1iNZ4U6shRh_z9vzcFUSAW5CFFnR
+ 4C4cY690lzVIfKJptVGdxWGJfXjC6NJIY4S3gxkhoEkjEMiTXP_a63otv4R7b_L6m7TH9ZCcMqZD
+ JJAN3fHJtAbuXZ04dXDwFpRz_x0Y5pGiMBuvK.mz5XjRlrjKaUPhgAlbUuBHTlgl5g4EWen0eoLU
+ y3Ej3nJTy8lGtw7fqKM5Lq.lVF.piTzJ.QbQuUM5yRLhy.PSFX8LhI4Fewv0QeI_XF5.xANCD7Q7
+ ERVw2VheJfvWAGbd8GvRFgoxDAi6FUPgW6TWTexLNkj5tb3p9d2zMbOYt_AwIjGZ9ttnzvWDUQ.l
+ CVXavzRM-
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic312.consmr.mail.ir2.yahoo.com with HTTP; Fri, 31 Jul 2020 19:53:17 +0000
+Date: Fri, 31 Jul 2020 19:53:11 +0000 (UTC)
+From: Maria Angeles Villanueva <mvillama71@yahoo.es>
+To: Ernest Ruiz <eruizsoley@gmail.com>
+Message-ID: <360218044.15107211.1596225191316@mail.yahoo.com>
+In-Reply-To: <30049094.20200731170301.5f244ec5479d28.02707864@mail179-19.suw41.mandrillapp.com>
+References: <30049094.20200731170301.5f244ec5479d28.02707864@mail179-19.suw41.mandrillapp.com>
+Subject: Rv: Confirmacion de la Reserva 11102146
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_15107210_868771079.1596225191306"
+X-Mailer: WebService/1.1.16271 YahooMailIosMobile Yahoo%20Mail/50233 CFNetwork/1126 Darwin/19.5.0
+Content-Length: 65223
+
+------=_Part_15107210_868771079.1596225191306
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+Enviado desde Yahoo Mail para iPhone
+
+
+Comenzar mensaje reenviado:
+
+El viernes, julio 31, 2020, 7:03 p.=C2=A0m., info@bfaspain.eu escribi=C3=B3=
+:
+
+ #yiv0723031271 * {}#yiv0723031271 body {margin:0;padding:0;font-family:Ope=
+n Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;background-=
+color:#ffffff;width:100% !important;min-height:100% !important;}#yiv0723031=
+271 h1 {font-size:18px;font-weight:bold;line-height:26px;font-family:Open S=
+ans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;margin:0px;}#y=
+iv0723031271 #yiv0723031271tinymce h2 {color:#393939;font-size:18px;font-we=
+ight:bold;letter-spacing:0.24px;line-height:24px;font-family:Open Sans, Hel=
+vetica Neue, Helvetica, Helvetica, Arial, sans-serif;}#yiv0723031271 h3 {ma=
+rgin:0;margin-bottom:5px;margin-top:3px;padding:0;font-size:14px;line-heigh=
+t:23px;font-weight:normal;color:#393939;font-family:Open Sans, Helvetica Ne=
+ue, Helvetica, Helvetica, Arial, sans-serif;}#yiv0723031271 h4 {color:#9B9B=
+9B;font-size:13px;letter-spacing:0.17px;line-height:18px;font-weight:normal=
+;margin:0px;text-align:justify;font-family:Open Sans, Helvetica Neue, Helve=
+tica, Helvetica, Arial, sans-serif;}#yiv0723031271 h5 {margin:0px;padding:0=
+;font-size:12px;line-height:20px;font-weight:600;color:#393939;font-family:=
+Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;}#yiv072=
+3031271 h6 {margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c3=
+33c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, san=
+s-serif;}#yiv0723031271 .yiv0723031271colorLogoActivoBorder {border-top:9px=
+ solid;}#yiv0723031271 #yiv0723031271principal {min-width:650px;max-width:6=
+50px;}#yiv0723031271 .yiv0723031271bordesGrises{border-left:10px solid #ebe=
+cee;border-right:10px solid #ebecee;border-bottom:10px solid #ebecee;}#yiv0=
+723031271 .yiv0723031271blockEmail, #yiv0723031271 .yiv0723031271blockEmail=
+NoResponsive, #yiv0723031271 .yiv0723031271tableDefault {background:white;b=
+order-collapse:initial;padding-left:40px;padding-right:40px;padding-bottom:=
+25px;}#yiv0723031271 .yiv0723031271blockTitle {padding-top:20px;padding-bot=
+tom:20px;}#yiv0723031271 .yiv0723031271noPaddingTable tr td {padding:0px!im=
+portant;}#yiv0723031271 .yiv0723031271doubleColumn {width:50%;}#yiv07230312=
+71 ul {padding-left:5px;margin-top:0px;}#yiv0723031271 .yiv0723031271title =
+{font-size:22px!important;}#yiv0723031271 .yiv0723031271subtitle {font-size=
+:14px!important;}@media (max-width:767px) and ( _filtered_a ) {#yiv07230312=
+71 table.yiv0723031271blockEmail {width:100%!important;}}@media screen and =
+(max-width:600px) {#yiv0723031271 table tr td {width:auto!important;min-hei=
+ght:auto!important;}#yiv0723031271 h1, #yiv0723031271 h2 {font-size:30px!im=
+portant;}#yiv0723031271 h3, #yiv0723031271 .yiv0723031271title {font-size:2=
+5px!important;}#yiv0723031271 h4, #yiv0723031271 h5, #yiv0723031271 h6, #yi=
+v0723031271 .yiv0723031271subtitle {font-size:20px!important;}#yiv072303127=
+1 ul, #yiv0723031271 p, #yiv0723031271 em {font-size:20px!important;}#yiv07=
+23031271 table.yiv0723031271blockEmail, #yiv0723031271 table.yiv0723031271t=
+ableDefault {width:100%!important;}#yiv0723031271 thead {display:none;}#yiv=
+0723031271 tr:nth-of-type {background-color:inherit;}#yiv0723031271 table.y=
+iv0723031271blockEmail tbody td {display:block;}#yiv0723031271 table.yiv072=
+3031271blockEmail tbody td:before {display:block;}#yiv0723031271 table.yiv0=
+723031271tableDefault tbody td {display:table-cell!important;}#yiv072303127=
+1 table.yiv0723031271tableDefault tbody td:before {display:initial!importan=
+t;}#yiv0723031271 .yiv0723031271blockTitle {padding-left:20px!important;pad=
+ding-top:20px!important;padding-bottom:20px;}#yiv0723031271 .yiv0723031271n=
+oPaddingTable {margin:0px!important;}#yiv0723031271 .yiv0723031271doubleCol=
+umn img {width:100%!important;}#yiv0723031271 .yiv0723031271doubleColumn {w=
+idth:100%!important;padding-left:0px!important;margin:0px!important;padding=
+-bottom:10px!important;padding-top:10px!important;}#yiv0723031271 .yiv07230=
+31271doubleColumn table tr td {padding-left:20px!important;}#yiv0723031271 =
+.yiv0723031271blockEmail, #yiv0723031271 .yiv0723031271blockEmailNoResponsi=
+ve, #yiv0723031271 .yiv0723031271tableDefault {background:white;border-coll=
+apse:initial;padding-left:20px!important;padding-right:20px!important;}#yiv=
+0723031271 .yiv0723031271inlineTable{display:inline-table!important;white-s=
+pace:nowrap;}#yiv0723031271 .yiv0723031271width10{width:10%;}#yiv0723031271=
+ .yiv0723031271width40{width:40%;}#yiv0723031271 .yiv0723031271width50{widt=
+h:50%;}#yiv0723031271 .yiv0723031271desgloseResponsive{font-size:16px;paddi=
+ng-left:20px;}#yiv0723031271 .yiv0723031271tableCell{display:table-cell !im=
+portant;}#yiv0723031271 img {max-width:100%!important;}#yiv0723031271 ul {p=
+adding-left:50px!important;}#yiv0723031271 .yiv0723031271blockSimple td, #y=
+iv0723031271 .yiv0723031271bloqueDoble td {padding-left:20px!important;}#yi=
+v0723031271 .yiv0723031271bloqueDoble .yiv0723031271doubleColumn td {paddin=
+g-left:0px!important;}}
+|=20
+|=20
+|=20
+Maria Angeles Villanueva
+
+=C2=A1Tu reserva est=C3=A1 confirmada! A continuaci=C3=B3n le ofrecemos tod=
+a la informaci=C3=B3n detallada y las condiciones de su reserva. =C2=A1Nos =
+vemos en Calafell!
+ |
+
+
+|=20
+CONTRATO DE ARRENDAMIENTO DE TEMPORADA
+ |
+|=20
+|=20
+Por la presente el propietario=C2=A0 MONICA CASTILLO GODOY con DNI: 4655942=
+8W y el hu=C3=A9sped Maria Angeles Villanueva han acordado lo siguiente:
+ |
+
+ |
+
+
+|=20
+PLANIFICACI=C3=93N DE PAGOS
+ |
+|=20
+| =C2=A0 |=20
+1er pago
+ |=20
+28/07/2020
+ |=20
+Transferencia
+ |=20
+1.035,80 =E2=82=AC
+ |
+|  |
+| =C2=A0 |
+
+ |
+
+
+|=20
+INFORMACI=C3=93N DE RESERVA
+ |
+|  |=20
+|=20
+Entrada
+ 04/08/2020  |=20
+Salida
+ 08/08/2020  |
+|=20
+
+R103 Chalet vacacional con piscina a 2 km de la playa COSTES DEL GARRAF 84
+
+Calafell 43820 (Tarragona)
+ |
+|=20
+N=C2=BA de noches: 4
+
+Capacidad: 8 personas
+
+Ocupantes: 5 adultos + 1 ni=C3=B1os
+ |
+|=20
+Localizador:  11102146
+ |
+|=20
+
+Importe total: 1.035,80 =E2=82=AC
+ |
+
+ |
+
+
+|=20
+FIANZA
+ |
+|=20
+|=20
+Importe: 300,00 =E2=82=AC
+ |
+|=20
+Forma de pago: Retenci=C3=B3n en tarjeta
+ |
+
+ |=20
+|=20
+Fecha de pago: 04/08/2020
+ |
+|=20
+Fecha de devoluci=C3=B3n: 10/08/2020
+ |
+
+ |
+
+
+|=20
+DESGLOSE DE PRECIOS
+ |
+|=20
+|=20
+Alojamiento
+ |
+|=20
+R103 - CASA GARRAF
+ |=20
+204,00 =E2=82=AC/noche
+ |=20
+x 4
+ |=20
+816,00 =E2=82=AC
+ |
+|  |
+|=20
+extras y servicios
+ |
+|=20
+Acceso a Internet
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|=20
+Aire acondicionado
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|=20
+Aparcamiento
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|=20
+Calefacci=C3=B3n
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|=20
+Limpieza final
+ |=20
+200,00 =E2=82=AC /reserva
+ |=20
+x 1
+ |=20
+200,00 =E2=82=AC
+ |
+|=20
+Ropa de cama
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|=20
+Toallas
+ |=20
+Incluido
+ |=20
+x 1
+ |=20
+0,00 =E2=82=AC
+ |
+|  |
+|=20
+Impuestos tur=C3=ADsticos
+ |
+|=20
+Tasa tur=C3=ADstica
+ |=20
+=C2=A0
+ |=20
+=C2=A0
+ |=20
+19,80 =E2=82=AC
+ |
+|  |
+|=20
+(IVA=C2=A0incluido)
+ |=20
+1.035,80 =E2=82=AC
+ |
+
+ |
+
+
+|=20
+RECEPCI=C3=93N Y RECOGIDA DE LLAVES
+ |
+|  |=20
+|=20
+Beachfront Apartment
+
+Direcci=C3=B3n:Vilamar 88 A CALAFELL (43820) Tarragona (Espa=C3=B1a)
+ |
+|=20
+Horario
+
+Entrada: Todos los d=C3=ADas: de 17:00 a 20:00
+
+Salida: 10:00
+
+Atenci=C3=B3n al p=C3=BAblico: Todos los d=C3=ADas: de 10:00 a 20:00
+ |
+|=20
+Datos de contacto:
+
+Tel=C3=A9fono: + (34) 673946792 + (34) 629790930
+
+E-mail: info@bfaspain.eu olena@bfaspain.eu
+ |
+|=20
+Idioma: espa=C3=B1ol, ingl=C3=A9s, franc=C3=A9s, italiano, catal=C3=A1n, ru=
+so
+ |
+
+ |
+
+
+|=20
+CONDICIONES GENERALES Y NORMAS DE LA CASA
+ |
+|=20
+El cliente acepta las siguientes condiciones para la ocupaci=C3=B3n de la v=
+ivienda para uso tur=C3=ADstico durante el per=C3=ADodo, la cantidad y los =
+ocupantes objeto de este contrato, y el consentimiento para el procesamient=
+o de datos personales y la libre circulaci=C3=B3n de estos datos
+1. USUARIO. La persona que hace la reserva debe ser mayor de edad y es resp=
+onsable de la veracidad de la informaci=C3=B3n proporcionada
+2. OCUPANTES. El cliente s=C3=B3lo puede presentar el n=C3=BAmero m=C3=A1xi=
+mo de personas seg=C3=BAn se define en las caracter=C3=ADsticas del apartam=
+ento y seg=C3=BAn la tarifa contratada.
+3. LIMPIEZA. El apartamento se pondr=C3=A1 a disposici=C3=B3n del cliente d=
+ebidamente limpio. El cliente se compromete a dejar el apartamento razonabl=
+emente limpio, sin basura o restos de comida.=C2=A0Obligatorio: sacar la ba=
+sura antes de salir de la propiedad. En caso contrario se descontara la pen=
+alizaci=C3=B3n de 200 eur de la fianza.
+4. EQUIPAMIENTO. El cliente se compromete a dejar la vivienda en las mismas=
+ condiciones en que lo encontr=C3=B3 al entrar en t=C3=A9rminos de mantenim=
+iento de muebles y equipamiento. Dispone de 24h para notificar cualquier de=
+sperfecto encontrado a su llegada.
+5. FIANZA. El cliente abonar=C3=A1 la fianza con la tarjeta de cr=C3=A9dito=
+ como garant=C3=ADa en el momento de la entrada, con el importe especificad=
+o en la reserva. Este dep=C3=B3sito se devolver=C3=A1 en su totalidad dentr=
+o de los 7 d=C3=ADas posteriores a la salida, a menos que se encuentren imp=
+erfectos en el apartamento, sea=C2=A0 muebles o equipamiento, o en situacio=
+nes de suciedad o basura extrema. El costo para restablecer las condiciones=
+ de la propiedad en el momento del check-in se descontar=C3=A1 del dep=C3=
+=B3sito.
+6. MODIFICACIONES. Nos reservamos el derecho de cambiar la propiedad contra=
+tada por una con caracter=C3=ADsticas similares o mejores en caso de fuerza=
+ mayor ajena de nuestra agencia como los defectos que se produzcan repentin=
+amente despu=C3=A9s de la fecha de la reserva. Estos cambios ser=C3=A1n sin=
+ costo para el cliente.
+7. CANCELACI=C3=93N. =C2=A0Penalizaci=C3=B3n por cancelaci=C3=B3n.
+- Cancelaci=C3=B3n gratuita hasta 7 d=C3=ADas antes de la llegada. (aplicad=
+a para las nuevas reservas hechas a partir de 10 de mayo 2020) Cancelaci=C3=
+=B3n con menos de 7 d=C3=ADas o No Show se cobrar=C3=A1 100% del total de l=
+a reserva. Las nuevas reservas pagadas con los vouchers Covid-19 no tendr=
+=C3=A1n derecho a reembolso, pero se les permitir=C3=A1 el cambio de fechas=
+.
+- En caso de fuerza mayor u otras razones fuera de nuestra empresa, la prop=
+iedad reservada podr=C3=A1 ser sustituida por otra propiedad de calidad sim=
+ilar o superior o se proceder=C3=A1 al reembolso del importe pagado por la =
+reserva en forma de voucher, sin derecho a ninguna compensaci=C3=B3n adicio=
+nal. (Fuerza mayor: epidemias y pandemias, calamidades naturales, accidente=
+s, acciones de las autoridades y otras circunstancias comprendidas en el t=
+=C3=A9rmino fuerza mayor, y el incumplimiento por parte de las partes de la=
+s obligaciones que le impone el presente contrato o el incumplimiento de la=
+s obligaciones, de estas circunstancias, no causa responsabilidad).
+-Seguro Aconsejamos a todos sus hu=C3=A9spedes adquirir un seguro de viaje =
+o de cancelaci=C3=B3n en su pa=C3=ADs de residencia.
+INTERNACIONAL MEDICAL SERVICES - Asistencia y atenci=C3=B3n m=C3=A9dica hos=
+pitalaria y extra-hospitalaria de los turistas. Tel=C3=A9fono gratuito: 900=
+ 844 484 o 871 959 966. La atenci=C3=B3n 24 h. / 365 d=C3=ADas. El Call cen=
+ter dispone de personal multiling=C3=BCe
+8. FUMAR. Est=C3=A1 permitido s=C3=B3lo en el exterior.
+9.NO HAY SERVICIO DE LIMPIEZA DIARIO. Si bien la ropa de cama y las toallas=
+ de ba=C3=B1o est=C3=A1n incluidas en la unidad, el servicio de limpieza di=
+ario no est=C3=A1 incluido en la tarifa de alquiler. P=C3=B3ngase en contac=
+to con nuestro personal si necesita un servicio de limpieza adicional, con =
+un precio de 20 eur por hora.
+10. Le sugerimos traer toallas de playa. No permitimos que se saquen toalla=
+s o ropa de cama de la propiedad.
+11.El sistema s=C3=A9ptico de la propiedad se encuentra en buenas condicion=
+es, sin embargo, se obstruir=C3=A1 si se deposita material inadecuado. NO T=
+IRAR NADA con excepci=C3=B3n del papel higi=C3=A9nico. No se deben inserir =
+ni toallitas h=C3=BAmedas ni productos de higiene =C3=ADntima femenina en n=
+ing=C3=BAn momento. Si se descubre que estos productos han sido tirados y o=
+bstruyen el sistema s=C3=A9ptico, se pueden cobrar da=C3=B1os de hasta 250 =
+eur de la fianza.
+12. Agradecemos el uso razonable del agua y la electricidad. Pensamos en me=
+dioambiente.
+
+13.El uso de las piscinas comunitarias y las zonas comunes en los espacios =
+compartidos estar=C3=A1 regulado seg=C3=BAn las normas de cada comunidad. E=
+l huesped estar=C3=A1 obligado cumplir con las normas escablecidas por la a=
+dministraci=C3=B3n de la comunidad donde se alojara durante las vacaciones.
+ |
+
+ |
+
+
+
+=C2=A0BFA SALES & RENTALS S.L=20
+673946792 - info@bfaspain.eu=20
+CALLE VILAMAR,88, 88 A CALAFELL, (43820)Espa=C3=B1a
+ |
+
+=C2=A0
+Este correo electr=C3=B3nico puede contener informaci=C3=B3n privilegiada y=
+/o confidencial, y no necesariamente refleja la opini=C3=B3n de BFA.=C2=A0S=
+i Ud. no es el destinatario de este mensaje, no est=C3=A1 autorizado a copi=
+ar, reproducir o difundir su contenido a ninguna persona. Por favor,=C2=A0 =
+avise al remitente y elimine el mensaje.=C2=A0Queda notificado que su uso, =
+distribuci=C3=B3n, impresi=C3=B3n, copia y difusi=C3=B3n por cualquier medi=
+o est=C3=A1 tipificada como delito en el art=C3=ADculo 197 s.s. y 278 del v=
+igente C=C3=B3digo Penal.=C2=A0Gracias.
+=C2=A0
+
+
+
+------=_Part_15107210_868771079.1596225191306
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><!--[=
+if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>=
+96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></head><bo=
+dy>
+<br><br><br><a href=3D"https://overview.mail.yahoo.com/?.src=3DiOS">Enviado=
+ desde Yahoo Mail para iPhone</a><br><br><p class=3D"yahoo-quoted-begin" st=
+yle=3D"font-size: 15px; color: #715FFA; padding-top: 15px; margin-top: 0"><=
+span style=3D"color: #AAAAAA;">Comenzar mensaje reenviado:</span><br><br>El=
+ viernes, julio 31, 2020, 7:03 p.&nbsp;m., info@bfaspain.eu escribi=C3=B3:<=
+/p><blockquote class=3D"iosymail"><div id=3D"yiv0723031271">
+
+
+   =20
+   =20
+   =20
+   =20
+    <style>
+
+#yiv0723031271 * {
+}
+
+#yiv0723031271 body {
+margin:0;padding:0;font-family:Open Sans, Helvetica Neue, Helvetica, Helvet=
+ica, Arial, sans-serif;background-color:#ffffff;width:100% !important;min-h=
+eight:100% !important;}
+
+#yiv0723031271 h1 {
+font-size:18px;font-weight:bold;line-height:26px;font-family:Open Sans, Hel=
+vetica Neue, Helvetica, Helvetica, Arial, sans-serif;margin:0px;}
+
+#yiv0723031271 #yiv0723031271tinymce h2 {
+color:#393939;font-size:18px;font-weight:bold;letter-spacing:0.24px;line-he=
+ight:24px;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Aria=
+l, sans-serif;}
+
+#yiv0723031271 h3 {
+margin:0;margin-bottom:5px;margin-top:3px;padding:0;font-size:14px;line-hei=
+ght:23px;font-weight:normal;color:#393939;font-family:Open Sans, Helvetica =
+Neue, Helvetica, Helvetica, Arial, sans-serif;}
+
+#yiv0723031271 h4 {
+color:#9B9B9B;font-size:13px;letter-spacing:0.17px;line-height:18px;font-we=
+ight:normal;margin:0px;text-align:justify;font-family:Open Sans, Helvetica =
+Neue, Helvetica, Helvetica, Arial, sans-serif;}
+
+#yiv0723031271 h5 {
+margin:0px;padding:0;font-size:12px;line-height:20px;font-weight:600;color:=
+#393939;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial,=
+ sans-serif;}
+
+#yiv0723031271 h6 {
+margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c333c;font-fam=
+ily:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;}
+
+#yiv0723031271 .yiv0723031271colorLogoActivoBorder {
+border-top:9px solid;}
+
+#yiv0723031271 #yiv0723031271principal {
+min-width:650px;max-width:650px;}
+#yiv0723031271 .yiv0723031271bordesGrises{
+border-left:10px solid #ebecee;border-right:10px solid #ebecee;border-botto=
+m:10px solid #ebecee;}
+#yiv0723031271 .yiv0723031271blockEmail, #yiv0723031271 .yiv0723031271block=
+EmailNoResponsive, #yiv0723031271 .yiv0723031271tableDefault {
+background:white;border-collapse:initial;padding-left:40px;padding-right:40=
+px;padding-bottom:25px;}
+#yiv0723031271 .yiv0723031271blockTitle {
+padding-top:20px;padding-bottom:20px;}
+
+#yiv0723031271 .yiv0723031271noPaddingTable tr td {
+padding:0px!important;}
+#yiv0723031271 .yiv0723031271doubleColumn {
+width:50%;}
+#yiv0723031271 ul {
+padding-left:5px;margin-top:0px;}
+#yiv0723031271 .yiv0723031271title {
+font-size:22px!important;}
+#yiv0723031271 .yiv0723031271subtitle {
+font-size:14px!important;}
+@media (max-width:767px) and ( _filtered_a ) {
+#yiv0723031271 table.yiv0723031271blockEmail {width:100%!important;}
+}
+
+@media screen and (max-width:600px) {
+#yiv0723031271 table tr td {width:auto!important;min-height:auto!important;=
+}
+
+#yiv0723031271 h1, #yiv0723031271 h2 {font-size:30px!important;}
+#yiv0723031271 h3, #yiv0723031271 .yiv0723031271title {font-size:25px!impor=
+tant;}
+#yiv0723031271 h4, #yiv0723031271 h5, #yiv0723031271 h6, #yiv0723031271 .yi=
+v0723031271subtitle {font-size:20px!important;}
+#yiv0723031271 ul, #yiv0723031271 p, #yiv0723031271 em {font-size:20px!impo=
+rtant;}
+
+#yiv0723031271 table.yiv0723031271blockEmail, #yiv0723031271 table.yiv07230=
+31271tableDefault {width:100%!important;}
+#yiv0723031271 thead {
+display:none;}
+#yiv0723031271 tr:nth-of-type {
+background-color:inherit;}
+
+#yiv0723031271 table.yiv0723031271blockEmail tbody td {
+display:block;}
+
+#yiv0723031271 table.yiv0723031271blockEmail tbody td:before {
+display:block;}
+
+#yiv0723031271 table.yiv0723031271tableDefault tbody td {
+display:table-cell!important;}
+
+#yiv0723031271 table.yiv0723031271tableDefault tbody td:before {
+display:initial!important;}
+
+#yiv0723031271 .yiv0723031271blockTitle {
+padding-left:20px!important;padding-top:20px!important;padding-bottom:20px;=
+}
+
+#yiv0723031271 .yiv0723031271noPaddingTable {
+margin:0px!important;}
+
+#yiv0723031271 .yiv0723031271doubleColumn img {
+width:100%!important;}
+#yiv0723031271 .yiv0723031271doubleColumn {
+width:100%!important;padding-left:0px!important;margin:0px!important;paddin=
+g-bottom:10px!important;padding-top:10px!important;}
+#yiv0723031271 .yiv0723031271doubleColumn table tr td {
+padding-left:20px!important;}
+
+#yiv0723031271 .yiv0723031271blockEmail, #yiv0723031271 .yiv0723031271block=
+EmailNoResponsive, #yiv0723031271 .yiv0723031271tableDefault {
+background:white;border-collapse:initial;padding-left:20px!important;paddin=
+g-right:20px!important;}
+
+#yiv0723031271 .yiv0723031271inlineTable{
+display:inline-table!important;white-space:nowrap;}
+#yiv0723031271 .yiv0723031271width10{
+width:10%;}
+#yiv0723031271 .yiv0723031271width40{
+width:40%;}
+#yiv0723031271 .yiv0723031271width50{
+width:50%;}
+#yiv0723031271 .yiv0723031271desgloseResponsive{
+font-size:16px;padding-left:20px;}
+#yiv0723031271 .yiv0723031271tableCell{
+display:table-cell !important;}
+#yiv0723031271 img {
+max-width:100%!important;}
+#yiv0723031271 ul {
+padding-left:50px!important;}
+#yiv0723031271 .yiv0723031271blockSimple td, #yiv0723031271 .yiv0723031271b=
+loqueDoble td {
+padding-left:20px!important;}
+#yiv0723031271 .yiv0723031271bloqueDoble .yiv0723031271doubleColumn td {
+padding-left:0px!important;}
+
+}
+
+</style>
+
+<div>
+<div id=3D"yiv0723031271contenedorPlantillaGenerada" style=3D"">
+<table style=3D"background-color:#ffffff;" border=3D"0" width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"background-color:#ebecee;">
+<td class=3D"yiv0723031271bordesGrises" style=3D"vertical-align:top;padding=
+:0;border-left:10px solid #ebecee;border-right:10px solid #ebecee;border-bo=
+ttom:10px solid #ebecee;">
+<table id=3D"yiv0723031271principal" class=3D"yiv0723031271colorLogoActivoB=
+order" style=3D"background-color:#ffffff;border-top:9px solid #b34040;min-w=
+idth:650px;max-width:650px;" border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td style=3D"vertical-align:top;padding:0px;">
+<table id=3D"yiv0723031271inicio" class=3D"yiv0723031271blockEmail" style=
+=3D"padding-top:0px;margin-top:0px;width:100%;border-bottom:9px solid #EBEC=
+EE;background-color:#ffffff;background:white;border-collapse:initial;paddin=
+g-left:40px;padding-right:40px;padding-bottom:25px;" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"20" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"color:#2c333c;background-color:#ffffff;">
+<td style=3D"vertical-align:middle;color:#2c333c;background-color:#ffffff;p=
+adding-top:0px;" align=3D"center" valign=3D"middle">
+<p class=3D"yiv0723031271title" style=3D"text-align:left;font-size:22px;"><=
+span style=3D"font-size:10pt;"><img style=3D"max-width:480px;max-height:85p=
+x;" src=3D"https://app.avantio.com/logos/2591.jpg?v=3D1596214976" alt=3D"" =
+width=3D"40"><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-=
+size:10pt;">Maria Angeles</span> <span class=3D"yiv0723031271editandoNoEdit=
+able" style=3D"font-size:10pt;">Villanueva</span></span></p>
+<p class=3D"yiv0723031271subtitle" style=3D"text-align:left;font-size:14px;=
+"><span style=3D"font-size:10pt;">=C2=A1Tu reserva est=C3=A1 confirmada! A =
+continuaci=C3=B3n le ofrecemos toda la informaci=C3=B3n detallada y las con=
+diciones de su reserva. =C2=A1Nos vemos en </span><span class=3D"yiv0723031=
+271editandoNoEditable" style=3D"font-size:10pt;">Calafell</span><span style=
+=3D"font-size:10pt;">!</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271contratoalquilervacacional" class=3D"yiv072303127=
+1blockEmail yiv0723031271nuevaPlantilla yiv0723031271blockSimple" style=3D"=
+border-bottom:9px solid #EBECEE;background:white;border-collapse:initial;pa=
+dding-left:40px;padding-right:40px;padding-bottom:25px;" border=3D"0" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" colspan=3D"2" align=3D"left" style=3D=
+"padding-top:20px;padding-bottom:20px;">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;">CONTRATO DE ARRENDAMIENTO DE TEMPORADA</h1>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"">
+<table class=3D"yiv0723031271noPaddingTable" style=3D"min-height:40px;width=
+:100%;" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"">
+<tr style=3D"min-height:40px;">
+<td style=3D"min-height:40px;padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">Por la presente el propietario&n=
+bsp; <span class=3D"yiv0723031271editandoNoEditable" style=3D"font-weight:b=
+old;"><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10=
+pt;">MONICA</span></span> <span class=3D"yiv0723031271editandoNoEditable" s=
+tyle=3D"font-weight:bold;"><span class=3D"yiv0723031271editandoNoEditable" =
+style=3D"font-size:10pt;">CASTILLO</span></span> <span class=3D"yiv07230312=
+71editandoNoEditable" style=3D"font-weight:bold;"><span class=3D"yiv0723031=
+271editandoNoEditable" style=3D"font-size:10pt;">GODOY</span></span> con DN=
+I: <span class=3D"yiv0723031271editandoNoEditable" style=3D"font-weight:bol=
+d;"><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt=
+;">46559428W</span></span> y el hu=C3=A9sped <span class=3D"yiv0723031271ed=
+itandoNoEditable" style=3D"font-weight:bold;">Maria Angeles</span> <span cl=
+ass=3D"yiv0723031271editandoNoEditable" style=3D"font-weight:bold;">Villanu=
+eva</span> han acordado lo siguiente:</span></h6>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271planificacionPagos" class=3D"yiv0723031271blockEm=
+ailNoResponsive yiv0723031271nuevaPlantilla" style=3D"width:100%;color:#2c3=
+33c;border-bottom:9px solid #EBECEE;background:white;border-collapse:initia=
+l;padding-left:40px;padding-right:40px;padding-bottom:25px;" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" style=3D"padding-bottom:0px!important=
+;padding-top:20px;" colspan=3D"2" align=3D"left">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">PLANIFICACI=C3=93N DE PAG=
+OS</span></h1>
+</td>
+</tr>
+<tr style=3D"color:#2c333c;">
+<td class=3D"yiv0723031271noPaddingTable" colspan=3D"2" style=3D"">
+<table class=3D"yiv0723031271bloque" style=3D"width:100%;color:#2c333c;padd=
+ing:0px !important;margin:0px !important;" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0">
+<tbody style=3D"">
+<tr style=3D"">
+<td style=3D"padding:0px;text-decoration:none;">&nbsp;</td>
+<td style=3D"padding-left:6px;font-size:13px;font-weight:bold;padding-top:1=
+2px;vertical-align:bottom;padding:0px;" rowspan=3D"3" align=3D"left">
+<h6 style=3D"margin-left:6px;margin:0;padding:0;font-size:12px;font-weight:=
+normal;color:#2c333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helv=
+etica, Arial, sans-serif;"><strong style=3D"">1er pago</strong></h6>
+</td>
+<td style=3D"padding-left:6px;font-size:13px;padding-top:12px;vertical-alig=
+n:bottom;padding:0px;" rowspan=3D"3" align=3D"left">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">28/07/2020</h6>
+</td>
+<td class=3D"yiv0723031271metodo-pago" style=3D"padding-left:6px;font-size:=
+13px;padding-top:12px;vertical-align:bottom;padding:0px;" rowspan=3D"3" ali=
+gn=3D"right">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Transferencia</h6>
+</td>
+<td style=3D"padding-left:6px;font-size:13px;font-weight:bold;text-align:ri=
+ght;padding-top:12px;vertical-align:bottom;padding:0px;" rowspan=3D"3" alig=
+n=3D"right">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><strong style=3D"">1.035,80 =E2=82=AC</strong></h6>
+</td>
+</tr>
+<tr class=3D"yiv0723031271erroneo" style=3D"">
+<td style=3D"padding:0px;font-size:1px;vertical-align:bottom;text-align:cen=
+ter;"><img src=3D"https://app.avantio.com/img/paid_first.png" align=3D"cent=
+er" style=3D""></td>
+</tr>
+<tr class=3D"yiv0723031271erroneo" style=3D"">
+<td style=3D"padding:0px;text-decoration:none;display:none;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271infoReserva" class=3D"yiv0723031271blockEmail yiv=
+0723031271nuevaPlantilla" style=3D"border-bottom:9px solid #EBECEE;backgrou=
+nd:white;border-collapse:initial;padding-left:40px;padding-right:40px;paddi=
+ng-bottom:25px;" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" style=3D"padding-bottom:20px;padding-=
+top:20px;" colspan=3D"2" align=3D"left">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">INFORMACI=C3=93N DE RESER=
+VA</span></h1>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271doubleColumn" style=3D"vertical-align:top;padding=
+-right:0px;width:50%;"><span style=3D"font-size:10pt;"><img src=3D"https://=
+img.avantio.com/fotos/2/159145361106540fcc7523fd661923f6f22de0fd45/big15914=
+53633314aa94e587317ba26cf7a0b22943428.jpg" alt=3D"" width=3D"250" style=3D"=
+"></span></td>
+<td class=3D"yiv0723031271doubleColumn" align=3D"center" style=3D"width:50%=
+;">
+<table id=3D"yiv0723031271informacionReserva" class=3D"yiv0723031271noPaddi=
+ngTable" style=3D"width:100%;" border=3D"0" width=3D"100%" align=3D"center"=
+>
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"width:50%;padding:0px;" width=
+=3D"50%">
+<h4 style=3D"color:#9b9b9b;font-size:18px;font-weight:600;letter-spacing:0.=
+17px;line-height:18px;margin:0px;text-align:justify;font-family:Open Sans, =
+Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><span style=3D"fo=
+nt-size:10pt;">Entrada</span></h4>
+<span style=3D"font-size:10pt;"><strong style=3D"color:#393939;font-weight:=
+bold;letter-spacing:0.24px;line-height:24px;"> <span class=3D"yiv0723031271=
+editandoNoEditable" style=3D"font-size:10pt;">04/08/2020</span> </strong></=
+span></td>
+<td class=3D"yiv0723031271tableCell" style=3D"width:50%;padding:0px;" width=
+=3D"50%">
+<h4 style=3D"color:#9b9b9b;font-size:18px;font-weight:600;letter-spacing:0.=
+17px;line-height:18px;margin:0px;text-align:justify;font-family:Open Sans, =
+Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><span style=3D"fo=
+nt-size:10pt;">Salida</span></h4>
+<span style=3D"font-size:10pt;"><strong style=3D"color:#393939;font-weight:=
+bold;letter-spacing:0.24px;line-height:24px;"> <span class=3D"yiv0723031271=
+editandoNoEditable" style=3D"font-size:10pt;">08/08/2020</span> </strong></=
+span></td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"width:100%;padding:0px;" cols=
+pan=3D"2"><br style=3D"">
+<h5 style=3D"margin:0px;padding:0;font-size:12px;line-height:20px;font-weig=
+ht:600;color:#393939;font-family:Open Sans, Helvetica Neue, Helvetica, Helv=
+etica, Arial, sans-serif;"><span class=3D"yiv0723031271editandoNoEditable" =
+style=3D"font-size:10pt;">R103 Chalet vacacional con piscina a 2 km de la p=
+laya COSTES DEL GARRAF 84</span></h5>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-si=
+ze:10pt;">Calafell</span><span style=3D"font-size:10pt;"> 43820 (</span><sp=
+an class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;">Tarr=
+agona</span><span style=3D"font-size:10pt;">)</span></h6>
+<hr style=3D""></td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"width:100%;padding:0px;" cols=
+pan=3D"2">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">N=C2=BA de no=
+ches: </strong></span><span class=3D"yiv0723031271editandoNoEditable" style=
+=3D"font-size:10pt;">4</span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Capacidad: </=
+strong></span><span class=3D"yiv0723031271editandoNoEditable" style=3D"font=
+-size:10pt;">8</span><span style=3D"font-size:10pt;"> personas</span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Ocupantes: </=
+strong></span><span class=3D"yiv0723031271editandoNoEditable" style=3D"font=
+-size:10pt;">5</span><span style=3D"font-size:10pt;"> adultos + </span><spa=
+n class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;">1</sp=
+an><span style=3D"font-size:10pt;"> ni=C3=B1os</span></h6>
+<hr style=3D""></td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"width:100%;padding:0px;" cols=
+pan=3D"2">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Localizador: =
+</strong> </span><span class=3D"yiv0723031271editandoNoEditable" style=3D"f=
+ont-size:10pt;">11102146</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"width:100%;padding:0px;" cols=
+pan=3D"2"><br style=3D"">
+<h3 style=3D"margin:0;margin-bottom:5px;margin-top:3px;padding:0;font-size:=
+14px;line-height:23px;font-weight:normal;color:#393939;font-family:Open San=
+s, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><span style=3D=
+"font-size:10pt;"><strong style=3D"">Importe total: </strong><span style=3D=
+"font-weight:bold;"><span class=3D"yiv0723031271editandoNoEditable" style=
+=3D"font-size:10pt;">1.035,80 =E2=82=AC</span></span></span></h3>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271fianza" class=3D"yiv0723031271blockEmail yiv07230=
+31271nuevaPlantilla" style=3D"border-bottom:9px solid #EBECEE;background:wh=
+ite;border-collapse:initial;padding-left:40px;padding-right:40px;padding-bo=
+ttom:25px;" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" colspan=3D"2" align=3D"left" style=3D=
+"padding-top:20px;padding-bottom:20px;">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">FIANZA</span></h1>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271doubleColumn" style=3D"width:50%;">
+<table class=3D"yiv0723031271noPaddingTable" border=3D"0" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" style=3D"">
+<tbody style=3D"">
+<tr style=3D"">
+<td style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Importe:</str=
+ong> </span><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-s=
+ize:10pt;">300,00 =E2=82=AC</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Forma de pago=
+:</strong> </span><span class=3D"yiv0723031271editandoNoEditable" style=3D"=
+font-size:10pt;">Retenci=C3=B3n en tarjeta</span></h6>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"yiv0723031271doubleColumn" style=3D"width:50%;">
+<table class=3D"yiv0723031271noPaddingTable" border=3D"0" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" style=3D"">
+<tbody style=3D"">
+<tr style=3D"">
+<td style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Fecha de pago=
+:</strong> </span><span class=3D"yiv0723031271editandoNoEditable" style=3D"=
+font-size:10pt;">04/08/2020</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Fecha de devo=
+luci=C3=B3n:</strong> </span><span class=3D"yiv0723031271editandoNoEditable=
+" style=3D"font-size:10pt;">10/08/2020</span></h6>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271desglosePrecios" class=3D"yiv0723031271blockEmail=
+ yiv0723031271nuevaPlantilla" style=3D"border-bottom:9px solid #EBECEE;back=
+ground:white;border-collapse:initial;padding-left:40px;padding-right:40px;p=
+adding-bottom:25px;" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" align=3D"left" style=3D"padding-top:2=
+0px;padding-bottom:20px;">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">DESGLOSE DE PRECIOS</span=
+></h1>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"">
+<table class=3D"yiv0723031271desgloseResponsive" style=3D"letter-spacing:0.=
+12px;line-height:17px;width:100%;">
+<tbody style=3D"">
+<tr style=3D"">
+<td style=3D"font-weight:bold;padding-bottom:5px!important;" colspan=3D"4">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><strong style=3D"">Alojamiento</strong></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">R103 - CASA GARRAF</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">204,00 =E2=82=AC/noche</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 4</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">816,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"padding-bottom:0px!important;=
+" colspan=3D"4"><hr style=3D"border-top:0px;color:#eeeeee;"></td>
+</tr>
+<tr style=3D"">
+<td style=3D"font-weight:bold;padding-bottom:5px!important;" colspan=3D"4">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><strong style=3D"">extras y servicios</strong></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Acceso a Internet</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Aire acondicionado</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Aparcamiento</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Calefacci=C3=B3n</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Limpieza final</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">200,00 =E2=82=AC /reserva</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">200,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Ropa de cama</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Toallas</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Incluido</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">x 1</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">0,00 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"padding-bottom:0px!important;=
+" colspan=3D"4"><hr style=3D"border-top:0px;color:#eeeeee;"></td>
+</tr>
+<tr style=3D"">
+<td style=3D"font-weight:bold;padding-bottom:5px!important;" colspan=3D"4">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><strong style=3D"">Impuestos tur=C3=ADsticos</strong></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"padding:0px 0px 0px 5px!important;vertical-align:top;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">Tasa tur=C3=ADstica</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">&nbsp;</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;padding:0p=
+x 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">&nbsp;</h6>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"vertical-align:top;text-align=
+:right;padding:0px 0px 0px 5px!important;white-space:nowrap;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;">19,80 =E2=82=AC</h6>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" style=3D"padding-bottom:0px!important;=
+" colspan=3D"4"><hr style=3D"border-top:0px;color:#eeeeee;"></td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271tableCell" colspan=3D"3" style=3D"">
+<h3 style=3D"margin:0;margin-bottom:5px;margin-top:3px;padding:0;font-size:=
+14px;line-height:23px;font-weight:normal;color:#393939;font-family:Open San=
+s, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;">(IVA&nbsp;incl=
+uido)</h3>
+</td>
+<td class=3D"yiv0723031271tableCell" style=3D"text-align:right;white-space:=
+nowrap;">
+<h3 style=3D"margin:0;margin-bottom:5px;margin-top:3px;padding:0;font-size:=
+14px;line-height:23px;font-weight:normal;color:#393939;font-family:Open San=
+s, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><span style=3D=
+"color:black;">1.035,80 =E2=82=AC</span></h3>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271recepcionRecogidaLlaves" class=3D"yiv0723031271bl=
+ockEmail yiv0723031271nuevaPlantilla" style=3D"border-bottom:9px solid #EBE=
+CEE;background:white;border-collapse:initial;padding-left:40px;padding-righ=
+t:40px;padding-bottom:25px;" border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" style=3D"padding-bottom:20px;padding-=
+top:20px;" colspan=3D"2" align=3D"left">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">RECEPCI=C3=93N Y RECOGIDA=
+ DE LLAVES</span></h1>
+</td>
+</tr>
+<tr style=3D"">
+<td class=3D"yiv0723031271doubleColumn yiv0723031271firstPadding" style=3D"=
+vertical-align:top;padding-right:0px;width:50%;"><span style=3D"font-size:1=
+0pt;"><img src=3D"https://maps.googleapis.com/maps/api/staticmap?key=3DAIza=
+SyCUtZPXBKJuQ0GHmkMiQKuSvf3yV53lzXg&amp;center=3D41.1884,1.5768&amp;zoom=3D=
+18&amp;size=3D250x210&amp;sensor=3Dfalse&amp;markers=3D41.1884,1.5768" alt=
+=3D"" width=3D"250" style=3D""></span></td>
+<td class=3D"yiv0723031271doubleColumn" valign=3D"top" style=3D"width:50%;"=
+>
+<table class=3D"yiv0723031271noPaddingTable" border=3D"0" align=3D"center" =
+style=3D"">
+<tbody style=3D"">
+<tr style=3D"">
+<td colspan=3D"2" style=3D"padding:0px;">
+<h5 style=3D"margin:0px;padding:0;font-size:12px;line-height:20px;font-weig=
+ht:600;color:#393939;font-family:Open Sans, Helvetica Neue, Helvetica, Helv=
+etica, Arial, sans-serif;"><span style=3D"font-size:10pt;"><strong style=3D=
+""><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;=
+">Beachfront Apartment</span></strong></span></h5>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Direcci=C3=B3=
+n:</strong></span><span class=3D"yiv0723031271editandoNoEditable" style=3D"=
+font-size:10pt;">Vilamar</span> <span class=3D"yiv0723031271editandoNoEdita=
+ble" style=3D"font-size:10pt;">88 A</span> <span class=3D"yiv0723031271edit=
+andoNoEditable" style=3D"font-size:10pt;">CALAFELL</span><span style=3D"fon=
+t-size:10pt;"> (</span><span class=3D"yiv0723031271editandoNoEditable" styl=
+e=3D"font-size:10pt;">43820</span><span style=3D"font-size:10pt;">) </span>=
+<span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;">T=
+arragona</span><span style=3D"font-size:10pt;"> (</span><span class=3D"yiv0=
+723031271editandoNoEditable" style=3D"font-size:10pt;">Espa=C3=B1a</span><s=
+pan style=3D"font-size:10pt;">)</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td colspan=3D"2" style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Horario</stro=
+ng></span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">Entrada: </span><span class=3D"y=
+iv0723031271editandoNoEditable" style=3D"font-size:10pt;">Todos los d=C3=AD=
+as: de 17:00 a 20:00</span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">Salida: </span><span class=3D"yi=
+v0723031271editandoNoEditable" style=3D"font-size:10pt;">10:00</span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">Atenci=C3=B3n al p=C3=BAblico: <=
+/span><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10=
+pt;">Todos los d=C3=ADas: de 10:00 a 20:00</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td colspan=3D"2" style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Datos de cont=
+acto:</strong></span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">Tel=C3=A9fono: </span><span clas=
+s=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;">+ (34)</spa=
+n> <span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10pt;=
+">673946792</span> <span class=3D"yiv0723031271editandoNoEditable" style=3D=
+"font-size:10pt;">+ (34)</span> <span class=3D"yiv0723031271editandoNoEdita=
+ble" style=3D"font-size:10pt;">629790930</span></h6>
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;">E-mail: </span><span class=3D"yi=
+v0723031271editandoNoEditable" style=3D"font-size:10pt;">info@bfaspain.eu</=
+span> <span class=3D"yiv0723031271editandoNoEditable" style=3D"font-size:10=
+pt;">olena@bfaspain.eu</span></h6>
+</td>
+</tr>
+<tr style=3D"">
+<td colspan=3D"2" style=3D"padding:0px;">
+<h6 style=3D"margin:0;padding:0;font-size:12px;font-weight:normal;color:#2c=
+333c;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sa=
+ns-serif;"><span style=3D"font-size:10pt;"><strong style=3D"">Idioma: </str=
+ong></span><span class=3D"yiv0723031271editandoNoEditable" style=3D"font-si=
+ze:10pt;">espa=C3=B1ol, ingl=C3=A9s, franc=C3=A9s, italiano, catal=C3=A1n, =
+ruso</span></h6>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"yiv0723031271condicionesgeneralesynormasdelacasa" class=3D"yiv=
+0723031271blockEmail yiv0723031271nuevaPlantilla yiv0723031271blockSimple" =
+style=3D"border-bottom:9px solid #EBECEE;background:white;border-collapse:i=
+nitial;padding-left:40px;padding-right:40px;padding-bottom:25px;" border=3D=
+"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody style=3D"">
+<tr style=3D"">
+<td class=3D"yiv0723031271blockTitle" colspan=3D"2" align=3D"left" style=3D=
+"padding-top:20px;padding-bottom:20px;">
+<h1 style=3D"color:#b34040;font-size:18px;font-weight:bold;line-height:26px=
+;font-family:Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-s=
+erif;margin:0px;"><span style=3D"font-size:10pt;">CONDICIONES GENERALES Y N=
+ORMAS DE LA CASA</span></h1>
+</td>
+</tr>
+<tr style=3D"">
+<td style=3D"">
+<p style=3D""><span style=3D"font-size:10pt;"><em style=3D"color:#000000;">=
+El cliente acepta las siguientes condiciones para la ocupaci=C3=B3n de la v=
+ivienda para uso tur=C3=ADstico durante el per=C3=ADodo, la cantidad y los =
+ocupantes objeto de este contrato, y el consentimiento para el procesamient=
+o de datos personales y la libre circulaci=C3=B3n de estos datos</em></span=
+><br style=3D"color:#000000;"><span style=3D"font-size:10pt;"><em style=3D"=
+color:#000000;">1. USUARIO. La persona que hace la reserva debe ser mayor d=
+e edad y es responsable de la veracidad de la informaci=C3=B3n proporcionad=
+a</em></span><br style=3D"color:#000000;"><span style=3D"font-size:10pt;"><=
+em style=3D"color:#000000;">2. OCUPANTES. El cliente s=C3=B3lo puede presen=
+tar el n=C3=BAmero m=C3=A1ximo de personas seg=C3=BAn se define en las cara=
+cter=C3=ADsticas del apartamento y seg=C3=BAn la tarifa contratada.</em></s=
+pan><br style=3D"color:#000000;"><span style=3D"font-size:10pt;"><em style=
+=3D"color:#000000;">3. LIMPIEZA. El apartamento se pondr=C3=A1 a disposici=
+=C3=B3n del cliente debidamente limpio. El cliente se compromete a dejar el=
+ apartamento razonablemente limpio, sin basura o restos de comida.&nbsp;Obl=
+igatorio: sacar la basura antes de salir de la propiedad. En caso contrario=
+ se descontara la penalizaci=C3=B3n de 200 eur de la fianza.</em></span><br=
+ style=3D"color:#000000;"><span style=3D"font-size:10pt;"><em style=3D"colo=
+r:#000000;">4. EQUIPAMIENTO. El cliente se compromete a dejar la vivienda e=
+n las mismas condiciones en que lo encontr=C3=B3 al entrar en t=C3=A9rminos=
+ de mantenimiento de muebles y equipamiento. Dispone de 24h para notificar =
+cualquier desperfecto encontrado a su llegada.</em></span><br style=3D"colo=
+r:#000000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000000;">5.=
+ FIANZA. El cliente abonar=C3=A1 la fianza con la tarjeta de cr=C3=A9dito c=
+omo garant=C3=ADa en el momento de la entrada, con el importe especificado =
+en la reserva. Este dep=C3=B3sito se devolver=C3=A1 en su totalidad dentro =
+de los 7 d=C3=ADas posteriores a la salida, a menos que se encuentren imper=
+fectos en el apartamento, sea&nbsp; muebles o equipamiento, o en situacione=
+s de suciedad o basura extrema. El costo para restablecer las condiciones d=
+e la propiedad en el momento del check-in se descontar=C3=A1 del dep=C3=B3s=
+ito.</em></span><br style=3D"color:#000000;"><span style=3D"font-size:10pt;=
+"><em style=3D"color:#000000;">6. MODIFICACIONES. Nos reservamos el derecho=
+ de cambiar la propiedad contratada por una con caracter=C3=ADsticas simila=
+res o mejores en caso de fuerza mayor ajena de nuestra agencia como los def=
+ectos que se produzcan repentinamente despu=C3=A9s de la fecha de la reserv=
+a. Estos cambios ser=C3=A1n sin costo para el cliente.</em></span><br style=
+=3D"color:#000000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000=
+000;">7. CANCELACI=C3=93N. &nbsp;Penalizaci=C3=B3n por cancelaci=C3=B3n.</e=
+m></span><br style=3D"color:#000000;"><span style=3D"font-size:10pt;"><em s=
+tyle=3D"color:#000000;">- Cancelaci=C3=B3n gratuita hasta 7 d=C3=ADas antes=
+ de la llegada. (aplicada para las nuevas reservas hechas a partir de 10 de=
+ mayo 2020) Cancelaci=C3=B3n con menos de 7 d=C3=ADas o No Show se cobrar=
+=C3=A1 100% del total de la reserva. Las nuevas reservas pagadas con los vo=
+uchers Covid-19 no tendr=C3=A1n derecho a reembolso, pero se les permitir=
+=C3=A1 el cambio de fechas.</em></span><br style=3D"color:#000000;"><span s=
+tyle=3D"font-size:10pt;"><em style=3D"color:#000000;">- En caso de fuerza m=
+ayor u otras razones fuera de nuestra empresa, la propiedad reservada podr=
+=C3=A1 ser sustituida por otra propiedad de calidad similar o superior o se=
+ proceder=C3=A1 al reembolso del importe pagado por la reserva en forma de =
+voucher, sin derecho a ninguna compensaci=C3=B3n adicional. (Fuerza mayor: =
+epidemias y pandemias, calamidades naturales, accidentes, acciones de las a=
+utoridades y otras circunstancias comprendidas en el t=C3=A9rmino fuerza ma=
+yor, y el incumplimiento por parte de las partes de las obligaciones que le=
+ impone el presente contrato o el incumplimiento de las obligaciones, de es=
+tas circunstancias, no causa responsabilidad).</em></span><br style=3D"colo=
+r:#000000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000000;">-S=
+eguro Aconsejamos a todos sus hu=C3=A9spedes adquirir un seguro de viaje o =
+de cancelaci=C3=B3n en su pa=C3=ADs de residencia.</em></span><br style=3D"=
+color:#000000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000000;=
+">INTERNACIONAL MEDICAL SERVICES - Asistencia y atenci=C3=B3n m=C3=A9dica h=
+ospitalaria y extra-hospitalaria de los turistas. Tel=C3=A9fono gratuito: 9=
+00 844 484 o 871 959 966. La atenci=C3=B3n 24 h. / 365 d=C3=ADas. El Call c=
+enter dispone de personal multiling=C3=BCe</em></span><br style=3D"color:#0=
+00000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000000;">8. FUM=
+AR. Est=C3=A1 permitido s=C3=B3lo en el exterior.</em></span><br style=3D"c=
+olor:#000000;"><span style=3D"font-size:10pt;"><em style=3D"color:#000000;"=
+>9.NO HAY SERVICIO DE LIMPIEZA DIARIO. Si bien la ropa de cama y las toalla=
+s de ba=C3=B1o est=C3=A1n incluidas en la unidad, el servicio de limpieza d=
+iario no est=C3=A1 incluido en la tarifa de alquiler. P=C3=B3ngase en conta=
+cto con nuestro personal si necesita un servicio de limpieza adicional, con=
+ un precio de 20 eur por hora.</em></span><br style=3D"color:#000000;"><spa=
+n style=3D"font-size:10pt;"><em style=3D"color:#000000;">10. Le sugerimos t=
+raer toallas de playa. No permitimos que se saquen toallas o ropa de cama d=
+e la propiedad.</em></span><br style=3D"color:#000000;"><span style=3D"font=
+-size:10pt;"><em style=3D"color:#000000;">11.El sistema s=C3=A9ptico de la =
+propiedad se encuentra en buenas condiciones, sin embargo, se obstruir=C3=
+=A1 si se deposita material inadecuado. NO TIRAR NADA con excepci=C3=B3n de=
+l papel higi=C3=A9nico. No se deben inserir ni toallitas h=C3=BAmedas ni pr=
+oductos de higiene =C3=ADntima femenina en ning=C3=BAn momento. Si se descu=
+bre que estos productos han sido tirados y obstruyen el sistema s=C3=A9ptic=
+o, se pueden cobrar da=C3=B1os de hasta 250 eur de la fianza.</em></span><b=
+r style=3D"color:#000000;"><span style=3D"font-size:10pt;"><em style=3D"col=
+or:#000000;">12. Agradecemos el uso razonable del agua y la electricidad. P=
+ensamos en medioambiente.</em></span></p>
+<p style=3D""><span style=3D"font-size:10pt;"><em style=3D"color:#000000;">=
+</em><em style=3D"">13.El uso de las piscinas comunitarias y las zonas comu=
+nes en los espacios compartidos estar=C3=A1 regulado seg=C3=BAn las normas =
+de cada comunidad. El huesped estar=C3=A1 obligado cumplir con las normas e=
+scablecidas por la administraci=C3=B3n de la comunidad donde se alojara dur=
+ante las vacaciones.</em></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br style=3D"">
+<p style=3D"color:#2d414c;font-family:Arial;font-size:12px;letter-spacing:0=
+.21px;line-height:26px;text-align:center;margin-bottom:10px;margin-top:10px=
+;">&nbsp;<strong style=3D"">BFA SALES &amp; RENTALS S.L</strong> <br style=
+=3D"">673946792 - info@bfaspain.eu <br style=3D"">CALLE VILAMAR,88, 88 A CA=
+LAFELL, (43820)Espa=C3=B1a</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div id=3D"yiv0723031271contenedorFirmaPie" style=3D"">&nbsp;</div>
+<p style=3D""><span style=3D"font-size:9px;"><em style=3D"">Este correo ele=
+ctr=C3=B3nico puede contener informaci=C3=B3n privilegiada y/o confidencial=
+, y no necesariamente refleja la opini=C3=B3n de BFA.&nbsp;Si Ud. no es el =
+destinatario de este mensaje, no est=C3=A1 autorizado a copiar, reproducir =
+o difundir su contenido a ninguna persona. Por favor,&nbsp; avise al remite=
+nte y elimine el mensaje.&nbsp;Queda notificado que su uso, distribuci=C3=
+=B3n, impresi=C3=B3n, copia y difusi=C3=B3n por cualquier medio est=C3=A1 t=
+ipificada como delito en el art=C3=ADculo 197 s.s. y 278 del vigente C=C3=
+=B3digo Penal.&nbsp;Gracias.</em></span></p>
+<div id=3D"yiv0723031271contenedorFirmaPlantilla" style=3D"">&nbsp;</div>
+</div>
+<img src=3D"https://mandrillapp.com/track/open.php?u=3D30049094&amp;id=3D05=
+292e4b69d54935a6a399871465dd5a" height=3D"1" width=3D"1"></div>
+</div><blockquote></blockquote></blockquote>
+</body></html>
+------=_Part_15107210_868771079.1596225191306--

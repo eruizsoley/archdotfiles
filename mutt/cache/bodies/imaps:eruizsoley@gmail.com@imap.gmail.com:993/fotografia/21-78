@@ -1,0 +1,1769 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a92:89cf:0:0:0:0:0 with SMTP id w76csp2838198ilk;
+        Sun, 8 Dec 2019 00:49:36 -0800 (PST)
+X-Google-Smtp-Source: APXvYqz45xr4tH5rkmqw7mzrJDi881oaz6yGxT2T/amcR0nAKYay9tMzesMhSxvw1QbTiAKXokUY
+X-Received: by 2002:a17:906:1f48:: with SMTP id d8mr11629996ejk.235.1575794975819;
+        Sun, 08 Dec 2019 00:49:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1575794975; cv=none;
+        d=google.com; s=arc-20160816;
+        b=INgKLzF1+GK/FbIAsgCDoC75kFEEAuGY4RLxOKE83C80SFNYJlL4N1h94aNLYB0HLY
+         /paj1xZoNBnWVz0CKH9dN5/HNKiTNpOnFBZ0iLl1oJS+2zC3QztIq/fiIqr+yufLv1Pc
+         naN//Gv5/xRRT5P7iu7Zy6NOMBXyC3GP+2PHJb0Ti64ZSpQYTQxM0fiRoQn9gzJyR4ZJ
+         pu9dIJWkanqhYe3YpPHtnDUGP+M7q4qZAMsfLhs9V81cSaOM0FRRXMDeRYAjAY37Oqfm
+         2yc+auyygOHSs9/M1XkdpCtgMA8udkYF/Zuwr6rAxovPoXkAJDX7obvMumStP0l5iGqB
+         SPhw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe:date:subject:to:from:mime-version
+         :dkim-signature:dkim-signature;
+        bh=z+xNluz63QjmHrR2qWQPgfSwdMrR137akRNvPa8fDb0=;
+        b=snq925nF4BvhBhvKis/n6+R1hQEuWXaN/nyUYFKv19uBjZweHFFCElcV7dfAI1UgTX
+         d9PyFBQL75EL60PoaF30ewySXfCNn3A8Zh829KEpUUyafsT339iyy0e9/TUYBP+XJWQx
+         uhpGzg+6aclA0i/mM5teYfAJXOt2Pl972OKv3EEEzJH5wY8Z4BZI31IZbgjZnbFA2aAf
+         ZTjeTgn0PdIT6W1x6gKxxBP4oloeVKclbnC4ZTVVTQfobKsWBjYC+CsMl7gPyQbf2trc
+         sMG7Kis8HPo+Q4Z4UcKlb1YJbP0v5+aa+O9nTvtAlcmbXwWxGI4W6E29JsDMF1jDc342
+         RF9Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@klaviyomail.com header.s=smtpapi header.b=mVN67RAS;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=y3iKSxR+;
+       spf=pass (google.com: best guess record for domain of bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com designates 198.37.146.176 as permitted sender) smtp.mailfrom="bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com"
+Return-Path: <bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com>
+Received: from o592.obm.klaviyomail.com (o592.obm.klaviyomail.com. [198.37.146.176])
+        by mx.google.com with ESMTPS id g12si13514979edf.14.2019.12.08.00.49.34
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 08 Dec 2019 00:49:35 -0800 (PST)
+Received-SPF: pass (google.com: best guess record for domain of bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com designates 198.37.146.176 as permitted sender) client-ip=198.37.146.176;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@klaviyomail.com header.s=smtpapi header.b=mVN67RAS;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=y3iKSxR+;
+       spf=pass (google.com: best guess record for domain of bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com designates 198.37.146.176 as permitted sender) smtp.mailfrom="bounces+1918527-bc7b-eruizsoley=gmail.com@delivery.klaviyomail.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=klaviyomail.com; 
+	h=content-type:mime-version:from:to:subject:list-unsubscribe; 
+	s=smtpapi; bh=z+xNluz63QjmHrR2qWQPgfSwdMrR137akRNvPa8fDb0=; b=mV
+	N67RASt55hWmH7iw0PweS+xT6MFBtQnxjJAhkf48AMAsXS/F1oVV6iem6COImmDH
+	is8SFn4J/J0KTK6+E3811cF15yITuDXgIq8AtOJkqVhkFtmrttS70URlz8FMb7Sr
+	LwEZrVXfEkFGUK5JYwozW0ISHGmHI7UA2yd1qmN4o=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=sendgrid.info; 
+	h=content-type:mime-version:from:to:subject:list-unsubscribe:x-feedback-id; 
+	s=smtpapi; bh=z+xNluz63QjmHrR2qWQPgfSwdMrR137akRNvPa8fDb0=; b=y3
+	iKSxR+RmN7w/fVt9RDKNnurkhbKVRYX20T8IVc/fiZcWBhgIJBU9tNP9CTycLJSn
+	A61sYUZcTluv4/HsD609UTPdiPlEteyybPVPTtbhLA6/Xi2G0Lu19Wbz8YS86BIA
+	J+sYoyO2HDinqFdqYpDzT1BtNXmD/nStpqZCcW7+4=
+Received: by filter0789p1iad2.sendgrid.net with SMTP id filter0789p1iad2-28448-5DECB91D-1
+        2019-12-08 08:49:33.003883084 +0000 UTC m=+302837.209516110
+Received: from ip-172-31-58-160.ec2.internal (ec2-34-201-129-169.compute-1.amazonaws.com [34.201.129.169])
+	by ismtpd0098p1iad2.sendgrid.net (SG) with ESMTP id 9ISfS116QO-xQkWtqM1XGg
+	for <eruizsoley@gmail.com>; Sun, 08 Dec 2019 08:49:32.917 +0000 (UTC)
+Received: from qw-flow-email-slowlane-0e3599074d8879577.servers.clovesoftware.com (unknown [20.0.30.146])
+	by ip-172-31-58-160.ec2.internal (Postfix) with ESMTP id 47W0PS57VzzPDSZ
+	for <eruizsoley@gmail.com>; Sun,  8 Dec 2019 08:49:32 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============5171050173777753439=="
+MIME-Version: 1.0
+From: "Jeff @ Moment" <hello@shopmoment.com>
+To: Ernest Ruiz <eruizsoley@gmail.com>
+Subject: Pro Camera - Tip #1
+Date: Sun, 08 Dec 2019 08:49:33 +0000 (UTC)
+List-Unsubscribe: <https://manage.kmail-lists.com/subscriptions/unsubscribe?a=h3KqFy&c=PfHv3T&r=3pKZcPT&m=LHX8YG&k=8f86f389466c81ac4b26bf1464bff502>
+X-Kmail-Flow: H8DqvT
+X-Kmail-Ops: PfHv3T
+X-Kmail-Message: LHX8YG
+X-Kmail-Account: h3KqFy
+X-Kmail-Relay: [h3KqFy.krelaymail.com]:587
+Message-ID: <9ISfS116QO-xQkWtqM1XGg@ismtpd0098p1iad2.sendgrid.net>
+X-SG-EID: IZwSZ/Dq5dH4Ke3uDQ9UMu5G1euGAY7U0e51VF8TPl3A/woJ3sU25zAMcFxO9ImnxwVz4QdwsHBZes
+ DNHful9fNYYDdZVMpiOnGFpQv0ryNiJEsr/vjntNOQnX8+CxVT2WKQWqIOPy60L2RaSsrjfDb55LE6
+ TdZcEZFaaENZQoXXf9Xcv8MM9HuFR3Q298Rfzmo9CyYSU0zhjD5aljCZDCaaVRrHXcD//PyxIDIMFm
+ U=
+X-SG-ID: SBwR90D05tjy2td57hrBiFjVntzAFjoc6FrHMy2bG5ZpF2QTkibM+eeS+zF87DqyiBRzyEfzpPWDw/
+ CtqXefgaHjMa09GKpA+9A2Iu2yp1e4dOJDH5KxFI9LSOQDB8I9QGfDWXTcVuhjKYS94P1DVSKif73u
+ QCO/ZhOz8i5DHKc=
+X-Feedback-ID: 1918527:YkuJa1mc9JbnTdz1oRzSrqn5lXIjBVFHhg1jTklo4zk=:ZgsfIYSdCbCzUfwZU493uREIWKAvws+5Wwuaxm0jXsc=:SG
+
+--===============5171050173777753439==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Today we're learning all about the viewfinder, the main screen in our app.
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20
+
+=C2=A0
+
+pro camera - tip #1
+
+Jeff here from Moment. I'm one of the engineers on the app team and I'm exc=
+ited to get you up and running. We'll send one email per day for the first =
+week to walk you through the app.
+
+If you want to skip ahead we have getting started videos here
+<https://momnt.io/2UEpFDs> and written tutorials here
+<https://momnt.io/2V0AK16> . If you ever need anything, just reply and one =
+of our pro gear guides will help you out. Our service team is made up of pr=
+o photographers and filmmakers.
+
+Let's get started!
+
+bottom controls
+
+Gallery | We save all of your photos to your native camera roll. This makes=
+ managing your photos and videos easier. Some apps build their own librarie=
+s on your phone, but we found that to be a frustrating user experience. In =
+the library you can see your images where you can delete, share, favorite, =
+and click to edit in Darkroom
+<https://itunes.apple.com/us/app/darkroom-photo-editor/id953286746?mt=3D8> .
+
+Settings | Everything you need, from getting help to controlling advanced p=
+hoto and video settings. Location tracking is off by default, but you can t=
+urn this on if you want metadata attached to your photos.
+
+Capture Button | This is our main shutter to shoot photos, record videos or=
+ capture slow shutter shots. You can also use the volume buttons to snap a =
+photo. This is no ordinary shutter button and we'll dive into that in Tip #=
+2.
+
+Presets | Save and quickly switch between=C2=A0your favorite camera setting=
+s in the form of presets.
+
+Capture Mode | Toggle between photo, video, and slow shutter capture modes.
+
+HARDWARE CONTROLS
+
+On the right side of the viewfinder, you'll find tools to control various h=
+ardware.
+
+Moment Lens | Select which Moment Lens you're shooting with. We add that in=
+formation to the metadata on your photo and enable various features related=
+ to specific lenses.
+
+Flash | Allows you to toggle the flash between on, off and auto.
+
+Front Camera | Switches between the front and back cameras. It works like t=
+he toggle in the standard iPhone Camera app, so no surprises here.
+
+iPhone Lens |=C2=A0If you have multiple cameras on the back of your iPhone,=
+ use this to pick which lens to shoot with. This is most helpful if you're =
+using a Moment Lens
+<https://www.shopmoment.com/shop/categories/lenses> so the phone doesn't sw=
+itch on your behalf and provide a black screen.
+
+top controls - photo mode
+
+Let's jump to the top of the screen and go through the secondary controls. =
+We place these here as they are less frequently used.
+
+Timer | Select between no timer, three second, or ten second timer for your=
+ shots.
+
+Burst | Switch between single photo or burst mode. We get more into burst m=
+ode in some upcoming tips.
+
+File Type | Toggle between JPG, TIFF, and RAW. We dive into these formats i=
+n future emails. In short, JPG is a good standard format, TIFF is best for =
+printing, and RAW is best if you plan to edit.
+
+top controls - video mode
+
+Let's jump over to video mode.
+
+=C2=A0Color Profiles | Switch between Default, Flat and Log. We'll go over =
+this advanced feature later this week. Stick to Default if you're not sure =
+what this is.
+
+Resolution | Toggle between 720p, 1080p, and 4K. This is the size, or dimen=
+sions, of your video.
+
+Frame Rate | FPS is essentially the amount of still images or frames being =
+recorded each second in a video. Switch from 24 all the way to 240 when sup=
+ported.
+
+=C2=A0
+
+That's all for now!
+
+-Jeff
+
+Questions? We're here to help!
+
+Visit the App Help Center
+<https://momnt.io/2V0AK16> or=C2=A0 Email us
+<hello@shopmoment.com?subject=3DQuestions%20about%20Moment%20Pro%20Camera>
+
+S=C2=A0H O P
+<https://momnt.io/2Dad2oT>
+<http://instagram.com/moment>
+<https://www.twitter.com/moment>
+<https://www.facebook.com/momentlenses/>
+<https://www.youtube.com/moment>
+<http://pinterest.com/momentco>
+
+A=C2=A0P P
+<https://itunes.apple.com/us/app/moment-better-camera-for-mobile/id92709890=
+8?mt=3D8>
+<https://momnt.io/2Dad2oT>
+
+55 S Atlantic St Seattle, WA 98134
+
+Unsubscribe
+<https://manage.kmail-lists.com/subscriptions/unsubscribe?a=3Dh3KqFy&c=3DPf=
+Hv3T&r=3D3pKZcPT&g=3DNM3Neq&k=3D0f235aefa72ab628d2026f37ab40b724&m=3DLHX8YG>
+
+
+--===============5171050173777753439==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
+<title></title>
+
+<media_query_styles></media_query_styles>
+<!--[if mso]>
+    <style>
+=20=20=20=20=20=20
+      .templateContainer {
+        border: 0px none #AAAAAA;
+        background-color: #FFFFFF;
+=20=20=20=20=20=20=20=20
+          border-radius: 0px;
+=20=20=20=20=20=20=20=20
+      }
+      #brandingContainer {
+        background-color: transparent !important;
+        border: 0;
+      }
+=20=20=20=20=20=20
+=20=20=20=20=20=20
+      .templateContainerInner {
+        padding: 0px;
+      }
+=20=20=20=20=20=20
+    </style>
+  <![endif]-->
+</head>
+<body style=3D'margin:0;padding:0;font-family:"Raleway", Helvetica, sans-se=
+rif;font-weight:400;letter-spacing:0.75px;line-height:180%;background-color=
+:#EEEDEA'>
+
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Today we're learning all about the viewfinder, the main=
+ screen in our app. </div>
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C</div>
+<center>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=
+=3D"bodyTable" width=3D"100%" data-upload-file-url=3D"/ajax/email-editor/fi=
+le/upload" data-upload-files-url=3D"/ajax/email-editor/files/upload" style=
+=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-la=
+yout:auto;padding:0;background-color:#EEEDEA;height:100%;margin:0;width:100=
+%">
+<tbody>
+<tr>
+<td align=3D"center" id=3D"bodyCell" valign=3D"top" style=3D"border-collaps=
+e:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:auto;padding-=
+top:10px;padding-left:20px;padding-bottom:20px;padding-right:20px;border-to=
+p:0;height:100%;margin:0;width:100%">
+<!--[if !mso]><!-->
+<div class=3D"templateContainer" style=3D"border:0 none #AAA;background-col=
+or:#FFF;border-radius:0;display: table; width:600px">
+<div class=3D"templateContainerInner" style=3D"padding:0">
+<!--<![endif]-->
+<!--[if mso]>
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"templateContainer"  width=3D"600" style=3D"border-collapse:collapse;mso=
+-table-lspace:0;mso-table-rspace:0;">
+              <tbody>
+                <tr>
+                  <td class=3D"templateContainerInner" style=3D"border-coll=
+apse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+            <![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-l=
+ayout:fixed">
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse;mso-t=
+able-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top" style=3D"border-colla=
+pse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<!--[if !mso]><!-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck kmMobileOnly" width=3D"100%" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;display:none;min-width:100%=
+">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner kmMobileStretch" style=3D"border-collapse:co=
+llapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:9px=
+;padding-top:20px;padding-bottom:20px;background-color:#FFFFFF;padding-left=
+:0px;padding-right:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/9faa11fb-3f06-4baf-8ede-5e5b31a68c=
+14.png" width=3D"564" style=3D"border:0;height:auto;line-height:100%;outlin=
+e:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inline;=
+vertical-align:top;font-size:12px;width:100%;max-width:1200px;padding:0px;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--<![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse;mso-t=
+able-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top" style=3D"border-colla=
+pse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso=
+-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:9px;padding-top:35p=
+x;padding-right:9;background-color:#EEEDEA;padding-left:9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/0359a58f-e7e3-41f9-9deb-527c40b401=
+eb.gif" width=3D"250" style=3D"border:0;height:auto;line-height:100%;outlin=
+e:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inline;=
+vertical-align:top;font-size:12px;width:100%;max-width:250px;padding:0;bord=
+er-width:0;background-color:#EEEDEA;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0=
+px;padding-right:19px;background-color:#EEEDEA;padding-left:19px;padding-bo=
+ttom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;color:#000000;pad=
+ding-bottom:18px;padding-right:33px;padding-left:33px;padding-top:0px;borde=
+r-width:0px;background-color:#EEEDEA;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align=
+: center;'>=C2=A0</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align=
+: center;'><font face=3D"Lato, Helvetica, sans-serif"><span style=3D"font-s=
+ize: 20px; letter-spacing: 2px; text-transform: uppercase;"><b>pro camera -=
+ tip #1</b></span></font></p>
+<style type=3D"text/css">
+@import url("https://fonts.googleapis.com/css?family=3DRaleway:400|Sanchez:=
+400,400italic|Lato:900");
+</style>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse;mso-t=
+able-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top" style=3D"border-colla=
+pse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:0px;p=
+adding-bottom:0px;padding-left:80px;padding-right:80px;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse;mso-t=
+able-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top" style=3D"border-colla=
+pse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-right=
+:45px;background-color:#EEEDEA;padding-left:45px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-style:ridg=
+e;padding-bottom:20px;padding-right:33px;padding-left:33px;padding-top:15px=
+;border-width:0px;background-color:#EEEDEA;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><font col=
+or=3D"#000000" face=3D"Raleway, sans-serif" style=3D"font-size: 16px;"><spa=
+n style=3D"white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Jeff here fro=
+m Moment. I'm one of the engineers on</span></font><span style=3D"font-size=
+: 16px; color: rgb(0, 0, 0); font-family: Raleway, sans-serif; white-space:=
+ pre-wrap; caret-color: rgb(0, 0, 0);"> the app team and I'm excited to get=
+ you up and running. We'll send one email per day for the first week to wal=
+k you through the app. </span></p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"color: rgb(0, 0, 0); font-family: Raleway, sans-serif; font-size: 16p=
+x; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">If you want to skip a=
+head we have getting started videos <u><a href=3D"https://trk.klclick.com/w=
+f/click?upn=3DrLkXA6STgTDe28BYIn90NIP3PsFXv0IOs7ozW4Dw5hu8WivRqjjyfBb6nk-2B=
+EW36ChQ22ef2jp-2BRqD3DAXeDmjUvYSk6RCS9PA16y0NmuBWGpXnS1VfTZ3HgmHXMRKLuhcXyZ=
+1K6pIuOUB0K5a0jVn5P7IJ5tHEzjZXH1TUE3UbQ-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4=
+GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F=
+8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikai=
+jRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfUl-2B-2BHzEvcJNZ1sv0lnRyXWeK=
+cxVzTrLzRtBu1BdkpmgPsb953wRAbWbf01578hRXTZN43ezDI4G6thHhR4n-2F7AgK2-2Fmlgbi=
+-2BZYjA7yJ41W1589eV8Mv1hwT8CSgOdzB1c5BpxXCK3PcfCL4kkuZ8XQ8mMn-2FiIUTgrd3OcF=
+Td27TnOLb-2FKrOXlD3ja6UMyAZjg-3D-3D" style=3D"word-wrap:break-word;max-widt=
+h:100%;color:#191919;font-weight:normal;text-decoration:none">here</a></u> =
+and written tutorials <u><a href=3D"https://trk.klclick.com/wf/click?upn=3D=
+rLkXA6STgTDe28BYIn90NOwIMyFr8a7H9oG55lQOWyzUP6uS4n9IKSBYlDcKWfG7Ba7eUVpVCfR=
+2F0b1kp3-2BMexxHfpe034zvdsimAoTReTLPRjc9s92VUewIQXVACZ7uy3JULCoRtnU61RI4vaY=
+8r5f95sihKrjBJN-2FmYAZbsU-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0=
+YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20i=
+R5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZ=
+CB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfW99DgM-2FK7MVS-2BvGw9CAeG-2FhVj1TWbYL3yIli=
+uY5pHh18tMEhxcPC7QJutbG3oGAOWP5yYu-2B5PJEf0sumIsU3FYQfNYuqwWtWRoRH2tTgtl-2B=
+7iaVdkGutV1SaT96tjhjzSbbiax-2BHcEECJVKRiSw-2BDDuVKFb0-2Bl2aW46zMCZau0QWJ5qK=
+Oeipa9MOo3tt0WC6A-3D-3D" style=3D"word-wrap:break-word;max-width:100%;color=
+:#191919;font-weight:normal;text-decoration:none">here</a></u>. If you ever=
+ need anything, just reply and one of our pro gear guides will help you out=
+. Our service team is made up of pro photographers and filmmakers. </span><=
+/p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"color: rgb(0, 0, 0); font-family: Raleway, sans-serif; font-size: 16p=
+x; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Let's get started! </=
+span></p>
+<div><span id=3D"docs-internal-guid-2357666f-7fff-7bb1-5060-7330c6b4abcd"><=
+span style=3D"font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); bac=
+kground-color: transparent; font-variant-numeric: normal; font-variant-east=
+-asian: normal; vertical-align: baseline; white-space: pre-wrap;"></span></=
+span></div>
+<p dir=3D"ltr" style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", =
+Helvetica, sans-serif;font-weight:400;letter-spacing:0.75px;line-height:180=
+%;line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;'><span style=3D"ca=
+ret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard=
+;"><span style=3D"font-size: 10pt; font-family: Raleway; background-color: =
+transparent; font-variant-ligatures: normal; font-variant-east-asian: norma=
+l; font-variant-position: normal; vertical-align: baseline; white-space: pr=
+e-wrap;"></span></span></p>
+<p dir=3D"ltr" style=3D'margin:0;padding-bottom:0;font-family:"Raleway", He=
+lvetica, sans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;=
+line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;'><span id=3D"docs-i=
+nternal-guid-3d73629b-7fff-06cb-412a-d1efce6ca5b5" style=3D"caret-color: rg=
+b(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard;"><span styl=
+e=3D"font-size: 10pt; font-family: Raleway; background-color: transparent; =
+font-variant-ligatures: normal; font-variant-east-asian: normal; font-varia=
+nt-position: normal; vertical-align: baseline; white-space: pre-wrap;"></sp=
+an></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso=
+-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0px;padding-right:0=
+px;background-color:#EEEDEA;padding-left:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding:0;text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/d606f791-99c4-4b4d-bbad-61a4096a17=
+8f.jpeg" width=3D" 510 " style=3D"border:0;height:auto;line-height:100%;out=
+line:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inli=
+ne;vertical-align:top;font-size:12px;width:100%;max-width:510px;padding:0;b=
+order-width:0;background-color:#EEEDEA;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0=
+px;padding-right:45px;background-color:#EEEDEA;padding-left:45px;padding-bo=
+ttom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;color:#000000;pad=
+ding-bottom:0px;padding-right:33px;padding-left:33px;padding-top:40px;borde=
+r-width:0px;background-color:#FFFFFF;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"font-size:16px;"><font face=3D"Lato, Helvetica, sans-serif"><span sty=
+le=3D"letter-spacing: 2px; text-transform: uppercase;"><b>bottom controls</=
+b></span></font></span></p>
+<style type=3D"text/css">
+@import url("https://fonts.googleapis.com/css?family=3DRaleway:400|Sanchez:=
+400,400italic|Lato:900");
+</style>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-right=
+:45px;background-color:#EEEDEA;padding-left:45px;padding-bottom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:9px;p=
+adding-bottom:9px;background-color:#FFFFFF;padding-left:33px;padding-right:=
+33px;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><b style=
+=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Ralewa=
+y; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Gall=
+ery | </b><span style=3D"background-color: transparent; color: rgb(0, 0, 0)=
+; font-family: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color=
+: rgb(0, 0, 0);">We save all of your photos to your native camera roll. Thi=
+s makes managing your photos and videos easier. Some apps build their own l=
+ibraries on your phone, but we found that to be a frustrating user experien=
+ce. In the library you can see your images where you can delete, share, fav=
+orite, and click to edit in </span><a href=3D"https://trk.klclick.com/wf/cl=
+ick?upn=3DrLkXA6STgTDe28BYIn90NHVVbzGsEKUdI1SUEEMa8kHOXXlj3CVT9-2F4yvmqf5YL=
+Hn9Cvfdsrd5eqXeLy-2BmjaPM42xWOSSPHPnHaS5cpINsh3O7u5Rot2OYq4Z3KZyqJkpB1K-2FO=
+5XhHzG1QeClXB9g31qrv-2BUtiph9zzpGl-2Fp1Ljg3IlUkDXpB6nM82XuCmJVXItPAQNWe-2BI=
+zkGXTVmGu3Y49gOMzYyXOmxsOM-2BqNeJY-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTP=
+uTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUM=
+NL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcET=
+cVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfWvFKximR-2Bl-2FNJJDdJe1R58ZYdTX-2=
+B-2FMWGO71vk2cM61qARVjTxwZ18GH4AmCG7LVBFeL5AhmOoLOOFoZwKQiFOyCEOcWCwxYr4cq6=
+Q9pX2BaWa3Nlu3929kDOQ-2BC4cjb4E2-2Bdv5F7N0hExytmSZWBABnNO0v6R63g9AK39sqzbf0=
+V-2Bnil3gU-2FOr8cD2sc9IYUw-3D-3D" style=3D"word-wrap:break-word;max-width:1=
+00%;color:#191919;font-weight:normal;text-decoration:none;background-color:=
+ transparent; font-family: Raleway; font-size: 10pt; white-space: pre-wrap;=
+ caret-color: rgb(0, 0, 0);"><u>Darkroom</u></a><span style=3D"background-c=
+olor: transparent; color: rgb(0, 0, 0); font-family: Raleway; font-size: 10=
+pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">.</span></p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><b style=
+=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Ralewa=
+y; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Sett=
+ings </b><b style=3D"background-color: transparent; color: rgb(0, 0, 0); fo=
+nt-family: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rg=
+b(0, 0, 0);">| </b><span style=3D"background-color: transparent; color: rgb=
+(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; ca=
+ret-color: rgb(0, 0, 0);">Everything you need, from getting help to control=
+ling advanced photo and video settings. Location tracking is off by default=
+, but you can turn this on if you want metadata attached to your photos.</s=
+pan><br>
+<br>
+<span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-fam=
+ily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0=
+, 0); font-weight: 700; font-variant-east-asian: normal; vertical-align: ba=
+seline;">Capture Button</span><span style=3D"background-color: transparent;=
+ color: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: p=
+re-wrap; caret-color: rgb(0, 0, 0); font-variant-east-asian: normal; vertic=
+al-align: baseline;"> <b style=3D"background-color: transparent; color: rgb=
+(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; ca=
+ret-color: rgb(0, 0, 0);">|</b> This is our main shutter to shoot photos, r=
+ecord videos or capture slow shutter shots. You can also use the volume but=
+tons to snap a photo. This is no ordinary shutter button and we'll dive int=
+o that in Tip #2. </span></p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><strong>P=
+resets | </strong>Save and quickly switch between=C2=A0your favorite camera=
+ settings in the form of presets.</p>
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span style=
+=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Ralewa=
+y; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0); font-=
+weight: 700; font-variant-east-asian: normal; vertical-align: baseline;">Ca=
+pture Mode</span><span style=3D"background-color: transparent; color: rgb(0=
+, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; care=
+t-color: rgb(0, 0, 0); font-variant-east-asian: normal; vertical-align: bas=
+eline;"> <b style=3D"background-color: transparent; color: rgb(0, 0, 0); fo=
+nt-family: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rg=
+b(0, 0, 0);">|</b> Toggle between photo, video, and slow shutter capture mo=
+des. </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed;background-color:#EEEDEA">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:20px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso=
+-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0px;padding-right:9=
+;background-color:#EEEDEA;padding-left:9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding:0;text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/8c38fdc2-48fd-45d8-83e4-2bc243d34f=
+66.jpeg" width=3D" 510 " style=3D"border:0;height:auto;line-height:100%;out=
+line:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inli=
+ne;vertical-align:top;font-size:12px;width:100%;max-width:510px;padding:0;b=
+order-width:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0=
+px;padding-right:45px;background-color:#EEEDEA;padding-left:45px;padding-bo=
+ttom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;color:#000000;pad=
+ding-bottom:0px;padding-right:33px;padding-left:33px;padding-top:40px;borde=
+r-width:0px;background-color:#FFFFFF;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"font-size:16px;"><font face=3D"Lato, Helvetica, sans-serif"><span sty=
+le=3D"letter-spacing: 2px; text-transform: uppercase;"><b>HARDWARE CONTROLS=
+</b></span></font></span></p>
+<style type=3D"text/css">
+@import url("https://fonts.googleapis.com/css?family=3DRaleway:400|Sanchez:=
+400,400italic|Lato:900");
+</style>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-right=
+:45px;background-color:#EEEDEA;padding-left:45px;padding-bottom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:9px;p=
+adding-bottom:9px;background-color:#FFFFFF;padding-left:33px;padding-right:=
+33px;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Rale=
+way; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">On=
+ the right side of the viewfinder, you'll find tools to control various har=
+dware.</span><br>
+<br>
+<span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-fam=
+ily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0=
+, 0); font-weight: 700; font-variant-east-asian: normal; vertical-align: ba=
+seline;">Moment Lens</span><span style=3D"background-color: transparent; co=
+lor: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-=
+wrap; caret-color: rgb(0, 0, 0); font-variant-east-asian: normal; vertical-=
+align: baseline;"> <b style=3D"background-color: transparent; font-size: 10=
+pt;">|</b> Select which Moment Lens you're shooting with. We add that infor=
+mation to the metadata on your photo and enable various features related to=
+ specific lenses.</span><br>
+<br>
+<strong style=3D"background-color: transparent; color: rgb(0, 0, 0); font-f=
+amily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0,=
+ 0, 0);"><span style=3D"background-color: transparent; font-size: 10pt;">Fl=
+ash </span></strong><b style=3D"background-color: transparent; color: rgb(0=
+, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; care=
+t-color: rgb(0, 0, 0);">|</b><span style=3D"background-color: transparent; =
+color: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pr=
+e-wrap; caret-color: rgb(0, 0, 0);"> Allows you to toggle the flash between=
+ on, off and auto.</span><br>
+<br>
+<span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-fam=
+ily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0=
+, 0);"><span style=3D"background-color: transparent; font-size: 10pt;"><str=
+ong>Front Camera</strong><b> </b></span></span><b style=3D"background-color=
+: transparent; color: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; =
+white-space: pre-wrap; caret-color: rgb(0, 0, 0);">|</b><span style=3D"back=
+ground-color: transparent; color: rgb(0, 0, 0); font-family: Raleway; font-=
+size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);"> Switches be=
+tween the front and back cameras. It works like the toggle in the standard =
+iPhone Camera app, so no surprises here.</span></p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><strong>i=
+Phone Lens |=C2=A0</strong>If you have multiple cameras on the back of your=
+ iPhone, use this to pick which lens to shoot with. This is most helpful if=
+ you're using a <a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STg=
+TDe28BYIn90NMXA9sfgmGrY-2BpB9z-2BnFwArPk1avk5qrfgyYA2CoCilIVuVuHiWtrGIfXd6f=
+qMFfZsgYhrxyCpm4KmyzLq-2FlSvc-2Ba44xx8Uf6XPykx-2Fy5mCzK2StJIiEC-2BhVuXbVoOp=
+bjjJC4oVLIOxD4EWPaz8vay07c8yCP-2BNEckOfXMyCFFbFBVh6auGgtqAWC9pRBaNDwg-3D-3D=
+_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN=
+8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZ=
+PQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BP=
+a-2FfatmYASVl4xejRPUmT-2Bwwavueakpbn1NRdsA9O1JUqapDLVjv6AMC-2B21U10wfs9IipU=
+38w0Djqi-2F8I42cK9JYCQ5z76fqZWQzf2-2BsjWPF5rLaIlWEOOd5-2F7Xng9HXmMDI2PLhGNl=
+jQIGZwxdUaMVO6gnrYQQORhq9XzbmuVj86M-2BLhJTJQtEPcgNIri39SCdhQ-3D-3D" style=
+=3D"word-wrap:break-word;max-width:100%;color:#191919;font-weight:normal;te=
+xt-decoration:none">Moment Lens</a> so the phone doesn't switch on your beh=
+alf and provide a black screen.</p>
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span style=
+=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Ralewa=
+y; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);"></sp=
+an></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed;background-color:#EEEDEA">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:20px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso=
+-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0px;padding-right:9=
+;background-color:#EEEDEA;padding-left:9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding:0;text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/a9c924c6-7269-4ba8-a68f-4b921591dd=
+48.jpeg" width=3D" 510 " style=3D"border:0;height:auto;line-height:100%;out=
+line:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inli=
+ne;vertical-align:top;font-size:12px;width:100%;max-width:510px;padding:0;b=
+order-width:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0=
+px;padding-right:45px;background-color:#EEEDEA;padding-left:45px;padding-bo=
+ttom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;color:#000000;pad=
+ding-bottom:0px;padding-right:33px;padding-left:33px;padding-top:40px;borde=
+r-width:0px;background-color:#FFFFFF;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"font-size:16px;"><font face=3D"Lato, Helvetica, sans-serif"><span sty=
+le=3D"letter-spacing: 2px; text-transform: uppercase;"><b>top controls - ph=
+oto mode</b></span></font></span></p>
+<style type=3D"text/css">
+@import url("https://fonts.googleapis.com/css?family=3DRaleway:400|Sanchez:=
+400,400italic|Lato:900");
+</style>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-right=
+:45px;background-color:#EEEDEA;padding-left:45px;padding-bottom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:9px;p=
+adding-bottom:9px;background-color:#FFFFFF;padding-left:33px;padding-right:=
+33px;">
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span style=
+=3D"background-color: transparent; color: rgb(0, 0, 0); font-family: Ralewa=
+y; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Let'=
+s jump to the top of the screen and go through the secondary controls. We p=
+lace these here as they are less frequently used. </span><br>
+<br>
+<span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-fam=
+ily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0=
+, 0); font-weight: 700; font-variant-east-asian: normal; vertical-align: ba=
+seline;">Timer</span><span style=3D"background-color: transparent; color: r=
+gb(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; =
+caret-color: rgb(0, 0, 0); font-variant-east-asian: normal; vertical-align:=
+ baseline;"> <b style=3D"background-color: transparent; font-size: 10pt;">|=
+</b> Select between no timer, three second, or ten second timer for your sh=
+ots.</span><br>
+<br>
+<strong style=3D"background-color: transparent; color: rgb(0, 0, 0); font-f=
+amily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0,=
+ 0, 0);"><span style=3D"background-color: transparent; font-size: 10pt;">Bu=
+rst </span></strong><b style=3D"background-color: transparent; color: rgb(0=
+, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pre-wrap; care=
+t-color: rgb(0, 0, 0);">|</b><span style=3D"background-color: transparent; =
+color: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; white-space: pr=
+e-wrap; caret-color: rgb(0, 0, 0);"> Switch between single photo or burst m=
+ode. We get more into burst mode in some upcoming tips.</span><br>
+<br>
+<span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-fam=
+ily: Raleway; font-size: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0=
+, 0);"><span style=3D"background-color: transparent; font-size: 10pt;"><str=
+ong>File Type</strong><b> </b></span></span><b style=3D"background-color: t=
+ransparent; color: rgb(0, 0, 0); font-family: Raleway; font-size: 10pt; whi=
+te-space: pre-wrap; caret-color: rgb(0, 0, 0);">|</b><span style=3D"backgro=
+und-color: transparent; color: rgb(0, 0, 0); font-family: Raleway; font-siz=
+e: 10pt; white-space: pre-wrap; caret-color: rgb(0, 0, 0);"> Toggle between=
+ JPG, TIFF, and RAW. We dive into these formats in future emails. In short,=
+ JPG is a good standard format, TIFF is best for printing, and RAW is best =
+if you plan to edit.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed;background-color:#EEEDEA">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:20px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso=
+-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0px;padding-right:9=
+;background-color:#EEEDEA;padding-left:9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding:0;text-align: center;">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/eaf7e81c-9033-4d9b-b1b8-1655dfcdce=
+33.jpeg" width=3D" 510 " style=3D"border:0;height:auto;line-height:100%;out=
+line:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inli=
+ne;vertical-align:top;font-size:12px;width:100%;max-width:510px;padding:0;b=
+order-width:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:0=
+px;padding-right:45px;background-color:#EEEDEA;padding-left:45px;padding-bo=
+ttom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;color:#000000;pad=
+ding-bottom:0px;padding-right:33px;padding-left:33px;padding-top:40px;borde=
+r-width:0px;background-color:#FFFFFF;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><span sty=
+le=3D"font-size:16px;"><font face=3D"Lato, Helvetica, sans-serif"><span sty=
+le=3D"letter-spacing: 2px; text-transform: uppercase;"><b>top controls - vi=
+deo mode</b></span></font></span></p>
+<style type=3D"text/css">
+@import url("https://fonts.googleapis.com/css?family=3DRaleway:400|Sanchez:=
+400,400italic|Lato:900");
+</style>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-right=
+:45px;background-color:#EEEDEA;padding-left:45px;padding-bottom:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:9px;p=
+adding-bottom:9px;background-color:#FFFFFF;padding-left:33px;padding-right:=
+33px;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'>Let's jum=
+p over to video mode.</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><strong>=
+=C2=A0Color Profiles</strong> | Switch between Default, Flat and Log. We'll=
+ go over this advanced feature later this week. Stick to Default if you're =
+not sure what this is.</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><strong>R=
+esolution</strong> | Toggle between 720p, 1080p, and 4K. This is the size, =
+or dimensions, of your video.</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'><strong>F=
+rame Rate</strong> | FPS is essentially the amount of still images or frame=
+s being recorded each second in a video. Switch from 24 all the way to 240 =
+when supported.</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'>=C2=A0</p>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'>That's al=
+l for now!</p>
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%'>-Jeff</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"kmDividerBlock" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;table-layout:fixed;background-color:#EEEDEA">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:10px;padding-=
+bottom:0px;padding-left:45px;padding-right:45px;">
+<table class=3D"kmDividerContent" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0=
+;mso-table-rspace:0;table-layout:fixed;border-top-width:3px;border-top-styl=
+e:solid;border-top-color:#FFFFFF;">
+<tbody>
+<tr><td style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;table-layout:fixed"><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:6=
+5px;padding-bottom:0px;background-color:#EEEDEA;padding-left:19px;padding-r=
+ight:19px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:0px;p=
+adding-bottom:25px;background-color:#EEEDEA;padding-left:33px;padding-right=
+:33px;">
+<h3 style=3D'color:#191919;display:block;font-family:"Lato", Helvetica, san=
+s-serif;font-size:16px;font-style:normal;font-weight:900;line-height:150%;l=
+etter-spacing:2px;margin:0;margin-bottom:12px;text-align:left;text-transfor=
+m:uppercase;text-align: center;'><span style=3D"font-size: 14px;">Questions=
+? We're here to help!</span></h3>
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align=
+: center;'><span style=3D"color: rgb(0, 0, 0); font-size: 12px; text-align:=
+ center;"></span><span style=3D"color: rgb(0, 0, 0); font-size: 12px; text-=
+align: center;"><a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STg=
+TDe28BYIn90NOwIMyFr8a7H9oG55lQOWyzUP6uS4n9IKSBYlDcKWfG7Ba7eUVpVCfR2F0b1kp3-=
+2BMexxHfpe034zvdsimAoTReTLPRjc9s92VUewIQXVACZ7uy3JULCoRtnU61RI4vaY8r5f95sih=
+KrjBJN-2FmYAZbsU-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO=
+9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd1=
+5jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0=
+eFlhbjqUx3rQWti-2BPa-2FfQG30iffJih8MrS4j7yBO39t8HR-2FrxNnzLzb1HM9a7mp-2Be3x=
+h7dviV-2F5qxZREuRgnpMkDi9JIypotF2PtZ1kvTcRKxemjkLqPEnVPsOkvFQ8-2BuAGXfdXF4A=
+RzZZ4JVj7zOyoUSU4Dlnb44vi7VlLEWLd7WheVIx8Vmc-2FW6gPqVZnUae-2FJ53rISW-2FuZML=
+DXEBLg-3D-3D" style=3D"word-wrap:break-word;max-width:100%;color:#191919;fo=
+nt-weight:normal;text-decoration:none"><u style=3D"text-align: center; colo=
+r: rgb(0, 0, 0); font-size: 12px;">Visit the App Help Center</u></a> or=C2=
+=A0</span><u style=3D"color: rgb(0, 0, 0); font-size: 12px; text-align: cen=
+ter;"><a href=3D"mailto:hello@shopmoment.com?subject=3DQuestions%20about%20=
+Moment%20Pro%20Camera" style=3D"word-wrap:break-word;max-width:100%;color:#=
+191919;font-weight:normal;text-decoration:none">Email us</a></u></p>
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align: =
+center;'><span style=3D"color: rgb(0, 0, 0); font-size: 12px; text-align: c=
+enter;"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%" style=3D"border-collapse:collapse;mso-tabl=
+e-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" valign=3D"top" style=3D"border-collapse:col=
+lapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding-top:=
+15px;padding-bottom:15px;background-color:#EEEDEA;padding-left:45px;padding=
+-right:45px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" width=3D"100%" style=3D"border-collapse:collapse;mso-table-ls=
+pace:0;mso-table-rspace:0;table-layout:fixed;background-color:#EEEDEA;">
+<thead>
+<tr>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:25=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:10=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:10=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:10=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:10=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:left;width:10=
+%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;pa=
+dding-top:4px;background-color:#EEEDEA;">
+</th>
+<th valign=3D"top" class=3D"kmTextContent" style=3D"color:#191919;font-fami=
+ly:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:normal;t=
+ext-align:left;max-width:100%;word-wrap:break-word;text-align:right;width:2=
+5%;padding-right:0px;padding-bottom:4px;font-weight:bold;padding-left:0px;p=
+adding-top:4px;background-color:#EEEDEA;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:25%;;border-top-style:solid;padding-bottom:4px;padd=
+ing-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bor=
+der-top-width:0px;">
+<span style=3D"font-size:11px;"><span style=3D"font-family:tahoma,geneva,sa=
+ns-serif;"></span></span><span style=3D"font-size:11px;"><span style=3D"fon=
+t-family:tahoma,geneva,sans-serif;"></span></span><span style=3D"font-size:=
+11px;"><span style=3D"font-family:tahoma,geneva,sans-serif;"><a href=3D"htt=
+ps://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NIPqwRs1piFHPIykJ63=
+-2BYDzZC8D59G1vwlt6NL2K2D-2FJk4EKtaWwehtYyOPw6wwAOL1mmUIsMxbIlZ6MuBMVqtGTQY=
+FzwBCFm2g6p7jLIi-2FgSXPK74uKw9ydjOc6ftudbt38em3SJl6y0iqe4J1ODn4-3D_Kzru7UZQ=
+tfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2=
+VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUD=
+RhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfXPFE=
+mlCQgfbo55JFYnacKNMV6BWUAKlOXzvOBeaz-2FeEt59Jm0pup87TdrsjsVC0UOa4rWI2r1YpOm=
+61PvRD93Az7-2BAtkFJjdlbIUlsRxCmLAcJZsU5Fw04lJv5F60DH8z5ezE-2BWBHw49V-2B-2Fg=
+KtV9vwoFnN3YvCOsgDdM2xyhLlJNZh0-2FndHZTsEphBcrBUOGQ-3D-3D" style=3D"word-wr=
+ap:break-word;max-width:100%;color:#191919;font-weight:normal;text-decorati=
+on:none">S=C2=A0H O P</a></span></span>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:10%;border-top-style:solid;padding-bottom:4px;paddi=
+ng-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bord=
+er-top-width:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-r=
+space:0;table-layout:fixed">
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DGGxo-2FMIAY38b45N6DQUI5wO=
+CTzt-2B0q5jqLkcCVbc3J-2Blxf2fT6-2BQY4pLaju6WDmEqwrc7R-2FDaYATIkGqXTW2BDbwJD=
+6UZcOizqcBiVJkMJOipLhh-2FO919c3xt2KmqPVsu029cI6l1-2Fs24Q5V0tFgE-2Baz7JpQJ0v=
+2NfoysFBA9RI-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F=
+-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEn=
+D4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlh=
+bjqUx3rQWti-2BPa-2FffzFLUDBwV33wQVN8XSa1h4gTNvNKQYJFrnUGTrOAdg9HkFRKqJdz21u=
+Ti1JrH1n4A3XmoLVFAe3cOqAWH7j5ujsxtWKZ6i8ovuSs4LNpbSXMGbKNpbcHjhU77EDZuC1pqT=
+5zHrhdaHit2JxV0Tl8jMWCn07el9nitRfB1AF657HxOZ3aYvOlqKG9ynh-2BLG8tA-3D-3D" ta=
+rget=3D"_self" style=3D"word-wrap:break-word;max-width:100%;color:#191919;f=
+ont-weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"Instagram" class=3D"kmImage" src=3D"https://d3=
+k81ch9hvuctc.cloudfront.net/company/h3KqFy/images/5f59d4e3-540b-41ce-ad6e-4=
+f9e4e4d2851.png" width=3D"24" style=3D"border:0;height:auto;line-height:100=
+%;outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display=
+:inline;vertical-align:top;font-size:12px;width:100%;max-width:64px;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:10%;border-top-style:solid;padding-bottom:4px;paddi=
+ng-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bord=
+er-top-width:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-r=
+space:0;table-layout:fixed">
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NGY8Y=
+oVTMFf0Xv0fhRSJYwn781FojjGM4iYpYKXXLH3RNmfvrEYdYisfdJu1MzEJRSEdhWM-2F3OPbkb=
+29nV2a8s9qQYSBRj-2B1JDzJdoBIxG67xN7HAWoxQWfZ9j06O4sVEwBZZbXmtiCSMNUQ-2F28xR=
+8w-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6=
+f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924Wb=
+SpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWt=
+i-2BPa-2FffWjlv92JLdYFUN6dHICCYNHrlpjZ9PoQt-2F5jk1mvNAkoNJ4TTlkN9gvo0gJo1Dp=
+DC-2BDcWZekb2jXqNwgmCi1N8avlR87xYDNsomJFJ4nuYY3VBwwnwWFPcetA6gqmUmyEWJdCW5j=
+ha-2BPkm3dHJEaHnY-2BCdNnrOcgXEKbHbvwZw6fpFkIxSFCwn9h-2BnrZ5Tq1w-3D-3D" targ=
+et=3D"_self" style=3D"word-wrap:break-word;max-width:100%;color:#191919;fon=
+t-weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"Twitter" class=3D"kmImage" src=3D"https://d3k8=
+1ch9hvuctc.cloudfront.net/company/h3KqFy/images/42a2bae9-fe5f-4465-ac46-198=
+06f1a119c.png" width=3D"24" style=3D"border:0;height:auto;line-height:100%;=
+outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display:i=
+nline;vertical-align:top;font-size:12px;width:100%;max-width:64px;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:10%;border-top-style:solid;padding-bottom:4px;paddi=
+ng-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bord=
+er-top-width:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-r=
+space:0;table-layout:fixed">
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NODKO=
+SU6PnGyyjrGtdUYrcZBnIqlE-2FUBhTTntKWE-2BlYaGga587XmC58TFSsyqwBlsFlM4Ww5UpLY=
+CJeXXpEl82mj7NyDRaWtBRq5UWkQK6fSP3al0GxRLcfTAnW4h0Lxy0VYns0NmCLZTS8Ql-2FJ0i=
+cBNkKjYWHNQngASOusZciXK_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny=
+76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUF=
+NMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5Dc=
+xtB0eFlhbjqUx3rQWti-2BPa-2FfRuuMgKKJL26Jalxl-2BIDd3N6Nv5uNqgc5AjTzaAcjMa8J5=
+iSE6WCprgd8Dk46fUtLhAtTu8EzazJe4Ib99PT-2B9DFKY7xgUnYE9AU25zkviCE2bG1FQ8sSz-=
+2BrmEUSO87SAuLhzXY2lB35jdgtlo8iqXdI-2FIcl5ujeRqlOawT09gqXiOSxolOwtbh2bpTiLw=
+w7DQ-3D-3D" target=3D"_self" style=3D"word-wrap:break-word;max-width:100%;c=
+olor:#191919;font-weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"Facebook" class=3D"kmImage" src=3D"https://d3k=
+81ch9hvuctc.cloudfront.net/company/h3KqFy/images/5433e6b8-01e9-4004-a5d6-d9=
+f082a416bf.png" width=3D"24" style=3D"border:0;height:auto;line-height:100%=
+;outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display:=
+inline;vertical-align:top;font-size:12px;width:100%;max-width:64px;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:10%;border-top-style:solid;padding-bottom:4px;paddi=
+ng-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bord=
+er-top-width:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-r=
+space:0;table-layout:fixed">
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NIS1v=
+9sDB6CCvudaBTJVpq29JPvr0Tr6a2P0FoUHyXwbCVjYo4XEDVH2UQ4kgAqib8-2F5RryH0CDQzg=
+Pr4DscLKD9hD-2FCNva-2B8ts4GDl0t4g44Q199ZY2rHOnIKSz8hAvWcQxHo00IyZWP5ZIcP3N3=
+Fc-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6=
+f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924Wb=
+SpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWt=
+i-2BPa-2FfXO41eFiXLltNw7kZkBG8zaBqepkQzLZD7NM7GnByzKPeSFO9TAyk93edtnoiewllC=
+aGdF7W4K6S7tTWFzCEE3s-2BQ-2B3OLxXrRQcsMdXiL0QtIK5DSe4jlJGQgxEVDGB4oQy25Eryp=
+kXenbeULHTTN-2FfQY8oBEPsPKnOSQp5yf704h-2F2I0JrY09iSLf8EtX51Gw-3D-3D" target=
+=3D"_self" style=3D"word-wrap:break-word;max-width:100%;color:#191919;font-=
+weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"YouTube" class=3D"kmImage" src=3D"https://d3k8=
+1ch9hvuctc.cloudfront.net/company/h3KqFy/images/70104e45-731f-4b7f-a0e1-9a5=
+ab408057d.png" width=3D"24" style=3D"border:0;height:auto;line-height:100%;=
+outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display:i=
+nline;vertical-align:top;font-size:12px;width:100%;max-width:221px;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-bottom:non=
+e;text-align:left;width:10%;border-top-style:solid;padding-bottom:4px;paddi=
+ng-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;bord=
+er-top-width:0px;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-r=
+space:0;table-layout:fixed">
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DRFQchWfqfgi5KMb84EF70NBcY=
+8aLJidEinZ0oolNzpV4Xl3I0y6hoYPy3FqjN6WVCkNd111JS9GIjEVzU5CdHFtWquBXSvawyd-2=
+Bhkj3AaR4B9ylpChz05sUmZHdxazVJjqHUF0USwT22HPyQfZ3N5YfSKXBe4K4uLocbwCeiBo0-3=
+D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13g=
+N8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoB=
+ZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2B=
+Pa-2FfRwpKy93-2FczJaSIbQSWtQ-2Fw9B3S3LP3ImUaqQfDucwJbp0p1rcS8QYuDv-2BxC3N8S=
+WZDaGf6Lu1TZpglJ2u9SfQJdU1LoUzvvKb9k7sYv-2FRawRFB9alarXu-2Bk-2B4f95-2F339v-=
+2BMvzitY3YmasKuQBxwN4FobIdo7C9g0vUQXL-2Bv7JrCMH9dvhlOE6vzt4PKYsT4wg-3D-3D" =
+target=3D"_self" style=3D"word-wrap:break-word;max-width:100%;color:#191919=
+;font-weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"Pinterest" class=3D"kmImage" src=3D"https://d3=
+k81ch9hvuctc.cloudfront.net/company/h3KqFy/images/76875c31-d5bf-4400-99ab-d=
+e1a0232f1ba.png" width=3D"24" style=3D"border:0;height:auto;line-height:100=
+%;outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display=
+:inline;vertical-align:top;font-size:12px;width:100%;max-width:64px;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"kmTextContent" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;border-right:none=
+;border-bottom:none;text-align:right;width:25%;;border-top-style:solid;padd=
+ing-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-to=
+p-color:#d9d9d9;border-top-width:0px;">
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align: =
+right;'><a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYI=
+n90NHVVbzGsEKUdI1SUEEMa8kGgWvbfDewbRheBjYKAZgEhe-2FHwmhZjTnsz7oyf7M8ZnHM54L=
+WAbKjh-2BMEmUYOBmbJpP62S-2BN1o1WaVI-2B54cEN38IU3WS0dpWLRPhs3uOnTPIZdGy4oFc7=
+pZHB9tmWMHCf50Y2T8wDsIiHcOat1Oxk1xWPNZp-2FKoB-2BxTkjLwuK6nYEV7inncaqdazx-2F=
+AdBK99QVGZaGwUdr4y5bvhM-2Bdigd_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEi=
+B0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B2=
+0iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYa=
+tZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfVfM5rwEz0k-2FiuYtmuj8AXNw-2FLOP4RaSXf4oF=
+CiIcJGW-2FaCAtcPVLwQ-2BKSReKQ4SoHNT3hS82ORe7uz4cdr4F3qv5HZmAXecVUtMsFBAptrE=
+eWbilHJF5-2Ba8UX5kO0vgJbQRD2gfiWGEegaA3rE0umWrdBfg3suwhW2ZTU-2ByiIFhiEKjwJZ=
+iqeLNiHwFXpPAAQ-3D-3D" style=3D"word-wrap:break-word;max-width:100%;color:#=
+191919;font-weight:normal;text-decoration:none;font-family: tahoma, geneva,=
+ sans-serif; font-size: 11px; line-height: 20.8px; text-align: right;">A=C2=
+=A0P P</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck kmDesktopOnly" width=3D"100%" style=3D"border-collapse:collapse;mso-tabl=
+e-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"border-collapse:collapse;mso-table=
+-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:9px;padding-top:30p=
+x;padding-bottom:15px;background-color:#EEEDEA;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" width=3D"100%" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%=
+">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" valign=3D"top" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-=
+size:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;=
+text-align: center;">
+<a href=3D"https://trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NIPqw=
+Rs1piFHPIykJ63-2BYDzZC8D59G1vwlt6NL2K2D-2FJk4EKtaWwehtYyOPw6wwAOL1mmUIsMxbI=
+lZ6MuBMVqtGTQYFzwBCFm2g6p7jLIi-2FgSXPK74uKw9ydjOc6ftudbt38em3SJl6y0iqe4J1OD=
+n4-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6=
+f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924Wb=
+SpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWt=
+i-2BPa-2FfWBZ-2Fv0RarW-2FW8h9QDgjFVBKmzFZJOVN9I-2Fxn4unnKN0ryqq3CaE82b8CqWX=
+1IL5-2B2V4uImFoCdr6cipoipwchrmTwbEvhgMXSS6WPBJnefwzlFw1FD0FGoNZEtOS-2BbUbXE=
+n2FFx2f2gbhO1qALSV0Qd6-2Fr-2BhhhLl9FrCjuQaX-2BN03gdPNRVH6au-2Frxxt0ZiFw-3D-=
+3D" target=3D"_self" style=3D"word-wrap:break-word;max-width:100%;color:#19=
+1919;font-weight:normal;text-decoration:none">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/h3KqFy/images/b5d8604d-9c4b-47e7-862f-8bdf09ad0b=
+fb.png" width=3D"564" style=3D"border:0;height:auto;line-height:100%;outlin=
+e:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inline;=
+vertical-align:top;font-size:12px;width:100%;max-width:1200px;background-co=
+lor:#EEEDEA;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;table-layout:fixed">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" valign=3D"top" style=3D"border-collapse:coll=
+apse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;background-co=
+lor:#EEEDEA;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%" style=3D"border-collapse:collap=
+se;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" valign=3D"top" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;color:#191919;fo=
+nt-family:Helvetica, Arial;font-size:13px;line-height:200%;letter-spacing:n=
+ormal;text-align:left;max-width:100%;word-wrap:break-word;padding-top:9px;p=
+adding-bottom:9px;background-color:#EEEDEA;padding-left:18px;padding-right:=
+18px;">
+<p style=3D'margin:0;padding-bottom:1em;font-family:"Raleway", Helvetica, s=
+ans-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align=
+: center;'><span style=3D"font-size:10px;"><span style=3D"line-height: 20.8=
+px;">55 S Atlantic St Seattle, WA 98134</span></span></p>
+<p style=3D'margin:0;padding-bottom:0;font-family:"Raleway", Helvetica, san=
+s-serif;font-weight:400;letter-spacing:0.75px;line-height:180%;text-align: =
+center;'><span style=3D"font-size:10px;"><a class=3D"unsubscribe-link" styl=
+e=3D"color:#191919;font-weight:normal;text-decoration:none;" href=3D"https:=
+//trk.klclick.com/wf/click?upn=3DrLkXA6STgTDe28BYIn90NGNstv4NrL7maBxvNAiZod=
+qi-2Fpptg3qBd89S0Dlzj4iCtV-2BCr6DiOPSZLBQQ-2FEr7C7puUlgxXZZ35gd5bZlTcZjb5vK=
+0AkNeZSVWF23owHPvKk2K93fo7ZjQ-2BLidKhC-2Fvc-2FrwwrCCxctvxGAtydGGJxnwdrXXdwi=
+UTktpPovQfDaaISPwhQBHT32R63YzoR-2B7Q-3D-3D_Kzru7UZQtfH-2FEcZh0sX1vVFYyy00k4=
+GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14awcN-2F=
+8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGFRbyikai=
+jRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfQY5nI-2B-2FCWfZfYQ33fqE8Af8v=
+zv0-2Bpae3S4LlQQm5Bfn7IpVW9Dq-2BBLz5VNpM4BZAciaDexjcix-2BhwC8lnpfrKibx7wNsx=
+MrPGlVyuH2lk7HHfe5loaATZbOcXhr-2BGIqmGcC3z4OEHng4RCAiPG6ECveR5fAIN1HtLFn2TZ=
+k3k0N62Exb7ad1ue-2B55Ph0z4iYg-3D-3D">Unsubscribe</a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<!--[if !mso]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if mso]>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<img src=3D"https://trk.klclick.com/wf/open?upn=3DKzru7UZQtfH-2FEcZh0sX1vVF=
+Yyy00k4GvHTPuTpMKEiB0YMGny76FO9-2F-2BPFMOcR6f13gN8d9TC36U2VR9Tevgh7eTLQXv14=
+awcN-2F8hLUMNL8-2B20iR5IUFNMd15jEnD4JyO924WbSpoBZPQatlCzUDRhB0N0Km-2Bb6AGGF=
+RbyikaijRcETcVkMgYatZCB5DcxtB0eFlhbjqUx3rQWti-2BPa-2FfcY4AocjneXyDXJMeTYgqT=
+Uesy0tPSgvONON919N0vQnhvc7K6XEpn1LBDdCL0dKhb40LZFJp2QDGM-2Flcx8oIH5EFIq5Mmu=
+orSj-2BhX6gP3aJJRjQWGNXl1zsXRhgCxF3Eie4u6j3AwiTZawm6Ek-2FugMwH5Qeb-2BcAwMrW=
+2jHQtKO3kW9-2Fw28aB-2BWetc8qzpGQtg-3D-3D" alt=3D"" width=3D"1" height=3D"1"=
+ border=3D"0" style=3D"height:1px !important;width:1px !important;border-wi=
+dth:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-=
+right:0 !important;margin-left:0 !important;padding-top:0 !important;paddin=
+g-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;=
+"/>
+</body>
+</html>
+
+--===============5171050173777753439==--

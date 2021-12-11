@@ -1,0 +1,86 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6512:e98:0:0:0:0 with SMTP id bi24csp3839387lfb;
+        Mon, 6 Sep 2021 08:29:41 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzC2oXT3+KpN9XOmt5BeG4sCpxM42c5Jtzu14Dz1bPNbFCGncWLalq5s6/Ee/wjy1pYKgzz
+X-Received: by 2002:a7b:cc14:: with SMTP id f20mr11969432wmh.137.1630942181185;
+        Mon, 06 Sep 2021 08:29:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1630942181; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Vgrx0c7yJXmq2/RY6WZaVQp+CEmWCKo+FdtKDX+5fdbk2ScfcxthZgLzVQFjYVcuYp
+         S3GKG6wJqSb5pGZrBjpf5PuYXSLdiwAKVi8UB4ITmgMPBY4ENXV6EtXg1uaY17uNs8K4
+         juYIirfSBf7aXnC3RkOFQWoJyIa8MIcGmajX0aB42WBC5AMl3O6198OEYwiKndL22EKw
+         079DUbArgoY1ykH4B4rUNEB+B7XwH8q5Ww9OOcALlZ4UVGtniVCt3TMPNebS/A5yiYRS
+         x/dksUHTrOlsNWE6OCZqsKYZL9NisTkjH3kR6LJyrb7HF1FuMSbqxmSZwq7ZpwyfV8w9
+         D44g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:content-transfer-encoding:subject:date:reply-to:from
+         :mime-version;
+        bh=DL5S28yPm5sFQbZSkEefXgzmnBit8zVaY1Yt5vlwEVg=;
+        b=oWQ7lzVWpg6kQSbw/ofU9WRNjwGKdxsu7cIqhTmgNGk/RJbO6vi4iZda+kOTJqKeIi
+         ztELAH8jfxLTNeYA+qpeqX8k1jPpJ91lBPW2FyGJ3jWRZgLTTRkhbiPiZ6pf1HAwuW7x
+         J40Z5U2g/WZzUoBMJRiGKa/UrtH7u+5Q9qUS/IMlglSkEQJMqdKcXkrPMojIi5dODE8n
+         nTQ+Syf8qIplvTV3EdUw25HiS0JqL1uVznWNIMbqrBnX0oyOBRV9qwaGoTOmvSq9Ifly
+         g5+nNV2W/1Z766MrGu3htjBL8sO05QUrDRknJr/R7FViP7IXDszphIyyEoCAyxN8XywE
+         dJgg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mailalexia.b@corazonistas.com designates 93.159.209.3 as permitted sender) smtp.mailfrom=mailalexia.b@corazonistas.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=corazonistas.com
+Return-Path: <mailalexia.b@corazonistas.com>
+Received: from s9mt3p.consultorpc.com (s9mt3p.consultorpc.com. [93.159.209.3])
+        by mx.google.com with ESMTPS id b13si9055568wrs.18.2021.09.06.08.29.40
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 06 Sep 2021 08:29:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mailalexia.b@corazonistas.com designates 93.159.209.3 as permitted sender) client-ip=93.159.209.3;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mailalexia.b@corazonistas.com designates 93.159.209.3 as permitted sender) smtp.mailfrom=mailalexia.b@corazonistas.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=corazonistas.com
+Received: by s9mt3p.consultorpc.com id h6opu816r3gf for <eruizsoley@gmail.com>; Mon, 6 Sep 2021 17:29:11 +0200 (envelope-from <mailalexia.b@corazonistas.com>)
+X-SmtpId: VTJGc2RHVmtYMS9XNkZ5UDI4K2xzVTc1Q0FxajRtR0g0eDJvTXFscHNXVEtZaDJtT3BNUDhwM1d1TnJoCjV6RDUK
+Return-Path: <mailalexia.b@corazonistas.com>
+MIME-Version: 1.0
+From: =?utf-8?Q?Colegio_Sagrado_Coraz=C3=B3n?=
+ <mailalexia.b@corazonistas.com>
+Reply-To: cpizani@corazonistas.com
+Date: 6 Sep 2021 17:28:39 +0200
+Subject: =?utf-8?B?Q29tdW5pY2FjacOzIDFyIGRpYSBJTkYvQ29tdW5pY2FjacOz?=
+ =?utf-8?B?biAxciBkw61hIElORg==?=
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+Message-ID: <0.2.F.9C7.1D7A333DE176F54.0@internal.ip-zone.com>
+
+PHRhYmxlIHN0eWxlPSdjb2xvcjogIzAwMDAwMDsgZm9udC1mYW1pbHk6IGFyaWFsO2Zv
+bnQtc2l6ZTogMTRweDsgd2lkdGg6IGF1dG87Jz48dHI+PHRkIHN0eWxlPSdib3JkZXIt
+cmlnaHQ6IDFweCBzb2xpZCAjZDNkM2QzOyBwYWRkaW5nLXJpZ2h0OiAxMHB4OyB3aWR0
+aDogODBweDsnPjxhIHN0eWxlPSJvdmVyZmxvdzpoaWRkZW47IHdoaXRlLXNwYWNlOm5v
+d3JhcDt0ZXh0LW92ZXJmbG93OiBlbGxpcHNpczsgd2lkdGg6IDkwJTsgZmxvYXQ6bGVm
+dDttYXgtd2lkdGg6ODBweDsgdGV4dC1kZWNvcmF0aW9uOm5vbmU7IGNvbG9yOiMzNDhm
+ZDk7YmFja2dyb3VuZDogdHJhbnNwYXJlbnQgbm8tcmVwZWF0IHNjcm9sbCAxcHggMXB4
+OyAgcGFkZGluZy1sZWZ0OjIwcHg7IHBvc2l0aW9uOnJlbGF0aXZlOyIgaHJlZj0naHR0
+cHM6Ly93ZWIyLmFsZXhpYWVkdS5jb20vQUNXZWIvcGFnaW5hcy9wdWJsaWNhcy9SZXBv
+c2l0b3Jpby5hc3B4P3Rva2VuPWU5OW1YMjhWbytRNTZvMksxQXRaVzk2bWV1RlB3YU8z
+S3BDeFhiMlBlMGoyYVdRYWd1UmY0dUxqZUJvbVlwWG13enQ0ZGZ3VGx6YUV4VDRJZ1Fj
+dmxkRTJsS25pemxHZFJyYzlmaEtqcU5McG9pcjVoMmptSi83dCtEQ041Q21sTVJmSWFx
+NzgwTWs9JyB0aXRsZT0nMDZfMDlfMjEtMjJfQ29tdW5pY2FjaW9fMXJfZGlhX1BhcnYu
+cGRmJz4wNl8wOV8yMS0yMl9Db211bmljYWNpb18xcl9kaWFfUGFydi5wZGY8aW1nIHNy
+Yz0naHR0cHM6Ly93ZWIyLmFsZXhpYWVkdS5jb20vQUNXZWIvZXN0aWxvL3Byb3Bpby9p
+bWFnZXMvYXR0YWNoLnBuZycgc3R5bGU9J2Zsb2F0OiBsZWZ0OyBoZWlnaHQ6IDE2cHg7
+cG9zaXRpb246IGFic29sdXRlOyB3aWR0aDogMThweDtsZWZ0OjBweDt0b3A6MXB4Oyc+
+PC9pbWc+PC9hPjwvdGQ+PC90cj48L3RhYmxlPjxwPgoJQmVudm9sZ3VkZXMgZmFtJmlh
+Y3V0ZTtsZXMsPC9wPgo8cD4KCVVzIGRvbmVtIGxhIGJlbnZpbmd1ZGEgYWwgbm91IGN1
+cnMgMjEtMjIsIGRlc2l0amFudCBxdWUgdG90cy9lcyBlc3RpZ3VldSBtb2x0IGImZWFj
+dXRlOyEuJm5ic3A7IFVzIGFkanVudGVtIGNvbXVuaWNhY2kmb2FjdXRlO24gYW1iIGxl
+cyBwcmltZXJlcyBpbmZvcm1hY2lvbnMgaSByZWNvcmRhdG9yaXMuPC9wPgo8cD4KCVJl
+YmV1IHVuYSBjb3JkaWFsIHNhbHV0YWNpJm9hY3V0ZTsgaSBlbnMgdmVpZW0gbW9sdCBh
+dmlhdCE8L3A+CjxwPgoJRXF1aXAgZCYjMzk7IEluZmFudGlsLjwvcD4KPHA+CgkmbmJz
+cDs8L3A+CjxwPgoJPHNwYW4gc3R5bGU9ImNvbG9yOiMwMDAwZmY7Ij5BcHJlY2lhZGFz
+IGZhbWlsaWFzLDwvc3Bhbj48L3A+CjxwPgoJPHNwYW4gc3R5bGU9ImNvbG9yOiMwMDAw
+ZmY7Ij5PcyBkYW1vcyBsYSBiaWVudmVuaWRhIGFsIG51ZXZvIDIxLTIyLCBkZXNlYW5k
+byBxdWUgdG9kb3MvYXMgZXN0JmVhY3V0ZTtpcyBtdXkgYmllbiEuJm5ic3A7IE9zIGFk
+anVudGFtb3MgY29tdW5pY2FjaSZvYWN1dGU7biBjb24gbGFzIHByaW1lcmFzIGluZm9y
+bWFjaW9uZXMgaSByZWNvcmRhdG9yaW9zLjwvc3Bhbj48L3A+CjxwPgoJPHNwYW4gc3R5
+bGU9ImNvbG9yOiMwMDAwZmY7Ij5SZWNpYmFuIHVuIGNvcmRpYWwgc2FsdWRvIHkgbm9z
+IHZlbW9zIG11eSBwcm9udG8hPC9zcGFuPjwvcD4KPHA+Cgk8c3BhbiBzdHlsZT0iY29s
+b3I6IzAwMDBmZjsiPkVxdWlwbyBkZSBJbmZhbnRpbC48L3NwYW4+PC9wPgo8cD4KCSZu
+YnNwOzwvcD4KPHA+CgkmbmJzcDs8L3A+Cg==
+

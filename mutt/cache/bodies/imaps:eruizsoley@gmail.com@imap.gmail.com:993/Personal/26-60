@@ -1,0 +1,89 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:4c2:0:0:0:0 with SMTP id f2csp696991ils;
+        Thu, 17 Sep 2020 12:56:13 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxm77K43yy7/TPkPoxTti37ekT5Hh61+83EHEHHkZ88eFO/6ItkXckbB23gOm5MOaZjcY08
+X-Received: by 2002:a1c:bcd6:: with SMTP id m205mr9501474wmf.68.1600372573488;
+        Thu, 17 Sep 2020 12:56:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1600372573; cv=none;
+        d=google.com; s=arc-20160816;
+        b=haBw/Po7O14hNhuCbIBAi3XiBhD0nLy3nk23HB0L8ssbz1s+ELcoVDa5iX419f53lE
+         j28ELN9LCQADvZsTijVgQp+Z+YtlG44v/K553DCqqam1/NwNHofFtWPhjhfaskW8I+em
+         LUezYkFryhgpPNe26UoXg5uPjBEmbtdZL3/f3qCrF4fR5L0VaJU2ynUqjrVfYT19Sh6z
+         bh2aVmxIQB1HawQc238lyuSxvygZmHU662AdeUsc2DUDw8Mc487+1+DpiTHfm2/iZ9n+
+         vgiaXMlwWleZF83xqLM5qioyoQ1H28O6Qv6qjjPnTgjYFv6OQEIBwzYQojvHesODty4J
+         XOFA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:ironport-sdr
+         :dkim-signature;
+        bh=d7Hj2x2/c7a9HRYheUyFKDPXuQ6ZOnLy7BAQ+qsjjWw=;
+        b=JuVIMxVvXF7zKVIsjvVhdHxF4T0x+k5tShTTufxDnmSz3HXPYy034hYdcZzp+TYE+8
+         Ua+KqSeOsggzw4jH18oeO/xQFbkxhdz7MREgjVmtD9wiz1PkOg6iiVsBxtB3OwjM05Pl
+         FURPFiDOaWSTjBTcRKIUWaWqHq+sFaxdVZQKWSe7JgDsuaJbistQuxQB5DJNF7p0+gfI
+         43po5AfI9YoQWu2p4iG1Ma+eDk6l+Ydu9EFt5y3ZIMWvXJgWswKczokoNa4YEOGgO8BB
+         1s/q+G/y7uJEB5JC1sZMvRQ5QY2ERcNQukFi4M1xVcVFbYok2GIqsEXTJBNnfB6UeTSh
+         7wIA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@seg-social.es header.s=giss header.b=I2ykqDED;
+       spf=pass (google.com: domain of frtg.registro.giss@seg-social.es designates 194.179.55.109 as permitted sender) smtp.mailfrom=frtg.registro.giss@seg-social.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=seg-social.es
+Return-Path: <frtg.registro.giss@seg-social.es>
+Received: from smtp04.seg-social.es (smtp04.seg-social.es. [194.179.55.109])
+        by mx.google.com with ESMTPS id s10si683261wri.263.2020.09.17.12.56.13
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Sep 2020 12:56:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of frtg.registro.giss@seg-social.es designates 194.179.55.109 as permitted sender) client-ip=194.179.55.109;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@seg-social.es header.s=giss header.b=I2ykqDED;
+       spf=pass (google.com: domain of frtg.registro.giss@seg-social.es designates 194.179.55.109 as permitted sender) smtp.mailfrom=frtg.registro.giss@seg-social.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=seg-social.es
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=seg-social.es; i=@seg-social.es; q=dns/txt; s=giss;
+  t=1600372573; x=1631908573;
+  h=date:from:to:message-id:subject:mime-version;
+  bh=d7Hj2x2/c7a9HRYheUyFKDPXuQ6ZOnLy7BAQ+qsjjWw=;
+  b=I2ykqDEDwKN6ar0d9rKfQ/w7H3ql5Gqm3IMQpOVqMxyPYwbD5hhV1527
+   GVz0K5G3GKKhmPzJnsfL5vFhOxceYkaIc/jlndKUYN5oyp/FPDR9vSsrI
+   ei6pBCDw2y3FGzuE8Dsm90rM6SK57IoKDGTlGjd2RBX72EQx5Du9l1Bwd
+   Y=;
+IronPort-SDR: 6xVsOfKMMAirRYz9UZfTtfQWpFhZFzw8+HtHJVoK5kyKGgdyuhHfzfT8rZ6Zvdjsrl0Ss5yeHG
+ TNG4QzRQn3baVEm5cFnO4KB6OVyNUub8HUUBVOO7kEfXSVY/kc17s0dZGCvoau3D6kaLJugKco
+ 3GrWu3qClgZv+cnH4Vs4S0QgTii56qerzjudtDalortXBnJv45ltCssDkpMOL/XBTzjPZn/42Y
+ ywa4cI9EH38iOqiLLneBIClZWKtd5Y/0WmQpgGN/pb9CO8NHF8Biav9kGz5Uipc0kXx/Be+59B
+ vZs=
+X-IronPort-AV: E=McAfee;i="6000,8403,9747"; a="1507090"
+X-IronPort-AV: E=Sophos;i="5.77,271,1596492000"; 
+   d="htm'217?scan'217,208,217";a="1507090"
+Received: from unknown (HELO G99XEHCY03.seg-social.ss) ([10.99.137.68])
+  by smtp04-priv.seg-social.es with ESMTP; 17 Sep 2020 21:56:13 +0200
+Received: from gwexchange02.correo.portal.ss (10.99.147.153) by
+ G99XEHCY03.seg-social.ss (10.99.137.68) with Microsoft SMTP Server id
+ 8.3.515.0; Thu, 17 Sep 2020 21:56:12 +0200
+Received: from g98ensa807-LD ([10.99.184.152])          by
+ correoweb2.correo.portal.ss (IBM Domino Release 9.0.1FP10 HF383)
+          with ESMTP id 2020091721561138-114869 ;          Thu, 17 Sep 2020
+ 21:56:11 +0200 
+Date: Thu, 17 Sep 2020 21:56:12 +0200
+From: <frtg.registro.giss@seg-social.es>
+To: <eruizsoley@gmail.com>
+Message-ID: <22425797.661081.1600372572366.JavaMail.frtg.registro.giss@seg-social.es>
+Subject: Solicitud de Informe de Vida Laboral
+MIME-Version: 1.0
+X-MIMETrack: Itemize by SMTP Server on CORREOWEB2/SRV/SEG-SOCIAL(Release 9.0.1FP10 HF383|November
+ 19, 2018) at 17/09/2020 21:56:11,
+	Serialize by Router on GWEXCHANGE02/SRV/SEG-SOCIAL(Release 9.0.1FP10 HF383|November
+ 19, 2018) at 17/09/2020 21:56:11,
+	Serialize complete at 17/09/2020 21:56:11
+X-TNEFEvaluated: 1
+Content-Type: multipart/mixed;
+	boundary="----=_Part_661080_18919749.1600372572366"
+Return-Path: frtg.registro.giss@seg-social.es
+X-GissPermisos: 1
+
+------=_Part_661080_18919749.1600372572366
+Content-Transfer-Encoding: 8bit
+Content-Type: text/html; name="00.html"
+Content-Disposition: inline; filename="00.htm"
+
+<html><body style='background-color:#FFFFFF;margin: 10px;'><p><div><span><span'><p style='font-family: Trebuchet MS;font-size:14px;color: rgb(87, 81, 76);word-break:break-all;'>Se ha tramitado correctamente la Solicitud de Solicitud de Informe de Vida Laboral</BR><B>Datos de la Solicitud</B></BR><B>Número de Referencia:</B> 41345109<BR><B>Fecha Solicitud:</B> 17/09/2020 21:56:07<BR></BR><B>Datos Personales</B></BR><B>Nombre:</B> ERNEST<BR><B>Primer Apellido:</B> RUIZ<BR><B>Segundo Apellido:</B> SOLEY<BR><B>E-Mail:</B> eruizsoley@gmail.com<BR><B>I.P.F:</B> 077305459K<BR><B>Número Seguridad Social:</B> 081088179816<BR></BR><B>Domicilio</B></BR><B>Tipo de Via:</B> PLAZA<BR><B>Nombre Via:</B> MARQUES SANTLLEHI<BR><B>Número:</B> 18<BR><B>BIS:</B> <BR><B>Piso:</B> 2<BR><B>Puerta:</B> 2<BR><B>Código Postal:</B> 08140<BR><B>Localidad:</B> CALDES DE MONTBUI<BR><B>Provincia:</B> BARCELONA<BR></p></span></span></div></body></html>
+------=_Part_661080_18919749.1600372572366--

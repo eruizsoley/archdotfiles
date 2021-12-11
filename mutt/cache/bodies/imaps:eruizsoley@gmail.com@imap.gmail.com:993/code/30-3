@@ -1,0 +1,86 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:c66:0:0:0:0 with SMTP id f6csp3606002ilj;
+        Sat, 23 May 2020 13:00:26 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwJSrjb2+WjntT+7u0Lbo0KDq5LhOKU5uErLjHZOessfJyUOhDoNSrz/vUepW0BUj9nXTYb
+X-Received: by 2002:a05:620a:1312:: with SMTP id o18mr21011751qkj.277.1590264026076;
+        Sat, 23 May 2020 13:00:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1590264026; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Vud1VpbIO+E0XKRWj2hdTXdP9+ZT8ctXGVGvCOhdCAySJWH3UU1+gAHs2CulM/tQDq
+         HsL3LMpgkiAe1mnXUafJdsIGHaypEv0arKHL4gl22b3+jYq4C4ao8FJ4IZsjkbw5nc1U
+         /or34bNeF25xH87ptM6WX9kr1w4NtOC3H+PqJfkGklyXsQJ6wg2UjSVp2Gr/qk6OMfez
+         qKWI0MBy3GQFVhkT7TwYqfdm0oVzo4Lit2uxtuL60ul+aHwT+rZYZN70RRnjtHXVr0rc
+         WicLXQyuCeucin1eo9jmcGjtIPovnMg5zVKl0h6VmljXyNeffb2rJmVowPwt50+5KBOQ
+         N21Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:content-transfer-encoding:mime-version:subject
+         :message-id:to:reply-to:from:date:dkim-signature:dkim-signature;
+        bh=lFgjCYYlbX/G2kXwrrW/tr1whCxx6iAdW38baV32rSk=;
+        b=vC0ZDVuMsZ89X6lHJ5jYPPwSy3I608RMgP/dtJ9ZEtPW8zI3zTzXI4TJgU5cso12f/
+         4CjrJc4hSrRDWwCswX8E9BQSRs/m+8G7qAmrjaouE5aTd0+JhgLr3GVejv9s2MkT/Q+4
+         8PsB6Ga9bvC1HfNGsh/yaBatJvL/CQxposk3jtVUTN2yKxs8tUhVC3TkYnMy4j5xUdTU
+         Z7c80BuQwlTLvKZELxRebEk283aeHsRVkgz0gEO12YwC2aV1GTEcsYQQLf8pJyIk+H6r
+         D7KnSuMbs+nHc++M0ZIgbc5c2e8ckRNjsYbGNQ59CmkX01z27F3AU0LzN5nEOjMvG9og
+         iEdA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fastspring.com header.s=iwn6hytdfbmqcwk6trp2inibbszzcaj6 header.b=J6QL+LpI;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=X23C6poK;
+       spf=pass (google.com: domain of 01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com designates 54.240.11.114 as permitted sender) smtp.mailfrom=01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com
+Return-Path: <01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com>
+Received: from a11-114.smtp-out.amazonses.com (a11-114.smtp-out.amazonses.com. [54.240.11.114])
+        by mx.google.com with ESMTPS id j6si2285108qka.287.2020.05.23.13.00.25
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Sat, 23 May 2020 13:00:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com designates 54.240.11.114 as permitted sender) client-ip=54.240.11.114;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fastspring.com header.s=iwn6hytdfbmqcwk6trp2inibbszzcaj6 header.b=J6QL+LpI;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=X23C6poK;
+       spf=pass (google.com: domain of 01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com designates 54.240.11.114 as permitted sender) smtp.mailfrom=01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=iwn6hytdfbmqcwk6trp2inibbszzcaj6; d=fastspring.com; t=1590264025;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	bh=lFgjCYYlbX/G2kXwrrW/tr1whCxx6iAdW38baV32rSk=;
+	b=J6QL+LpINXwSGdYi/S7AxVVViGvDWcOzq6uGahzAk277JdDE5D8LBC3dNf/CEF0X
+	5JYBUDTroo+zvZ8MdDNE6LTJGPt8hCvegxqSP9tQX74kREtSz6q8sEKoGLng3kIw390
+	vsBNWDGH/tGTZMdrXd6nP8MxSGGYYxcBMZLSY7JE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1590264025;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=lFgjCYYlbX/G2kXwrrW/tr1whCxx6iAdW38baV32rSk=;
+	b=X23C6poKiYrRsUWQnKNhmnNWOxJSphL96yh36d9kJWGMnXiiZ8iMOW3dP3arjzQU
+	PtexUxXDGYDz5JNpZLNKFJkcUu0CMtccNGmVIWSq14u40+YYD3PUDavAWATUM/8FOXy
+	G38U2bY4KRg/F2bUpr7z7UQEhwvw9vaeydntKrnY=
+Date: Sat, 23 May 2020 20:00:25 +0000
+From: BinaryAge Support <mailer@fastspring.com>
+Reply-To: support@binaryage.com
+To: ernest ruiz soley <eruizsoley@gmail.com>
+Message-ID: <01000172431f5271-5d662c72-f5de-41b5-b668-ef79ea6d75bc-000000@email.amazonses.com>
+Subject: TotalFinder License - Order BA200523-1325-70121
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SES-Outgoing: 2020.05.23-54.240.11.114
+Feedback-ID: 1.us-east-1.57ceHxSMzMgytiLOXafUChrX3Wev4Z6W5huQ8qW2iRs=:AmazonSES
+
+Dear ernest ruiz soley,
+
+Thank you for your order.
+
+Number of licenses: 1
+
+Your license information is:
+License Name: "ernest ruiz soley"
+License Key: "GAWQE-F9ATS-S6HAH-TZ9JL-JWS9J-AX6V4-9YJ38-F2T6M-A9KED-262R7-PVSA7-NATXR-X45FN-X7Q8S-2ULZP-A"
+
+IMPORTANT:
+Please make sure you copy and paste the name and the key without the quotes.
+
+Here is a screenshot example:
+https://totalfinder.binaryage.com/images/totalfinder-registration.png
+
+For more information please visit:
+https://totalfinder.binaryage.com/registration
+
+Have a nice day,
+Antonin

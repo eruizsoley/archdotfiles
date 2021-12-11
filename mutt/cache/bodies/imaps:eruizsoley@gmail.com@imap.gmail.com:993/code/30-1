@@ -1,0 +1,136 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:3:0:0:0:0 with SMTP id h3csp3079256ilr;
+        Mon, 29 Jun 2020 12:49:17 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxyp8A2CgpLNS+LKLl7ejx0veRQZWGN76Frtg2D/WJH5khy1zQxBmKCXaDvJb1j44KdSwt3
+X-Received: by 2002:a37:9e42:: with SMTP id h63mr15639303qke.116.1593460156942;
+        Mon, 29 Jun 2020 12:49:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1593460156; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UDx4C8irdVY4e0clZuSPzxlxPkogglv3boFBJT+vXsDiZ3S/Ud2wN3ELHVQ9jx/YJv
+         5tX10O2tbz6x2sThsI7OXdYkEyHUN52C4OmqshUxyC2Z1vvfWi2Vj4LOGUyfOn4+lVwd
+         RYMBYNe7AM6U3PdkOLajh15K5H7EuJsE7s7kgLvQ/uV9jmsf4UQ96xiQpqimptuZAy3j
+         A4gBWZn8KRKXX90GAt1UZmAix131y4rWbkeDbzkvd/o5auDoe9akMcosyAHXc6zHqi9s
+         Qt+sAvSKS/QtloiwEENl0BJwLMZme41nSVPU0RNLrewof+8+Eq4QtQVrjJON+cf9OmEW
+         wfCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=WBztgG9E3YVHysstx1Hva+TkdtnuGUYoNeidccO98DQ=;
+        b=kKoKEyk2ROsebDFv74UWgaqMcMhEtoRk7osRdogdtpfcItqoQaqkbYVo6HChUA8uxM
+         hpo34lNRImv47HgdGedW3X/6IC6IjECYXWwQHPrsKlQL5mRFzg+Sf5D4QxZZUvFHYgN7
+         4ykIKbeZl1sL8v9b63nSzCqrGrVJSE6SLgopRIX8QEj54O2cyJy31uY1EiS3hfRpU9ur
+         St1fbRkKaenXVuChuCPq/Erm+riDVfhAd478MBCotCF+zPHLPtBbrz31nqMh/doNyBrm
+         8soVqd6HoCZKSwA4p1HqXzpeXdRK0MogEZELnzFJhFWjjkKF0aQ7fhvjNO5/qBODD8m0
+         zq5Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mongodb.com header.s=lioupvld75vpuqywrj6t5sdvjdvjiike header.b=Q5bGMYqd;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=gW2dJ1xU;
+       spf=pass (google.com: domain of 0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com designates 54.240.9.23 as permitted sender) smtp.mailfrom=0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mongodb.com
+Return-Path: <0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com>
+Received: from a9-23.smtp-out.amazonses.com (a9-23.smtp-out.amazonses.com. [54.240.9.23])
+        by mx.google.com with ESMTPS id b25si586279qtc.71.2020.06.29.12.49.16
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Mon, 29 Jun 2020 12:49:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com designates 54.240.9.23 as permitted sender) client-ip=54.240.9.23;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mongodb.com header.s=lioupvld75vpuqywrj6t5sdvjdvjiike header.b=Q5bGMYqd;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=gW2dJ1xU;
+       spf=pass (google.com: domain of 0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com designates 54.240.9.23 as permitted sender) smtp.mailfrom=0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mongodb.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=lioupvld75vpuqywrj6t5sdvjdvjiike; d=mongodb.com; t=1593460156;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=CeQaBpSFlwKeMbk7WTXKmKu1I5cwZ9sx0XmQ3drEM6U=;
+	b=Q5bGMYqd34MqkJ/FhjOIun27K6GYtfk1sXO48TuP58tDm7RTENmrVL0Hhpf1NT7G
+	/IPiXQ932wN//aO5RSCS6iUkva++gKYPf6Rh2Qw/mEPT7ia/vXEl9g4Qd+tFhBRuxH9
+	3AIpxlIZraMW4jBcSh/UgKQcrDDLZuS0paNWHntY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1593460156;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=CeQaBpSFlwKeMbk7WTXKmKu1I5cwZ9sx0XmQ3drEM6U=;
+	b=gW2dJ1xUoaxpuJCBR+dAwDPeZais7Z5fu5EnfwTdUKH9l4NTWW0dhzF1pWGma8WY
+	gt3g+JY7oidLhyg87Q188mjbC9Ir1WNTF3JM/lHrI5VULb6rvY3xP4v4T7APTu04X98
+	2WZRzD3wz3kYWGmtd8JiPNy79muBfItR06TqkH4Y=
+Date: Mon, 29 Jun 2020 19:49:16 +0000
+From: MongoDB Atlas <mongodb-atlas@mongodb.com>
+Reply-To: cloud-manager-support@mongodb.com
+To: eruizsoley@gmail.com
+Message-ID: <0100017301a067ad-671f8e60-15c5-4008-8410-c34c1c93bf50-000000@email.amazonses.com>
+Subject: You've added "Allow access from anywhere (0.0.0.0/0)" to your IP
+ Whitelist
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_18_1616545067.1593460156317"
+X-SES-Outgoing: 2020.06.29-54.240.9.23
+Feedback-ID: 1.us-east-1.SQF4pBjWHY2JcNoZz7Je3LrKT+vZTBvBiJRSu0bEyrk=:AmazonSES
+
+------=_Part_18_1616545067.1593460156317
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#f5f6f7">
+    <tr><td height="50"></td></tr>
+    <tr>
+        <td align="center" valign="top">
+            <!-- table lvl 1 -->
+            <table width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border:1px solid #f1f2f5" class="main-content">
+                
+                    <tr>
+                        <td colspan="3" height="60" bgcolor="#ffffff" style="border-bottom:1px solid #eeeeee; padding-left:16px;" align="left">
+                            <img src="https://cloud.mongodb.com/static/images/logo-mongodb-atlas-email.png" style="display:block;width:206px;height:39px;"/>
+                        </td>
+                    </tr>
+                
+                <tr><td colspan="3" height="20"></td></tr>
+                <tr>
+                    <td width="20"></td>
+                    <td align="left">
+                        <!-- table lvl 2 -->
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td colspan="3"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:bold;font-size:10px;color:#999999" class="label">ORGANIZATION</span></td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:normal;font-size:20px;line-height:20px;color:#333333"><a href="https://cloud.mongodb.com/v2#/org/5efa42e51f05be3b40bc477d/projects">ernest&#x27;s Org - 2020-06-29</a></span></td>
+                              </tr>
+                              <tr><td colspan="3" height="20"></td></tr>
+                              <tr>
+                                <td colspan="3"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:bold;font-size:10px;color:#999999" class="label">PROJECT</span></td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:normal;font-size:20px;line-height:20px;color:#333333"><a href="https://cloud.mongodb.com/v2/5efa4372e0b6b612734d2e5b">almuerzi</a></span></td>
+                              </tr>
+                              <tr><td colspan="3" height="20"></td></tr>
+                              <tr><td colspan="3" height="1" bgcolor="#eeeeee" style="font-size:1px;line-height:1px;">&nbsp;</td></tr>
+                            <tr><td colspan="3" height="20"></td></tr>
+                            <tr><td colspan="3"><div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;">
+<p>This is an informational notice to ensure you're aware that you've added "Allow access from anywhere (0.0.0.0/0)" to your IP Whitelist.</p>
+<p>While MongoDB Atlas clusters are protected by authentication, it is important to ensure that strong credentials (username and password) are used for all database users, particularly when allowing access from anywhere.</p>
+<p>If you believe adding access from anywhere was done in error, please navigate to <a href="https://cloud.mongodb.com/v2/5efa4372e0b6b612734d2e5b#security/network/whitelist">https://cloud.mongodb.com/v2/5efa4372e0b6b612734d2e5b#security/network/whitelist</a> to change your IP Whitelist settings.</p>
+</div>
+</td></tr>
+                            <tr><td colspan="3" height="20"></td></tr>
+                            <tr>
+                                <td colspan="3" style="text-align: center">
+                                    <span style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#cccccc;">This message was sent from MongoDB, Inc., 1633 Broadway, 38th floor, NY, NY 10019</span>
+                                </td>
+                            </tr>
+                            </table>
+                    </td>
+                    <td width="20"></td>
+                </tr>
+                <tr><td colspan="3" height="20"></td></tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            
+        </td>
+    </tr>
+</table>
+
+
+------=_Part_18_1616545067.1593460156317--

@@ -1,0 +1,243 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a05:6e02:3:0:0:0:0 with SMTP id h3csp1200484ilr;
+        Tue, 7 Jul 2020 13:33:11 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzb61+CksNT5fxxNdNhO1A7qR565nhk45EWflzozY+dhLkH1sH7T6mifEKsHLWynQpDZI0u
+X-Received: by 2002:a17:907:9c6:: with SMTP id bx6mr49032101ejc.43.1594153991714;
+        Tue, 07 Jul 2020 13:33:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1594153991; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZfRyv4U1fTANDGvkumbOYPv3ZNMh57xMRp89UeOGh7ZeVI0XwP9js52Yjf1/Dv/MtN
+         2aCQCk3IuXhmsnUuy5xhSmiBr76qZV4EPsFQLsGxGjJVw3oNXaLksKsNwfz0etNUvz/8
+         mkM/wtOkgRp7hsPv3TYBwCH04N3y6SxHFHrYbG5EDVFq8vAJwvcBtm8enI7SXEkzDgZw
+         C63AE3Ar0mCG0d7o11HXneOsmaxAjBtkAuRioDDa3sxfZro5Ztxq9NJ7wYG13Wf5gW++
+         7Wk/H1beHF+1EMVIL/wyPyg4PtIuwgITR7999m2a3P0hb/FozoC1gY4Wws20lv3UWmBI
+         x4fw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=C+7a35a+CHHhEs5Q7NN3toEbcT7gu9+5v+wvzpVn1Io=;
+        b=NWAq2Vg/lvri+hAGkeCtlsmEmkAY9lpb3PoTqj1CNNCk9dLp21Mryxx9Ycetop8abg
+         lWoUdpxYBt3NXXJ9osfFoyNSkXAfQG/sueSJyvB/BNKlkCZNCnzI27yhdxQojV3uUNoY
+         7ZgqxXLVKGWr3pd5hRdGLihn+RdRgFtKwLDH7owcCIoK7PaxXQwjJMazgalMRLYnqEZZ
+         wnGpUI/7NG8T/Vvk9MwXGimW54Y1gmmhsZtxPt5zVlppCC8e1JEauHUeWzNBYhdqieaU
+         SJFVxP9juB6OZNk+I5444unaIdk2kP6LgOVDk5dcf99y6WUwyRquOwbbhoSSggYYeELh
+         /enQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@udemymail.com header.s=as3 header.b=NCqFwf17;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=o2qwPJzu;
+       spf=pass (google.com: domain of bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com designates 167.89.104.228 as permitted sender) smtp.mailfrom="bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com"
+Return-Path: <bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com>
+Received: from o3.e.udemymail.com (o3.e.udemymail.com. [167.89.104.228])
+        by mx.google.com with ESMTPS id p22si14964311edm.430.2020.07.07.13.33.11
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 07 Jul 2020 13:33:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com designates 167.89.104.228 as permitted sender) client-ip=167.89.104.228;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@udemymail.com header.s=as3 header.b=NCqFwf17;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=o2qwPJzu;
+       spf=pass (google.com: domain of bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com designates 167.89.104.228 as permitted sender) smtp.mailfrom="bounces+7354-d06b-eruizsoley=gmail.com@e.udemymail.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=udemymail.com; 
+	h=content-transfer-encoding:content-type:from:mime-version:to:subject; 
+	s=as3; bh=C+7a35a+CHHhEs5Q7NN3toEbcT7gu9+5v+wvzpVn1Io=; b=NCqFwf
+	17tJ6nfH2AxH5QLJn/Zy2cxD+IjNp38MMSARqCPmIZahFKR22qIfmbDHR0umYnuD
+	psegknUw/D0pElSAD4CsjWDAaTv6jyDEqdHRfow2VU1qBk4Ug+rGHN1GJODXw59Z
+	yMoUb81mEmwJHg6YQoY0bfmfmKxDasPHVSy78=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=sendgrid.info; 
+	h=content-transfer-encoding:content-type:from:mime-version:to:subject:x-feedback-id; 
+	s=smtpapi; bh=C+7a35a+CHHhEs5Q7NN3toEbcT7gu9+5v+wvzpVn1Io=; b=o2
+	qwPJzu6aJTLwmVAObOwg6AAASc+VbdzFldQml8AhFQmtC6/Vn1ra7qQXUbCSzRyn
+	VYDgFzJllF4SpYjbeXUJkCnuaG0nO1HvpT7TCA2VseW9xhzh2uBm5f2MEsgH2jdd
+	nuTRlfp/iD+4M4IEwzONimE+YipVIG2dBSi+JqAYs=
+Received: by filter1408p1las1.sendgrid.net with SMTP id filter1408p1las1-1965-5F04DC05-3E
+        2020-07-07 20:33:09.798456692 +0000 UTC m=+681426.652064884
+Received: from NzM1NA (unknown)
+	by ismtpd0051p1iad1.sendgrid.net (SG) with HTTP id lCjw7ZuqSmWYHOyrQ5Aisg
+	Tue, 07 Jul 2020 20:33:09.701 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Date: Tue, 07 Jul 2020 20:33:09 +0000 (UTC)
+From: "Udemy" <no-reply@e.udemymail.com>
+Mime-Version: 1.0
+To: eruizsoley@gmail.com
+Message-ID: <lCjw7ZuqSmWYHOyrQ5Aisg@ismtpd0051p1iad1.sendgrid.net>
+Subject: =?UTF-8?B?VHUgQ2VydGlmaWNhZG8gZGUgQ3VtcGxpbWllbnRvIHBhcmEgZWwgY3Vyc28gIkFwcmVuZGUgSmF2YXNjcmlwdCBFUzksIEhU?= =?UTF-8?B?TUwsIENTUzMgeSBOb2RlSlMgZGVzZGUgY2VybyIgZXN0w6EgbGlzdG8=?=
+X-SG-EID: IZwSZ/Dq5dH4Ke3uDQ9UMu5G1euGAY7U0e51VF8TPl0zAsMGPm/i0dsBz5Xx7jDjwtTTY6g6IWZVg9
+ XQ+aTQ++oU2n947EeHwwfU1SN6BZC0dXojTxtn10g+injE4Ob7hvSWMv6hfXOSVXS2Q3lJM1YZnWJA
+ ylaP9yLDMr5WOdLjAbUIjnYTkoYFGrvVoaIyZJkYDyPGLVnLee8BKSz/A92ASl2RGG5YjgFd1X7/Cd
+ Q=
+X-SG-ID: dXNuuxiaeVPHPf1dZH02eD7ZmsMUf56AY+fsTVjyJOLnu5DfUz4q2WQSIJnGRpc52dNZVe9NCwqcZz
+ KBjhNpKl3YoindWNDqV4YRG1qf90LasXL11KZbvksZymEYuGRY
+X-Feedback-ID: 7354:TQd5dBZxTAZid45OLOQ5wf20gapE1XughvIm9XNCkmM=:tUBUIxlAwvTAw6kwSTMxpTZy2bOZ0ziwjmvMKMPNjSs=:SG
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Du=
+tf-8">
+        <meta name=3D"x-apple-disable-message-reformatting" />
+        <title>Udemy</title>
+        <style>
+            img {
+                max-width: 100%;
+            }
+            p{
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            p a{
+                text-decoration: none;
+            }
+            ul{
+                margin: 0 0 10px 0;
+                padding-left: 10px;;
+            }
+            @media (max-width: 480px) {
+                #logo {
+                    margin: 0 auto;
+                    padding-left: 0 !important;
+                }
+            }
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </style>
+    </head>
+    <body>
+        <div style=3D"background-color: #f2f3f5; padding: 20px;">
+            <div style=3D"max-width: 600px; margin: 0 auto;">
+                <div style=3D"background: #fff; font: 14px sans-serif; colo=
+r: #686f7a; border-top: 4px solid #ec5252; margin-bottom:20px;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                        <div style=3D"border-bottom: 1px solid #f2f3f5; pad=
+ding: 20px 30px;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+                                <img id=3D"logo" width=3D"150" style=3D"max=
+-width: 99px; display: block;" src=3D"https://www.udemy.com/staticx/udemy/i=
+mages/v6/logo-coral.png" alt=3D"Udemy" />
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+                        </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                        <div style=3D"padding: 20px 30px;">
+                            <div style=3D"font-size: 16px; line-height: 1.5=
+em; border-bottom: 1px solid #f2f3f5; padding-bottom: 10px; margin-bottom: =
+20px;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+                                    <p><a href=3D"" style=3D"text-decoratio=
+n:none; color:#000">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                                                Hola Ernest:
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                                    </a></p>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20
+                                <p><a href=3D"" style=3D"text-decoration:no=
+ne; color:#000">=C2=A1Felicidades! conseguiste tu Certificado de Cumplimien=
+to para el curso "</a><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF=
+3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXinLDDgpf89Lt5v9bVSd8EpFLxYTeXH17rK=
+-2FfvXWqIW7iAa8AWQ6h-2FUJAIuo3whSNIluIRLV5kc4-2B4I-2BUKXjFfYs-2F3F9aqLPwumt=
+73YjBCRVeHd-2B7U0b-2BsM5YomMJs-2F-2Btq3Gof2TRewbVo60nTcZCne3X6hD1Ti9EkE1xb7=
+GfN-2BCcw-3D-3DiJla_P-2F2y-2B6TpUzyBMvEGnkn3lDvmpH71V8TncPpKRvnydWL6LL7daA3=
+zZEIYUd6WbRD34b01Rjt-2FGMZ4I5iUM7IFfBmkwWFJovbVzZw6ss6YowmeSKF627-2FhpNd1eE=
+vFcgi0wSQs7JPuYUUXT5VFwV57xL2r-2B8eMboY054Rn01aEC1Ysw-2F9K5hYINE6vRFe1vhKSR=
+ziETtO-2FxwVAqG964-2FTp1ICLFAl3JCJPwvhPZiS-2FBugIJ2aFT-2BqKFcRWmKXWnaaQYcUj=
+h379GyA6GNGhyvHaoHXsUFicxyqNue35JS2CJ0Tb8pI2jx6QPvtjLhXijvn8mtWEOyqYm-2BkMK=
+XAwmu7ulQ-3D-3D">Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero</a>=
+<a href=3D"" style=3D"text-decoration:none; color:#000">".</a></p>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20
+                                        <a href=3D"https://e2.udemymail.com=
+/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc8I9YwO1Dqfes0Mn7ke358OFDNp3GYgm4x3NUxl=
+irEcTJ8YoNzKQ-2BcmxoRDeLqEW8i0ltra5u5Q0ZFCXgOvt9CO02p9zn2FtI5jGXcucgMBINyvl=
+qjbPcyP9pTm6Tj7rwPqe-2FEU0LirdDo-2FD6ETvN-2BRjCnZ4dSDzzJvM-2BQgSfyiEr6q9_P-=
+2F2y-2B6TpUzyBMvEGnkn3lDvmpH71V8TncPpKRvnydWL6LL7daA3zZEIYUd6WbRD34b01Rjt-2=
+FGMZ4I5iUM7IFfBmkwWFJovbVzZw6ss6YowmeSKF627-2FhpNd1eEvFcgi0wSQs7JPuYUUXT5VF=
+wV57xEr5zKOBcNiH3FFIi8CvE5R3czK3ZXxz8kwTKhUUmcwO4vLPpqARYXYQ-2BrgXWqcvc-2FE=
+Qe5d4MdFr1YFtYg6cIRFCdpx5vepLVdXO2PhhG8flygMSzwxL05jhcdqexquQTXRpbRJCgtuF68=
+kvnsREyBJEQsji4xn5IYODtDjri8Ilm6cu-2Ftu-2BA1zQf1CeYlSa1w-3D-3D" target=3D"_=
+blank"
+                                           style=3D"font-size: 16px; color:=
+ #ffffff;
+                                           text-decoration: none; border-ra=
+dius: 2px;
+                                           -webkit-border-radius: 2px; -moz=
+-border-radius: 2px;
+                                           background-color: #ec5252;
+                                           border-top: 12px solid #ec5252;
+                                           border-bottom: 12px solid #ec525=
+2;
+                                           border-right: 18px solid #ec5252;
+                                           border-left: 18px solid #ec5252;=
+ display: inline-block;">
+                                           Ver certificado
+                                        </a>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+                            </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+                        </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                </div>
+                <div style=3D"font: 11px sans-serif; color: #686f7a;">
+                    <p style=3D"font-size: 11px; color: #686f7a;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                            Udemy 600 Harrison Street, 3rd Floor, San Franc=
+isco, CA 94107.
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                    </p>
+                </div>
+            </div>
+        </div>
+=20=20=20=20
+<img src=3D"https://e2.udemymail.com/wf/open?upn=3DKzru7UZQtfH-2FEcZh0sX1vV=
+FYyy00k4GvHTPuTpMKEiChHEL2joxUxjDdGeRdtTtq8c9rkKcjs9bGFa3WMVX26uTJf8wBnQtJ9=
+Mmo3fAV5xnlzkluKMGNtneWgGgFerS-2F-2FLaYX-2Fd5Rt8oH2aWMIfscYbCIh7B8xah4krRKV=
+JZKYTwnOtLNsE893aJG6iLjaFJKCXuNtRuiIE3V05Xiqv2eaYEkVdaFpleITamH9pQ6KCqNSbor=
+7EgCE4pGqTWxblPa-2FhDLgNoUinFBPcnpiH8esgweg0UxGaDupzcNxDf75lGhzyv5zp5KfuID-=
+2FOYgeyAjml1XE25MAAWg7OwSZJGag-3D-3D" alt=3D"" width=3D"1" height=3D"1" bor=
+der=3D"0" style=3D"height:1px !important;width:1px !important;border-width:=
+0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-righ=
+t:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bo=
+ttom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>

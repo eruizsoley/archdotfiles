@@ -1,0 +1,499 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a92:b70b:0:0:0:0:0 with SMTP id k11csp658598ili;
+        Fri, 12 Jun 2020 12:55:19 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxi3jS9/Zw+4WUWhyJ3kmdXX1dQ0Ss6Pn94RVZagXGVO4npD3ZILBExB+bMCpZoQyLOKH/Y
+X-Received: by 2002:a05:6402:8d1:: with SMTP id d17mr12752679edz.38.1591991718891;
+        Fri, 12 Jun 2020 12:55:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1591991718; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OTz7AmvjHTPnhaHmXpeCwHWF568cb78Q0i95fFb1LTd3LyKTtMzD6lAfuiuBbYae+4
+         CEUIWH90rvCInYhCpgGyM15hPj1qyZGPcwtbWvUPhh6uWPVUZvj00HJx2L1WlfewlHHV
+         RWObHzUxOLc3PxnF/rCUQW2S3VuI4JVTyKe/x4wr7nI+7ahl0nI3hkwQNIt+mDeCIjyT
+         i6raPC4eK4tnvWyH1lD8l+G8ZXhH/QYhOokSJVR8MakcTToN1dQcfiZ+mu11cddJ3W9n
+         0jYX4vwH2/ITAMRXOKs90ceantRTAagy+oi9qfGyU0izb7lEpFVsoYpyvgm8AQVA8pS3
+         ca3Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:mime-version:from:date:dkim-signature
+         :dkim-signature;
+        bh=/Hlw/rdVdG7WrY3kjEFOlw+2gZEQIDQGM6/ANqcYI7A=;
+        b=CLTHqFNJruora06GVSFEVjWEfIu3zQQL5xAT8I3r5Mek3tjHBprPiyDDRmhj1UO1kr
+         fROM/upUK3EIaCt2UqUCoOidXj2LNEY/cC0CWrc5EJNJtwKMirl5r5JOUvh1CIhS9nag
+         B+u9KdW00EheDg4GWF9fcFMhTuUQ0gZudjbpZ3Q7lh+NMNU29OkDcZNVGTNPlEJVEYOC
+         ONESH3T18G87j/CBIps7R36sUObW77GBnVa7YOowxI0Ori521YD16MGUrzpXOmQ/Xnpz
+         ZIFhaEhYrZpa/+9Ucx9YIOx0+wfyUC3M8yXO2b/4FYYQ0PmKqc3G7TPnezDRGJYHXPGF
+         JcrQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alfredapp.com header.s=s1 header.b=IsDGLQfx;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=QkcWi0y5;
+       spf=pass (google.com: domain of bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com designates 149.72.136.142 as permitted sender) smtp.mailfrom="bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com"
+Return-Path: <bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com>
+Received: from o1.ptr3859.alfredapp.com (o1.ptr3859.alfredapp.com. [149.72.136.142])
+        by mx.google.com with ESMTPS id s9si4473548edx.608.2020.06.12.12.55.17
+        for <eruizsoley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 12 Jun 2020 12:55:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com designates 149.72.136.142 as permitted sender) client-ip=149.72.136.142;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alfredapp.com header.s=s1 header.b=IsDGLQfx;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=QkcWi0y5;
+       spf=pass (google.com: domain of bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com designates 149.72.136.142 as permitted sender) smtp.mailfrom="bounces+113239-8813-eruizsoley=gmail.com@em989.alfredapp.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=alfredapp.com;
+	h=content-type:from:mime-version:subject:x-feedback-id:to;
+	s=s1; bh=/Hlw/rdVdG7WrY3kjEFOlw+2gZEQIDQGM6/ANqcYI7A=;
+	b=IsDGLQfx4TbtdiltHFAKX/bv0tjaRA7eArstVfFoBz7oLiqyGCrRtRBfj37i/5TU1Uya
+	grPs+9hrGUrxTFcT/ELfsN9RFynflUK/mlcMeGl68v/hnFAM0ykK5eAM8Fb6nF/Pi3ctsU
+	UBvqG8kxIfp4ru6IWt/hLrq78EjOaGgeI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:x-feedback-id:to;
+	s=smtpapi; bh=/Hlw/rdVdG7WrY3kjEFOlw+2gZEQIDQGM6/ANqcYI7A=;
+	b=QkcWi0y5EVQfAArnU9RAZPYkoHgnEWVblkV6Sbccuupx86oCXaL9DyJlFeww0paszd4Y
+	c4QhGzNeG4QHrQ1bCxnSbSRuaxXerr7omMJRo4/kPBCoeZQp6bebyqIuahZxhNrPWeTlKQ
+	DZfQ02JrgHWHQHtB1i5OZn4OuiE6fGJhQ=
+Received: by filterdrecv-p3iad2-784dbb6bd8-gkg68 with SMTP id filterdrecv-p3iad2-784dbb6bd8-gkg68-19-5EE3DDA4-29
+        2020-06-12 19:55:16.323389567 +0000 UTC m=+776908.136644177
+Received: from MTEzMjM5 (unknown)
+	by ismtpd0007p1lon1.sendgrid.net (SG)
+	with HTTP
+	id Im8KRLXMSIecEW1dNxLb9Q
+	Fri, 12 Jun 2020 19:55:16.127 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=c20e972ab4d48b1927ebda2efd4935a468d79a165fe4a3148630d4b2fdf7
+Date: Fri, 12 Jun 2020 19:55:16 +0000 (UTC)
+From: Alfred <license@alfredapp.com>
+Mime-Version: 1.0
+Message-ID: <Im8KRLXMSIecEW1dNxLb9Q@ismtpd0007p1lon1.sendgrid.net>
+Subject: Your Alfred Powerpack License - 1702186062
+X-Feedback-ID: 113239:SG
+X-SG-EID: 
+ =?us-ascii?Q?3FJhRX0+I4U4F2XOXfdPhtY8qMBJsQ8rSrdUhfunRSn2z76ZaigTBZB9O8wbAu?=
+ =?us-ascii?Q?BXI+u0z5jRTIT+Pya3zLAkJBvuSy=2FprOXuNmrKi?=
+ =?us-ascii?Q?Q=2FcxTGg7Pb6PWnoOvkl9eFCQmsElaYTCnR5d=2Fd0?=
+ =?us-ascii?Q?RsWpcr8b3WW9Gm6Gbk7H95fbkzMGad44qmCNtB4?=
+ =?us-ascii?Q?My09J8FgkUpe8dV58hzlDd8LIpjBuj=2F3SEY9lST?=
+ =?us-ascii?Q?UT5qnFMJob3hdwDyjBFTOq15BgPpMG288PSLlY?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FKHgAsE=2FCUk5eZaRe5Ltr?=
+ =?us-ascii?Q?cbJxMJeSCHLslB6deUbtEF+7OC=2Fh4wYX3gS3OtY?=
+ =?us-ascii?Q?iWQ7gTAaQDRn2lKvCvSkTYeG+WVhoAarvTt4ZnQ?=
+ =?us-ascii?Q?nZ9oy5eh=2Ffr9LWYIOZ=2FA1sexpgL1DFtZ1UuwR7F?=
+ =?us-ascii?Q?KV+zLBVSsYkbMSiIlFJNDj2aePAKc42s6eQ=3D=3D?=
+To: eruizsoley@gmail.com
+
+--c20e972ab4d48b1927ebda2efd4935a468d79a165fe4a3148630d4b2fdf7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Thank you for buying an Alfred Powerpack license!
+
+This is the license code you need to unlock the Alfred Powerpack functional=
+ity:
+
+Email:
+
+eruizsoley@gmail.com
+
+License Code:
+
+A4SLNDY1M2YwMmUzYTZiMAFPc2HcT5UsB5uh/qIX7FLnDQmbs2
+MmY23E7lDBmVwi+XphmqtsT+w3KPJLmqmMnk4O0wZ12WUAajQ8
+B70bJ67ztMn4o2B3Kc3K9zVNSiQrAKVjHBvZ9y2XdJdlmz9KAe
+2P3HBgv6HWCUtObHbAi3gfhcErJ13Fj/+u/ltSHkqYnN8k2au4
+
+Copy and paste your license details above to the Alfred Powerpack preferenc=
+es. If you are missing the Powerpack tab in the preferences, you are using =
+the Mac App Store version. You'll need to download the latest version of Al=
+fred from our website first.
+
+Need help to get started with Alfred? Visit our help site (https://www.alfr=
+edapp.com/help/) for tutorials on using Alfred, as well as useful workflows=
+, tips and tricks.
+
+You can also find us on Twitter at @alfredapp (https://twitter.com/alfredap=
+p) to say hello.
+
+Cheers,
+Andrew and Vero
+
+You purchased the Alfred Powerpack from Running with Crayons Ltd, a company=
+ registered in England and Wales (company number 7211061) at Lakin Rose, Pi=
+oneer House, Vision Park, Histon, Cambridge CB24 9NL, United Kingdom. For m=
+ore information, visit https://www.alfredapp.com/
+--c20e972ab4d48b1927ebda2efd4935a468d79a165fe4a3148630d4b2fdf7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, minimum-scale=3D1, maximum-scale=3D1" /><!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge" /><!--<![end=
+if]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type=3D"text/css">
+      body {width: 600px;margin: 0 auto;}
+      table {border-collapse: collapse;}
+      table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+      img {-ms-interpolation-mode: bicubic;}
+    </style>
+    <![endif]-->
+
+    <style type=3D"text/css">
+      body, p, div {
+        font-family: helvetica,arial,sans-serif;
+        font-size: 14px;
+      }
+      body {
+        color: #888;
+      }
+      body a {
+        color: #50acbc;
+        text-decoration: none;
+      }
+      p { margin: 0; padding: 0; }
+      table.wrapper {
+        width:100% !important;
+        table-layout: fixed;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      img.max-width {
+        max-width: 100% !important;
+      }
+      .column.of-2 {
+        width: 50%;
+      }
+      .column.of-3 {
+        width: 33.333%;
+      }
+      .column.of-4 {
+        width: 25%;
+      }
+      @media screen and (max-width:480px) {
+        .preheader .rightColumnContent,
+        .footer .rightColumnContent {
+            text-align: left !important;
+        }
+        .preheader .rightColumnContent div,
+        .preheader .rightColumnContent span,
+        .footer .rightColumnContent div,
+        .footer .rightColumnContent span {
+          text-align: left !important;
+        }
+        .preheader .rightColumnContent,
+        .preheader .leftColumnContent {
+          font-size: 80% !important;
+          padding: 5px 0;
+        }
+        table.wrapper-mobile {
+          width: 100% !important;
+          table-layout: fixed;
+        }
+        img.max-width {
+          height: auto !important;
+          max-width: 480px !important;
+        }
+        a.bulletproof-button {
+          display: block !important;
+          width: auto !important;
+          font-size: 80%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .columns {
+          width: 100% !important;
+        }
+        .column {
+          display: block !important;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--user entered Head Start-->
+   =20
+     <!--End Head user entered-->
+  </head>
+  <body>
+    <center class=3D"wrapper" data-link-color=3D"#50acbc" data-body-style=
+=3D"font-size: 14px; font-family: helvetica,arial,sans-serif; color: #888; =
+background-color: #eee;">
+      <div class=3D"webkit">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"wrapper" bgcolor=3D"#eee">
+          <tr>
+            <td valign=3D"top" bgcolor=3D"#eee" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" class=3D"out=
+er" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tr>
+                        <td>
+                          <!--[if mso]>
+                          <center>
+                          <table><tr><td width=3D"600">
+                          <![endif]-->
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width: 100%; max-width:600px;" align=3D"cent=
+er">
+                            <tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng: 0px 0px 0px 0px; color: #888; text-align: left;" bgcolor=3D"#fff#ffffff=
+" width=3D"100%" align=3D"left">
+                               =20
+    <table class=3D"module preheader preheader-hide" role=3D"module" data-t=
+ype=3D"preheader" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"
+           style=3D"display: none !important; mso-hide: all; visibility: hi=
+dden; opacity: 0; color: transparent; height: 0; width: 0;">
+      <tr>
+        <td role=3D"module-content">
+          <p>This is the license code you need to unlock the Alfred Powerpa=
+ck functionality.</p>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:12px 0px 0px 0p=
+x;background-color:#eee;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/9f212c86d=
+86eb1bbfecdf3d67af0776b7826a1bf9cbe99ec4503a7f0bda9ef419065f381de40a5ec27e7=
+7ad3b1bb82ed906f5afa8f134321be2bba994114b86f.png" alt=3D"Alfred Powerpack" =
+width=3D"600">
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:24px 18px 6px 18px;line-height:22px;text-align=
+:inherit;background-color:#ffffff;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#ffffff">
+            <div>
+<div><span style=3D"font-size:24px;"><span style=3D"font-style: normal; fon=
+t-variant-caps: normal; caret-color: rgb(80, 172, 188); color: rgb(80, 172,=
+ 188); font-family: helvetica, arial, sans-serif;">Thank you for buying an =
+Alfred Powerpack license!</span></span></div>
+</div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:6px 18px 6px 18px;line-height:22px;text-align:=
+inherit;background-color:#ffffff;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#ffffff">
+            <div>This is the license code you need to unlock the Alfred Pow=
+erpack functionality:</div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"background-color:#fff;padding:18px 18px 6px 18px;line-=
+height:22px;text-align:inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#fff">
+            <div><span style=3D"font-size:16px;">Email:</span></div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"background-color:#fbfbd5;padding:0px 16px 0px 28px;lin=
+e-height:16px;text-align:inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#fbfbd5">
+            <pre><span style=3D"font-family:courier,monospace;"><span style=
+=3D"color:#696969;"><span style=3D"font-size:14px;">eruizsoley@gmail.com</s=
+pan></span></span></pre>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"background-color:#fff;padding:18px 18px 6px 18px;line-=
+height:22px;text-align:inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#fff">
+            <div><span style=3D"font-size:16px;">License Code:</span></div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"background-color:#fbfbd5;padding:0px 16px 0px 28px;lin=
+e-height:16px;text-align:inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#fbfbd5">
+            <pre><span style=3D"font-family:courier,monospace;"><span style=
+=3D"color:#696969;"><span style=3D"font-size:14px;">A4SLNDY1M2YwMmUzYTZiMAF=
+Pc2HcT5UsB5uh/qIX7FLnDQmbs2
+MmY23E7lDBmVwi+XphmqtsT+w3KPJLmqmMnk4O0wZ12WUAajQ8
+B70bJ67ztMn4o2B3Kc3K9zVNSiQrAKVjHBvZ9y2XdJdlmz9KAe
+2P3HBgv6HWCUtObHbAi3gfhcErJ13Fj/+u/ltSHkqYnN8k2au4</span></span></span></pr=
+e>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:22px 18px 18px 18px;line-height:22px;text-alig=
+n:inherit;background-color:#fff;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#fff">
+            <div>
+<div>Copy and paste your license details above to the Alfred Powerpack pref=
+erences. If you are missing the Powerpack tab in the preferences, you are u=
+sing the Mac App Store version. You'll need to download the latest version =
+of Alfred from our website first.</div>
+
+<div>&nbsp;</div>
+</div>
+
+<div>Need help to get started with Alfred? Visit <a href=3D"https://www.alf=
+redapp.com/help/">our help site</a> for tutorials on using Alfred, as well =
+as useful workflows,&nbsp;tips and tricks.</div>
+
+<div>&nbsp;</div>
+
+<div>You can also find us on Twitter at <a href=3D"https://twitter.com/alfr=
+edapp">@alfredapp</a> to say hello.</div>
+
+<div>&nbsp;</div>
+
+<div>Cheers,</div>
+
+<div>Andrew and Vero</div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;background-color:#fff;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/bff514da1=
+ab0ae1fbf2ddde1b4440ac126ad131a6e33042ad1bfef450a50f32688d0f8772e3be59283a8=
+e6efc9a9194592996c50aaff0dabc801a1e77df72d2f.gif" alt=3D"" width=3D"600">
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"background-color:#ffffff;padding:18px 18px 18px 18px;l=
+ine-height:18px;text-align:inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"#ffffff">
+            <div><span style=3D"font-size:12px;">You purchased the Alfred P=
+owerpack from Running with Crayons Ltd, a company registered in England and=
+ Wales (company number 7211061) at Lakin Rose, Pioneer House, Vision Park, =
+Histon, Cambridge CB24 9NL, United Kingdom. For more information, visit <a =
+href=3D"https://www.alfredapp.com/">https://www.alfredapp.com/</a></span></=
+div>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module"
+           role=3D"module"
+           data-type=3D"spacer"
+           border=3D"0"
+           cellpadding=3D"0"
+           cellspacing=3D"0"
+           width=3D"100%"
+           style=3D"table-layout: fixed;">
+      <tr>
+        <td style=3D"padding:0px 0px 20px 0px;"
+            role=3D"module-content"
+            bgcolor=3D"#eee">
+        </td>
+      </tr>
+    </table>
+ =20
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td></tr></table>
+                          </center>
+                          <![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+  </body>
+</html>
+--c20e972ab4d48b1927ebda2efd4935a468d79a165fe4a3148630d4b2fdf7--

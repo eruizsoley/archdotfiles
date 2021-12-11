@@ -1,0 +1,31 @@
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/sent Mail"
+
+set header_cache = ~/.config/mutt/cache/headers
+set message_cachedir = ~/.config/mutt/cache/bodies
+set certificate_file = ~/.config/mutt/certificates
+
+set move = no
+set editor='nvim "+normal \\ec" +/^$/'
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
+# open in gui browser: hit "v" then go down to text/html then hit "m" or "Enter"
+# bind attach <return> view-mailcap
+# auto_view text/html                                      # view html automatically
+# alternative_order text/plain text/enriched text/html     # list html for last
+
+# Sidebar Patch --------------------------------------
+# set sidebar_delim   = ' || '
+set sidebar_visible = yes
+set sidebar_width   = 25
+color sidebar_new yellow default
+bind index,pager <up> sidebar-prev
+bind index,pager <down> sidebar-next
+bind index,pager <right> sidebar-open
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+
+source ~/.config/mutt/colors
+source ~/.config/mutt/credentials
