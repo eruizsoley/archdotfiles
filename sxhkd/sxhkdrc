@@ -22,6 +22,10 @@ super + d
 super + F1
 	bash ~/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh
 
+# launch bluetooth
+super + F2
+	bash ~/.config/rofi/rofi-bluetooth/rofi-bluetooth
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
