@@ -1,0 +1,75 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a19:6f01:0:0:0:0:0 with SMTP id k1csp2256059lfc;
+        Sat, 11 Dec 2021 06:27:01 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyeUVT02dR3YgSv23R7yd4ZGf3CN6zdA4iAfO7da3xAHtSAtfyY7q0vtdKU8cEYrogi111S
+X-Received: by 2002:a05:6214:5088:: with SMTP id kk8mr31751362qvb.61.1639232821445;
+        Sat, 11 Dec 2021 06:27:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1639232821; cv=none;
+        d=google.com; s=arc-20160816;
+        b=enQn1OdjdG8JRiGymM9Ffj5ZADLDMJ0AYWuANl4FU883P0VRdpQDmHLUbIYR/qRC8G
+         7duxAs3SvISNhdTsZRsV3i8w3MBsJ3aSLnAGUVldBfptmNdbreiyl+Hk/J/NydNzIMNK
+         gdX21p2DBZuIsMNHKjQ2+abi4OWCmbfPESdTwk0wTClj/wY4durafJJZfBcpBrRap506
+         n6AFNg6XZus0iiWkzbIf6l3BQ8wL6rKgWzpPBGGGSK4AZCOH5qtshAu0HiVsXi5yOTew
+         0uPmeUzuntDYke4Zr0ULdeaFBiJ0ABz0+hz4zDD18dOWUWoQi40tIi3H38NjfgVwjxTU
+         Z1EA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=nKqNVv2jVwmljB5HuK6ws6y3uNcTDZXNz+Mu++m517s=;
+        b=bXruUq1dqTV9YSKm1EGbCoR8tKFZOa4gyC+hVuRHzXsXjwZYMevXGqzWhq2nr3+0JD
+         1boJb3+JjpCweS1n2UHzhvE7DGLisfW2mdUVbNsXobNEj5w+EwLH/TfKPEm+SRUu+TmT
+         A1AxlE0DbumRzK+fOHTcATS3gACoCKa6qLWVtho+eTDolIEcZx4YmoQoYYrfBBIoXu2N
+         5YxvnuOvTudV1bSx081XI/L4VRdjRDHXOE80y7TWmlzsABEEdfuQNiVQthws9cL4TIc1
+         OXGo/EIHjd56xkFFSPQQOXqTdO7UrDb6OoW2WHyiaL5elfaSPONw8kMFSxeyYy7fhSPA
+         sOVg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2014 header.b=sBdF1HY4;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from smtp.github.com (out-26.smtp.github.com. [192.30.252.209])
+        by mx.google.com with ESMTPS id az34si6903377qkb.125.2021.12.11.06.27.00
+        for <eruizsoley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Sat, 11 Dec 2021 06:27:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) client-ip=192.30.252.209;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2014 header.b=sBdF1HY4;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-1979650.ash1-iad.github.net [10.56.202.73])
+	by smtp.github.com (Postfix) with ESMTPA id C12865E0482
+	for <eruizsoley@gmail.com>; Sat, 11 Dec 2021 06:27:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2014; t=1639232820;
+	bh=nKqNVv2jVwmljB5HuK6ws6y3uNcTDZXNz+Mu++m517s=;
+	h=Date:From:To:Subject:From;
+	b=sBdF1HY4FuaInVfL0jmBzufox0SrFKLJ3M2fGtrp3cIrSbF//QI94V/VvRY9qtX9y
+	 oQ5I8+SLDqYAKLjxS6XG5PG9gO9d24mRGHRRL0s41GjQTlQpSrnz/aUSpA3LKqJg+K
+	 +c6LfLpyWnRFZHOfHTzoh/2E+djVW0ASw4w4JppY=
+Date: Sat, 11 Dec 2021 06:27:00 -0800
+From: GitHub <noreply@github.com>
+To: eruizsoley <eruizsoley@gmail.com>
+Message-ID: <61b4b534bf757_59c78844881@lowworker-669646864b-5cxpt.mail>
+Subject: [GitHub] Please verify your device
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey eruizsoley!
+
+A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.
+
+Device: Chrome on Linux
+Verification code: 994574
+
+If you did not attempt to sign in to your account, your password may be compromised. Visit https://github.com/settings/security to create a new, strong password for your GitHub account.
+
+If you'd like to automatically verify devices in the future, consider enabling two-factor authentication on your account. Visit https://docs.github.com/articles/configuring-two-factor-authentication to learn about two-factor authentication.
+
+If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods. See https://docs.github.com/articles/configuring-two-factor-authentication-recovery-methods in the GitHub Help.
+
+Thanks,
+The GitHub Team

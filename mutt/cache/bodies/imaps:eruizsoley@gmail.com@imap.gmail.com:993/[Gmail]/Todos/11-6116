@@ -1,0 +1,798 @@
+Delivered-To: eruizsoley@gmail.com
+Received: by 2002:a19:6f01:0:0:0:0:0 with SMTP id k1csp1288768lfc;
+        Fri, 10 Dec 2021 06:17:10 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyrkDsN59Z/i6xKEHOUohdMG5+JllVJQY/JzCIghD2BVyw0sbU47W+9OCOjEV+eryXZo7Fa
+X-Received: by 2002:a5d:940c:: with SMTP id v12mr22586069ion.157.1639145830047;
+        Fri, 10 Dec 2021 06:17:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1639145830; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IWUz/JgoIZGD9hsmbAt+4ZUxU7zdcgOuaGikvp69gYlP9LPuBop34GQLCRwbiU9jOb
+         Lq1MONWO5O053jvhYCjTLFlbgDoxgR9weYL5BNr8uLEAEDE1ZoaBJxr3QE3R6lnO+Hn4
+         h8J2WlSmSos5kB5Od1LoTxRMjNdRBufXj134rPebE77ramlXOLGJFMDXrxhYPdHnT215
+         sks6d8nRJVLg6Uf0lzSK4+MUuFhO6UzuzYmfFi4VTTIr5/6PmKmGqWO++KMLb4DVT/ZD
+         QY0mpLvGwV6peIq0I+r0fxHwIg8y+xwBbL7KimMwZk78rr0oF7UDfUSDPbvbElvC1Zza
+         GqbQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:reply-to:from
+         :date:subject:to:dkim-signature;
+        bh=ioBQIvSDVWgHGu5ispxBdXGYSPe7lF1fsKi3T7tN1sY=;
+        b=HVvSCT2F+Je5VnFR8dL8mD3Cie309o42X6ZC0Ar5xnA1sL/UnjKdWMlZK57uQqVY9T
+         yOOBFkD5E5QEUbKvuKCEnIRyA9VARpW0UE76gqMVfQqwCJRY+eNxKDd2nk1CAY3J/gCS
+         HEl+TiurnzJXuB5XcL9263Kyn4aDPPpxEhXglZJ+sO6ZdPvS6/3AMWmMHGBwLrG8lIEp
+         id0yN6Jgmg2ms1fahUNqUz/ahDv4cfZY0ccxPliQneQ/HE2gPt8pQ+hxBNl44EHhrAy4
+         SryN6DQnIhehAJuXQRwZz7LCCrDlRa/F/6v9y7oe3xNzKOr2QiK6yFli5ebWXCcyHOlm
+         uq2w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@signing.refused header.s=default header.b="It/oMYpR";
+       spf=neutral (google.com: 146.66.121.61 is neither permitted nor denied by best guess record for domain of u2-9e6z34n83cr6@c87721.sgvps.net) smtp.mailfrom=u2-9e6z34n83cr6@c87721.sgvps.net
+Return-Path: <u2-9e6z34n83cr6@c87721.sgvps.net>
+Received: from delivery.mailspamprotection.com ([146.66.121.61])
+        by mx.google.com with ESMTPS id l18si5093855iow.31.2021.12.10.06.17.09
+        for <eruizsoley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 10 Dec 2021 06:17:10 -0800 (PST)
+Received-SPF: neutral (google.com: 146.66.121.61 is neither permitted nor denied by best guess record for domain of u2-9e6z34n83cr6@c87721.sgvps.net) client-ip=146.66.121.61;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@signing.refused header.s=default header.b="It/oMYpR";
+       spf=neutral (google.com: 146.66.121.61 is neither permitted nor denied by best guess record for domain of u2-9e6z34n83cr6@c87721.sgvps.net) smtp.mailfrom=u2-9e6z34n83cr6@c87721.sgvps.net
+Received: from 110.130.214.35.bc.googleusercontent.com ([35.214.130.110] helo=c87721.sgvps.net)
+	by se28.mailspamprotection.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+	(Exim 4.92)
+	(envelope-from <u2-9e6z34n83cr6@c87721.sgvps.net>)
+	id 1mvghu-0004pm-4B
+	for eruizsoley@gmail.com; Fri, 10 Dec 2021 08:17:09 -0600
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=signing.refused; s=default; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Reply-To:From:Date:Subject:To:Sender:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=ioBQIvSDVWgHGu5ispxBdXGYSPe7lF1fsKi3T7tN1sY=; b=It/oMYpRpPy09L/AFpdRm82Clo
+	r9BnBBjab7CS423uXWdE2pSZJH2HGW4VlTIEOazUrpLmXGJtcyiURylRO7m2e67Pneqv3EekFtaQp
+	sjpzVzaFDQmHTnzhjRes7G0m0I02rp/86xEZ0+JAloaOKh/ZNY8fjo9XpxD5VVbCbwnw=;
+Received: from [127.0.0.1] (port=48198 helo=c87721.sgvps.net)
+	by c87721.sgvps.net with smtp (Exim 4.90-.1)
+	(envelope-from <u2-9e6z34n83cr6@c87721.sgvps.net>)
+	id 1mvght-000ARv-0m
+	for eruizsoley@gmail.com; Fri, 10 Dec 2021 14:17:05 +0000
+To: Ernest <eruizsoley@gmail.com>
+Subject: =?utf-8?Q?Las_100_mejores_fotos_del_a=C3=B1o_seg=C3=BAn_TIME?=
+X-PHP-Originating-Script: 501:PHPMailer.php
+Date: Fri, 10 Dec 2021 14:17:04 +0000
+From: El equipo de Photolari <hola@photolari.com>
+Reply-To: Photolari <boletin@photolari.com>
+Message-ID: <NDA0ODI3MAWY8245SI240JAMTYzOTE0NTgyNDgyMzU3@www.photolari.com>
+X-Mailer: MailPoet (https://www.mailpoet.com)
+X-email_id: 240
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_Vm8ZZmmSny4k94mtwQ2wAOmOkIC84frPJ8GvFjg4qg"
+Content-Transfer-Encoding: 8bit
+X-ACL-Warn: Message rejected. c87721.sgvps.net is not currently owned by sender
+X-Originating-IP: 35.214.130.110
+X-SpamExperts-Domain: c84072.sgvps.net
+X-SpamExperts-Username: 35.214.130.110
+Authentication-Results: mailspamprotection.com; auth=pass smtp.auth=35.214.130.110@c84072.sgvps.net
+X-SpamExperts-Outgoing-Class: unsure
+X-SpamExperts-Outgoing-Evidence: Combined (0.49)
+X-Recommended-Action: accept
+X-Filter-ID: Pt3MvcO5N4iKaDQ5O6lkdGlMVN6RH8bjRMzItlySaT+orEY26eqt18wAuknfLUpAPUtbdvnXkggZ
+ 3YnVId/Y5jcf0yeVQAvfjHznO7+bT5wNOgR8X6jyuoSoN+LixkHDBD98F0IWGfBKHW73y4zF1s66
+ yfQg3HUFVdb+wDVsxfEsKWtknW8RXG5x2BDBRPXMSxIRXVMlFuiz/acFNeeXt210GhOy8tQIJGC7
+ Uu9wYbKh+FIe7bxq8J5w4q3O8qAc1zyMfzqd1uv/grcJK+QNlLG6foOyXRBmiF7i14pkEzfsqijR
+ 3q/kiCVyxQvMqIKKLoQlIkLSs1fQl7ECuU4UOAmnWgUJI9wF1eD8jysd1Vw1yUWDmjbPhvdaCXFN
+ EjZCut5PpkrBQueV+Yg5wqLK/Lp1iz7qBGB0Y+Q2805sYY9nrqWGHcz5u2H0Q2lCzlNpZK0EMmf3
+ P50Ajf/tIX00Fi2UzZMb4kuX6D5eETmGUuUcqbdy+7WYS7ujrPXHqhox0HpT3S2SFmqVvJUoDpLg
+ 16h4fdi146VscqgNfYFRJ9QZZwC4tEuT3Jm5/2rEFXOQBK6gaJhOTc6RnX9jBUQA9+0OlwexQHmZ
+ Q3Vd7meTRk5x3dBtceKX2dWiEm+7oHm9xBEeGmns8QeFADnQDTrfrpdwLAwbo48OxgoIF1f8KUxb
+ O+uWqv+yIXuSaTRGCFbDjMhpwyKUnIZXKOkSA6DYP9lqtiJ2RkF0cIKeA4r3qcrDeo2F/515C8kJ
+ 0QodJwfrmFGs5lmow6gOzU/CbOds0gEiRQv+PVjjwa+Z5RFCOMTHTu1EGglhFZHJYfM0eGGKSguV
+ 0TqC9t5Bx9sBk0JPuSzdJ27WExS94ixf1S8gKD6KIEEGgro/FqM9d64/jXos4oSvOeIDNjNNOkFx
+ 5KeJTCzo6zsMBiN5CrtOSZw5b+75pi605HnGu+h/juBQNawnLbaM5bYS1jV3t3b54hdfzJ1hBUvS
+ Sq5Jd1K9M8mWGu+tOR+gJD/q/js/puGTk153RFR8WPKRH3DnvLUSJ+L6fxyNcFLZweBzfKFuN5sW
+ UWCd9Wpl6sUimYGiBY+4OKCAsAV7MCxt5xVh8+BplZlhMcOpyKA69LF1Ge2GaGfxmfpGM17d+s2U
+ vqXqs42O2MhuNzZg7/71CZKjVpgkDaEziJysDGtPXWyWp+beo6l5Vzou//nzk76lak4ojODbJHHE
+ 2yX8zWX9wslqZC5NzlNX8if4QtCk0HuTftgzF3cpnHoX47PlbM4wRJIXHcOXlhXl
+X-Report-Abuse-To: spam@quarantine1.mailspamprotection.com
+
+This is a multi-part message in MIME format.
+
+--b1_Vm8ZZmmSny4k94mtwQ2wAOmOkIC84frPJ8GvFjg4qg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Las 100 mejores fotos del año según TIME 
+
+¿Tienes problemas para visualizar? Mira este boletín en tu navegador. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=W3ZpZXdfaW5fYnJvd3Nlcl9saW5rXQ&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Diciembre es siempre un mes extraño. La Navidad y el fin de año marcan casi todas las noticias y los consabidos resúmenes de lo más destacado de
+los últimos meses. Por ejemplo, el ya clásico 'Las 100 fotos del año' de la revista TIME que siempre es una maravilla repasar dedicándole unos
+minutos. Y con un café cerca, a ser posible. 
+Además, en España los días festivos del 6 y el 8 de diciembre dejan la semana un poco coja. Pese a ello, en Photolari hemos aprovechado esta semana
+más tranquila para publicar al fin el vídeo de nuestro viaje a Formentera del pasado mes de octubre y para grabar un nuevo episodio de nuestro
+podcast. No está mal para una semana tan corta y para un fin de 2021 al que llegamos todos muy cansados.
+
+Las 100 fotos más relevantes de 2021 según la revista Time (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9sYXMtMTAwLWZvdG9zLW1hcy1yZWxldmFudGVzLWRlLTIwMjEtc2VndW4tbGEtcmV2aXN0YS10aW1lLw&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+La prestigiosa revista TIME ha publicado, como cada año, la selección de las que considera las 100 fotografías más relevantes o icónicas de 2021.
+Como todos sabemos -recuerdan "2020 fue un año maldito y el peor de todos los tiempos”, pero que ese 2021 al que mirábamos con esperanza, también
+ha sido complicado y ha estado lleno de acontecimientos dignos …
+Leer más. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9sYXMtMTAwLWZvdG9zLW1hcy1yZWxldmFudGVzLWRlLTIwMjEtc2VndW4tbGEtcmV2aXN0YS10aW1lLw&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Fujifilm GFX: cinco fotógrafos profesionales nos cuentan por qué trabajan con el formato medio de Fujifilm (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9mdWppZmlsbS1nZngtY2luY28tZm90b2dyYWZvcy1wcm9mZXNpb25hbGVzLW5vcy1jdWVudGFuLXBvci1xdWUtdHJhYmFqYW4tY29uLWVsLWZvcm1hdG8tbWVkaW8tZGUtZnVqaWZpbG0v&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Decía Eugene Smith -al menos a él se le atribuye la frase- que el mundo no entra en 35 milímetros. Y es que hay vida más allá del formato
+completo y estos fotógrafos y fotógrafas profesionales con los que hemos hablado son una buena prueba de ello. Todos utilizan equipo Fujifilm GFX,
+la marca que en los últimos años más …
+Leer más. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9mdWppZmlsbS1nZngtY2luY28tZm90b2dyYWZvcy1wcm9mZXNpb25hbGVzLW5vcy1jdWVudGFuLXBvci1xdWUtdHJhYmFqYW4tY29uLWVsLWZvcm1hdG8tbWVkaW8tZGUtZnVqaWZpbG0v&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+¿El streaming salvará las cámaras digitales? Parece que en China sí (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9lbC1zdHJlYW1pbmctc2FsdmFyYS1sYXMtY2FtYXJhcy1kaWdpdGFsZXMtcGFyZWNlLXF1ZS1lbi1jaGluYS1zaS8&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Que el vídeo se ha convertido en una prestación fundamental de muchas cámaras de foto no es ningún secreto. Hace tiempo que los fabricantes
+entendieron que no sólo había un mercado interesante, sino que el margen de precios cuando se apostaba por el vídeo era mucho más amplio. Pero la
+pandemia y el confinamiento descubrió otro potencial de las cámaras …
+Leer más. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9lbC1zdHJlYW1pbmctc2FsdmFyYS1sYXMtY2FtYXJhcy1kaWdpdGFsZXMtcGFyZWNlLXF1ZS1lbi1jaGluYS1zaS8&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+COMPRA AQUÍ LA TAZA DE PHOTOLARI (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9iYXphci1waG90b2xhcmkv&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Sony A7 IV: el vídeo a prueba (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9zb255LWE3LWl2LWVsLXZpZGVvLWEtcHJ1ZWJhLw&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Tras probarla el día de su estreno oficial centrándonos -principalmente- en su prestaciones fotográficas, hoy volvemos a la carga con la Sony A7 IV
+para analizar al detalle todo lo que puede dar de sí esta cámara en el terreno del vídeo. Grabación en 4K de gran calidad con compresión 4:2:2 y
+10 bits, pantalla desplegable lateralmente, estabilización de imagen …
+Leer más. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9zb255LWE3LWl2LWVsLXZpZGVvLWEtcHJ1ZWJhLw&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Photolari Viajeros: Formentera (fotográfica) (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9waG90b2xhcmktdmlhamVyb3MtZm9ybWVudGVyYS1mb3RvZ3JhZmljYS8&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Entre faros, playas de postal y una costa espectacular, la pequeña isla de Formentera concentra en apenas 85 kilómetros cuadrados muchos argumentos
+para ser un gran destino fotográfico. Y a la lista habitual, sumamos uno que refuerza todavía más esta idea: Formentera Fotográfica. Una cita
+anual con la fotografía de autor, el documentalismo o la foto de naturaleza que el …
+Leer más. (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=aHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9waG90b2xhcmktdmlhamVyb3MtZm9ybWVudGVyYS1mb3RvZ3JhZmljYS8&controller=stats&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Darse de Baja (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=W3Vuc3Vic2NyaWJlX2xpbmtd&controller=stats&hash=56323b3a6245d0ca5f23b4ab8b72c9a7&action=analyse&wysija-page=1&wysijap=subscriptions
+) - Editar tu suscripción (
+https://www.photolari.com/?email_id=240&user_id=8245&urlpassed=W3N1YnNjcmlwdGlvbnNfbGlua10&controller=stats&hash=33d935e2b77eebb112ec2d869d1779ea&action=analyse&wysija-page=1&wysijap=subscriptions
+)
+
+Photolari Magazine
+08005 Barcelona
+hola@photolari.com
+
+--b1_Vm8ZZmmSny4k94mtwQ2wAOmOkIC84frPJ8GvFjg4qg
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">=0A<html xmlns=3D"http://www.w3.org/1999/=
+xhtml"  >=0A<head>=0A    <meta http-equiv=3D"Content-Type" content=3D"text/=
+html;charset=3Dutf-8" />=0A    <meta name=3D"viewport" content=3D"width=3Dd=
+evice-width, initial-scale=3D1.0"/>=0A    <title>Las 100 mejores fotos del =
+a&ntilde;o seg&uacute;n TIME</title>=0A    <style type=3D"text/css">body {=
+=0A        width:100% !important;=0A        -webkit-text-size-adjust:100%;=
+=0A        -ms-text-size-adjust:100%;=0A        margin:0;=0A        padding=
+:0;=0A    }=0A=0A    body,table,td,p,a,li,blockquote{=0A        -ms-text-si=
+ze-adjust:100%;=0A        -webkit-text-size-adjust:100%;=0A    }=0A=0A    .=
+ReadMsgBody{=0A        width:100%;=0A    }.ExternalClass {width:100%;}.Exte=
+rnalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .Ext=
+ernalClass td, .ExternalClass div {line-height: 100%;}#backgroundTable {mar=
+gin:0; padding:0; width:100% !important; line-height: 100% !important; back=
+ground:#ffffff;}img {=0A        outline:none;=0A        text-decoration:non=
+e;=0A        -ms-interpolation-mode: bicubic;=0A    }=0A    a img {border:n=
+one;}=0A    .image_fix {display:block;}p {=0A        font-family: "Arial";=
+=0A        font-size: 12px;=0A        line-height: 150%;=0A        margin: =
+1em 0;=0A        padding: 0;=0A    }h1,h2,h3,h4,h5,h6{=0A        margin:0;=
+=0A        padding:0;=0A    }h1 {=0A        color:#000000 !important;=0A   =
+     display:block;=0A        font-family:Arial;=0A        font-size:28px;=
+=0A        font-style:normal;=0A        font-weight:normal;=0A        line-=
+height:125%;=0A        letter-spacing:normal;=0A        margin:0;=0A       =
+ =0A        text-align:left;=0A    }h2 {=0A        color:#000000 !important=
+;=0A        display:block;=0A        font-family:Arial;=0A        font-size=
+:26px;=0A        font-style:normal;=0A        font-weight:normal;=0A       =
+ line-height:125%;=0A        letter-spacing:normal;=0A        margin:0;=0A =
+       =0A        text-align:left;=0A    }h3 {=0A        color:#000000 !imp=
+ortant;=0A        display:block;=0A        font-family:Arial;=0A        fon=
+t-size:24px;=0A        font-style:normal;=0A        font-weight:normal;=0A =
+       line-height:125%;=0A        letter-spacing:normal;=0A        margin:=
+0;=0A        =0A        text-align:left;=0A    }table td {border-collapse: =
+collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}table { border-coll=
+apse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }a {=0A        c=
+olor:#21759B;=0A        word-wrap:break-word;=0A    }=0A    #outlook a {pad=
+ding:0;}=0A    .yshortcuts { color:#21759B; }=0A=0A    #wysija_wrapper {=0A=
+        background:#ffffff;=0A        color:#000000;=0A        font-family:=
+"Arial";=0A        font-size:12px;=0A        -webkit-text-size-adjust:100%;=
+=0A        -ms-text-size-adjust:100%;=0A        =0A    }=0A=0A    .wysija_h=
+eader_container {=0A        mso-border-right-alt: 0;=0A        mso-border-l=
+eft-alt: 0;=0A        mso-border-top-alt: 0;=0A        mso-border-bottom-al=
+t: 0;=0A        =0A    }=0A=0A    .wysija_block {=0A        mso-border-righ=
+t-alt: 0;=0A        mso-border-left-alt: 0;=0A        mso-border-top-alt: 0=
+;=0A        mso-border-bottom-alt: 0;=0A        background:#ffffff;=0A    }=
+=0A=0A    .wysija_footer_container {=0A        mso-border-right-alt: 0;=0A =
+       mso-border-left-alt: 0;=0A        mso-border-top-alt: 0;=0A        m=
+so-border-bottom-alt: 0;=0A        =0A    }=0A=0A    .wysija_viewbrowser_co=
+ntainer, .wysija_viewbrowser_container a {=0A        font-family: "Arial" !=
+important;=0A        font-size: 11px !important;=0A        color: #000000 !=
+important;=0A    }=0A    .wysija_unsubscribe_container, .wysija_unsubscribe=
+_container a {=0A        text-align:center;=0A        color: #7f7f7f !impor=
+tant;=0A        font-size:12px;=0A    }=0A    .wysija_viewbrowser_container=
+ a, .wysija_unsubscribe_container a {=0A        text-decoration:underline;=
+=0A    }=0A    .wysija_list_item {=0A        margin:0;=0A    }@media only s=
+creen and (max-device-width: 480px), screen and (max-width: 480px) {a[href^=
+=3D"tel"], a[href^=3D"sms"] {=0A            text-decoration: none;=0A      =
+      color: #21759B;pointer-events: none;=0A            cursor: default;=
+=0A        }=0A=0A        .mobile_link a[href^=3D"tel"], .mobile_link a[hre=
+f^=3D"sms"] {=0A            text-decoration: default;=0A            color: =
+#21759B !important;=0A            pointer-events: auto;=0A            curso=
+r: default;=0A        }body, table, td, p, a, li, blockquote { -webkit-text=
+-size-adjust:none !important; }body{ width:100% !important; min-width:100% =
+!important; }=0A    }@media only screen and (min-device-width: 768px) and (=
+max-device-width: 1024px), screen and (min-width: 768px) and (max-width: 10=
+24px) {a[href^=3D"tel"],=0A        a[href^=3D"sms"] {=0A            text-de=
+coration: none;=0A            color: #21759B;pointer-events: none;=0A      =
+      cursor: default;=0A        }=0A=0A        .mobile_link a[href^=3D"tel=
+"], .mobile_link a[href^=3D"sms"] {=0A            text-decoration: default;=
+=0A            color: #21759B !important;=0A            pointer-events: aut=
+o;=0A            cursor: default;=0A        }=0A    }=0A=0A    @media only =
+screen and (-webkit-min-device-pixel-ratio: 2) {=0A    }@media only screen =
+and (-webkit-device-pixel-ratio:.75){}=0A    @media only screen and (-webki=
+t-device-pixel-ratio:1){}=0A    @media only screen and (-webkit-device-pixe=
+l-ratio:1.5){}</style><!--[if IEMobile 7]>=0A<style type=3D"text/css">=0A=
+=0A</style>=0A<![endif]--><!--[if gte mso 9]>=0A<style type=3D"text/css">.w=
+ysija_image_container {=0A        padding-top:0 !important;=0A    }=0A    .=
+wysija_image_placeholder {=0A        mso-text-raise:0;=0A        mso-table-=
+lspace:0;=0A        mso-table-rspace:0;=0A        margin-bottom: 0 !importa=
+nt;=0A    }=0A    .wysija_block .wysija_image_placeholder {=0A        margi=
+n:2px 1px 0 1px !important;=0A    }=0A    p {=0A        line-height: 110% !=
+important;=0A    }=0A    h1, h2, h3 {=0A        line-height: 110% !importan=
+t;=0A        margin:0 !important;=0A        padding: 0 !important;=0A    }=
+=0A</style>=0A<![endif]-->=0A=0A<!--[if gte mso 15]>=0A<style type=3D"text/=
+css">table { font-size:1px; mso-line-height-alt:0; line-height:0; mso-margi=
+n-top-alt:0; }=0A    tr { font-size:1px; mso-line-height-alt:0; mso-margin-=
+top-alt:1px; }=0A</style>=0A<![endif]-->=0A=0A</head>=0A<body bgcolor=3D"#f=
+fffff" yahoo=3D"fix">=0A    <span style=3D"margin-bottom:0;margin-left:0;ma=
+rgin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;p=
+adding-top:0;display:block;background:#ffffff;">=0A    <table width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" id=3D"wysija_wrapper">=
+=0A        <tr>=0A            <td valign=3D"top" align=3D"center">=0A      =
+          <table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"center">=0A                    =0A                    <tr>=
+=0A                        <td width=3D"600" style=3D"min-width:600px;" val=
+ign=3D"top" align=3D"center"   >=0A                            <p class=3D"=
+wysija_viewbrowser_container" style=3D"font-family: Arial, 'Helvetica Neue'=
+, Helvetica, sans-serif;font-size: 11px;color: #000000;color: #000000 !impo=
+rtant;background-color: #ffffff;border: 0;text-align: center;padding-top: 8=
+px;padding-right: 8px;padding-bottom: 8px;padding-left: 8px;" >&iquest;Tien=
+es problemas para visualizar? <a style=3D"font-family: Arial, 'Helvetica Ne=
+ue', Helvetica, sans-serif;font-size: 11px;color: #000000;color: #000000 !i=
+mportant;background-color: #ffffff;border: 0;" href=3D"https://www.photolar=
+i.com/?email_id=3D240&user_id=3D8245&urlpassed=3DW3ZpZXdfaW5fYnJvd3Nlcl9saW=
+5rXQ&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscrip=
+tions" target=3D"_blank">Mira este bolet&iacute;n en tu navegador.</a></p>=
+=0A                        </td>=0A                    </tr>=0A            =
+        =0A                    <tr>=0A                        <td width=3D"=
+600" style=3D"min-width:600px;" valign=3D"top" align=3D"center">=0A        =
+                    =0A<table class=3D"wysija_header" style=3D"border: 0;bo=
+rder-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear:=
+ both;border: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" align=3D"center">=0A <tr>=0A <td height=3D"1" align=
+=3D"center" class=3D"wysija_header_container" style=3D"font-size:1px;line-h=
+eight:1%;mso-line-height-rule:exactly;border: 0;min-width: 100%;background-=
+color: #ffffff;border: 0;" >=0A =0A <img width=3D"216" height=3D"71" src=3D=
+"https://www.photolari.com/wp-content/uploads/2016/10/photolari-logo-redond=
+o-header.png" border=3D"0" alt=3D"" class=3D"image_fix" style=3D"width:216p=
+x; height:71px;text-decoration: none;outline: 0;border: 0;display: block;-m=
+s-interpolation-mode: bicubic;" />=0A </td>=0A </tr>=0A</table>=0A         =
+               </td>=0A                    </tr>=0A                    <tr>=
+=0A                        <td width=3D"600" style=3D"min-width:600px;" val=
+ign=3D"top" align=3D"left">=0A                            =0A=0A<table clas=
+s=3D"wysija_block" style=3D"border: 0;border-collapse: collapse;mso-table-l=
+space: 0pt; mso-table-rspace: 0pt;clear: both;border: 0;min-width: 100%;" w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"lef=
+t">=0A <tr style=3D"font-size:1px; mso-line-height-alt:0; mso-margin-top-al=
+t:1px;">=0A <td width=3D"100%" valign=3D"middle" class=3D"wysija_divider_co=
+ntainer" style=3D"height:24px;background-color: #ffffff;border: 0;padding-t=
+op: 15px;padding-right: 17px;padding-bottom: 15px;padding-left: 17px;" alig=
+n=3D"left">=0A <div align=3D"center">=0A <img src=3D"https://www.photolari.=
+com/wp-content/uploads/wysija/dividers/business2.png" border=3D"0" width=3D=
+"552" height=3D"24" alt=3D"---" class=3D"image_fix" style=3D"width:552px; h=
+eight:24px;text-decoration: none;outline: 0;border: 0;display: block;-ms-in=
+terpolation-mode: bicubic;" />=0A </div>=0A </td>=0A </tr>=0A</table>=0A=0A=
+=0A<table class=3D"wysija_block" style=3D"border: 0;border-collapse: collap=
+se;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear: both;border: 0;min-w=
+idth: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" align=3D"left">=0A <tr>=0A =0A =0A <td class=3D"wysija_content_container =
+center" style=3D"border: 0;border-collapse: collapse;background-color: #a30=
+000;border: 0;padding-top: 10px;padding-right: 17px;padding-bottom: 10px;pa=
+dding-left: 17px;" align=3D"left" >=0A =0A <div class=3D"wysija_text_contai=
+ner"><p style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-seri=
+f;font-size: 12px;color: #000000;color: #000000 !important;background-color=
+: #a30000;border: 0;letter-spacing: normal;mso-line-height-rule: exactly;-m=
+so-line-height-rule: exactly;line-height: 150%;margin-top: 1em;margin-right=
+: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0;paddi=
+ng-bottom: 0;padding-left: 0;vertical-align: top;word-wrap: break-word;"><s=
+pan style=3D"color: #ffffff;"><span style=3D"caret-color: #ffffff;">Diciemb=
+re es siempre un mes extra&ntilde;o. La Navidad y el fin de a&ntilde;o marc=
+an casi todas las noticias y los consabidos res&uacute;menes de lo m&aacute=
+;s destacado de los &uacute;ltimos meses. Por ejemplo, el ya cl&aacute;sico=
+ 'Las 100 fotos del a&ntilde;o' de la revista TIME que siempre es una marav=
+illa repasar dedic&aacute;ndole unos minutos. Y con un caf&eacute; cerca, a=
+ ser posible. </span></span></p><p style=3D"font-family: Arial, 'Helvetica =
+Neue', Helvetica, sans-serif;font-size: 12px;color: #000000;color: #000000 =
+!important;background-color: #a30000;border: 0;letter-spacing: normal;mso-l=
+ine-height-rule: exactly;-mso-line-height-rule: exactly;line-height: 150%;m=
+argin-top: 1em;margin-right: 0;margin-bottom: 1em;margin-left: 0;padding-to=
+p: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;vertical-align: top=
+;word-wrap: break-word;"><span style=3D"color: #ffffff;"><span style=3D"car=
+et-color: #ffffff;">Adem&aacute;s, en Espa&ntilde;a los d&iacute;as festivo=
+s del 6 y el 8 de diciembre dejan la semana un poco coja. Pese a ello, en P=
+hotolari hemos aprovechado esta semana m&aacute;s tranquila para publicar a=
+l fin el v&iacute;deo de nuestro viaje a Formentera del pasado mes de octub=
+re y para grabar un nuevo episodio de nuestro podcast. No est&aacute; mal p=
+ara una semana tan corta y para un fin de 2021 al que llegamos todos muy ca=
+nsados.</span></span></p></div>=0A </td>=0A =0A </tr>=0A</table>=0A=0A<tabl=
+e class=3D"wysija_block" style=3D"border: 0;border-collapse: collapse;mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt;clear: both;border: 0;min-width: 10=
+0%;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"left">=0A <tr>=0A =0A =0A <td class=3D"wysija_content_container center"=
+ style=3D"border: 0;border-collapse: collapse;background-color: #ffffff;bor=
+der: 0;padding-top: 10px;padding-right: 17px;padding-bottom: 10px;padding-l=
+eft: 17px;" align=3D"left" >=0A =0A =0A <table class=3D"wysija_image_table =
+center" style=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt;clear: both;border: 0;text-align: center;margin-top:=
+ 0;margin-right: auto;margin-bottom: 0;margin-left: auto;" width=3D"562" he=
+ight=3D"396" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"cent=
+er">=0A <tr style=3D"font-size:1px; mso-line-height-alt:0; mso-margin-top-a=
+lt:1px;">=0A <td class=3D"wysija_image_container center" style=3D"border: 0=
+;border-collapse: collapse;border: 1px solid #ffffff;text-align: left;displ=
+ay: block;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: au=
+to;padding-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;" widt=
+h=3D"562" height=3D"396" valign=3D"top" align=3D"center">=0A <div class=3D"=
+wysija_image_placeholder center" align=3D"center" style=3D"height:396px;wid=
+th:562px;">=0A =0A =0A <a href=3D"https://www.photolari.com/?email_id=3D240=
+&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9sYXMtMTAwLWZ=
+vdG9zLW1hcy1yZWxldmFudGVzLWRlLTIwMjEtc2VndW4tbGEtcmV2aXN0YS10aW1lLw&control=
+ler=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" class=
+=3D"wysija_image_link" style=3D"height:396px;width:562px;outline: 0;border:=
+ 0;display: block;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-lef=
+t: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;" ><=
+img width=3D"562" height=3D"396" src=3D"https://www.photolari.com/wp-conten=
+t/uploads/2021/12/casas-enterradas-en-ceniza-volcanica-600x426.jpeg" border=
+=3D"0" alt=3D"Casas enterradas en ceniza volc&aacute;nica" class=3D"image_f=
+ix" style=3D"width:562px; height:396px;text-decoration: none;outline: 0;bor=
+der: 0;display: block;-ms-interpolation-mode: bicubic;" /></a>=0A </div>=0A=
+ </td>=0A </tr>=0A </table>=0A=0A <div class=3D"wysija_text_container"><h2 =
+class=3D"align-left" style=3D"font-family: Arial, 'Helvetica Neue', Helveti=
+ca, sans-serif;font-size: 26px;color: #000000;color: #000000 !important;bac=
+kground-color: #ffffff;border: 0;font-weight: normal;font-style: normal;let=
+ter-spacing: normal;mso-line-height-rule: exactly;-mso-line-height-rule: ex=
+actly;line-height: 125%;margin-top: 0;margin-right: 0;margin-bottom: 0;marg=
+in-left: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;padding-left: =
+0;border: 0;text-align: left;" ><a style=3D"color: #21759B;color: #21759B !=
+important;background-color: #ffffff;text-decoration: none;border: 0;word-wr=
+ap: break-word;" href=3D"https://www.photolari.com/?email_id=3D240&user_id=
+=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9sYXMtMTAwLWZvdG9zLW1=
+hcy1yZWxldmFudGVzLWRlLTIwMjEtc2VndW4tbGEtcmV2aXN0YS10aW1lLw&controller=3Dst=
+ats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" target=3D"_bl=
+ank">Las 100 fotos m&aacute;s relevantes de 2021 seg&uacute;n la revista Ti=
+me</a></h2><p style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size: 12px;color: #000000;color: #000000 !important;background=
+-color: #ffffff;border: 0;letter-spacing: normal;mso-line-height-rule: exac=
+tly;-mso-line-height-rule: exactly;line-height: 150%;margin-top: 1em;margin=
+-right: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0=
+;padding-bottom: 0;padding-left: 0;vertical-align: top;word-wrap: break-wor=
+d;">La prestigiosa revista TIME ha publicado, como cada a&ntilde;o, la sele=
+cci&oacute;n de las que considera las 100 fotograf&iacute;as m&aacute;s rel=
+evantes o ic&oacute;nicas de 2021. Como todos sabemos -recuerdan "2020 fue =
+un a&ntilde;o maldito y el peor de todos los tiempos&rdquo;, pero que ese 2=
+021 al que mir&aacute;bamos con esperanza, tambi&eacute;n ha sido complicad=
+o y ha estado lleno de acontecimientos dignos &hellip;</p>=0A<p style=3D"fo=
+nt-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size: 12px;c=
+olor: #000000;color: #000000 !important;background-color: #ffffff;border: 0=
+;letter-spacing: normal;mso-line-height-rule: exactly;-mso-line-height-rule=
+: exactly;line-height: 150%;margin-top: 1em;margin-right: 0;margin-bottom: =
+1em;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;paddin=
+g-left: 0;vertical-align: top;word-wrap: break-word;"><a style=3D"color: #2=
+1759B;color: #21759B !important;background-color: #ffffff;text-decoration: =
+none;border: 0;word-wrap: break-word;" href=3D"https://www.photolari.com/?e=
+mail_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS=
+9sYXMtMTAwLWZvdG9zLW1hcy1yZWxldmFudGVzLWRlLTIwMjEtc2VndW4tbGEtcmV2aXN0YS10a=
+W1lLw&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscri=
+ptions" target=3D"_blank">Leer m&aacute;s.</a></p></div>=0A </td>=0A =0A </=
+tr>=0A</table>=0A=0A<table class=3D"wysija_block" style=3D"border: 0;border=
+-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear: bot=
+h;border: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"left">=0A <tr>=0A =0A =0A <td class=3D"wysija_=
+content_container left" style=3D"border: 0;border-collapse: collapse;backgr=
+ound-color: #d6d6d6;border: 0;padding-top: 10px;padding-right: 17px;padding=
+-bottom: 10px;padding-left: 17px;" align=3D"left" >=0A =0A =0A =0A <table s=
+tyle=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt;clear: both;" width=3D"1%" height=3D"243" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr style=3D"font-size:1px=
+; mso-line-height-alt:0; mso-margin-top-alt:1px;">=0A <td class=3D"wysija_i=
+mage_container left" style=3D"border: 0;border-collapse: collapse;border: 1=
+px solid #d6d6d6;display: block;margin-top: 0;margin-right: 0;margin-bottom=
+: 0;margin-left: 0;padding-top: 0;padding-right: 10px;padding-bottom: 0;pad=
+ding-left: 0;" width=3D"1%" height=3D"243" valign=3D"top">=0A <div align=3D=
+"left" class=3D"wysija_image_placeholder left" style=3D"height:243px;width:=
+325px;border: 0;display: block;margin-top: 0;margin-right: 10px;margin-bott=
+om: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;padd=
+ing-left: 0;" >=0A =0A <a href=3D"https://www.photolari.com/?email_id=3D240=
+&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9mdWppZmlsbS1=
+nZngtY2luY28tZm90b2dyYWZvcy1wcm9mZXNpb25hbGVzLW5vcy1jdWVudGFuLXBvci1xdWUtdH=
+JhYmFqYW4tY29uLWVsLWZvcm1hdG8tbWVkaW8tZGUtZnVqaWZpbG0v&controller=3Dstats&a=
+ction=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" class=3D"wysija_im=
+age_link" style=3D"height:243px;width:325px;outline: 0;border: 0;display: b=
+lock;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;padding-=
+top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;" ><img width=3D"=
+325" height=3D"243" src=3D"https://www.photolari.com/wp-content/uploads/202=
+1/12/fuji-gfx-etura-02-600x450.jpg" border=3D"0" alt=3D"Fuji-GFX-Etura-02" =
+class=3D"image_fix" style=3D"width:325px; height:243px;text-decoration: non=
+e;outline: 0;border: 0;display: block;-ms-interpolation-mode: bicubic;" /><=
+/a>=0A </div>=0A </td>=0A </tr>=0A </table>=0A=0A <div class=3D"wysija_text=
+_container"><h2 class=3D"align-left" style=3D"font-family: Arial, 'Helvetic=
+a Neue', Helvetica, sans-serif;font-size: 26px;color: #000000;color: #00000=
+0 !important;background-color: #d6d6d6;border: 0;font-weight: normal;font-s=
+tyle: normal;letter-spacing: normal;mso-line-height-rule: exactly;-mso-line=
+-height-rule: exactly;line-height: 125%;margin-top: 0;margin-right: 0;margi=
+n-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom: =
+0;padding-left: 0;border: 0;text-align: left;" ><a style=3D"color: #21759B;=
+color: #21759B !important;background-color: #d6d6d6;text-decoration: none;b=
+order: 0;word-wrap: break-word;" href=3D"https://www.photolari.com/?email_i=
+d=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9mdWpp=
+ZmlsbS1nZngtY2luY28tZm90b2dyYWZvcy1wcm9mZXNpb25hbGVzLW5vcy1jdWVudGFuLXBvci1=
+xdWUtdHJhYmFqYW4tY29uLWVsLWZvcm1hdG8tbWVkaW8tZGUtZnVqaWZpbG0v&controller=3D=
+stats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" target=3D"_=
+blank">Fujifilm GFX: cinco fot&oacute;grafos profesionales nos cuentan por =
+qu&eacute; trabajan con el formato medio de Fujifilm</a></h2><p style=3D"fo=
+nt-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size: 12px;c=
+olor: #000000;color: #000000 !important;background-color: #d6d6d6;border: 0=
+;letter-spacing: normal;mso-line-height-rule: exactly;-mso-line-height-rule=
+: exactly;line-height: 150%;margin-top: 1em;margin-right: 0;margin-bottom: =
+1em;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;paddin=
+g-left: 0;vertical-align: top;word-wrap: break-word;">Dec&iacute;a Eugene S=
+mith -al menos a &eacute;l se le atribuye la frase- que el mundo no entra e=
+n 35 mil&iacute;metros. Y es que hay vida m&aacute;s all&aacute; del format=
+o completo y estos fot&oacute;grafos y fot&oacute;grafas profesionales con =
+los que hemos hablado son una buena prueba de ello. Todos utilizan equipo F=
+ujifilm GFX, la marca que en los &uacute;ltimos a&ntilde;os m&aacute;s &hel=
+lip;</p>=0A<p style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size: 12px;color: #000000;color: #000000 !important;background=
+-color: #d6d6d6;border: 0;letter-spacing: normal;mso-line-height-rule: exac=
+tly;-mso-line-height-rule: exactly;line-height: 150%;margin-top: 1em;margin=
+-right: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0=
+;padding-bottom: 0;padding-left: 0;vertical-align: top;word-wrap: break-wor=
+d;"><a style=3D"color: #21759B;color: #21759B !important;background-color: =
+#d6d6d6;text-decoration: none;border: 0;word-wrap: break-word;" href=3D"htt=
+ps://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6L=
+y93d3cucGhvdG9sYXJpLmNvbS9mdWppZmlsbS1nZngtY2luY28tZm90b2dyYWZvcy1wcm9mZXNp=
+b25hbGVzLW5vcy1jdWVudGFuLXBvci1xdWUtdHJhYmFqYW4tY29uLWVsLWZvcm1hdG8tbWVkaW8=
+tZGUtZnVqaWZpbG0v&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysij=
+ap=3Dsubscriptions" target=3D"_blank">Leer m&aacute;s.</a></p></div>=0A </t=
+d>=0A =0A </tr>=0A</table>=0A=0A<table class=3D"wysija_block" style=3D"bord=
+er: 0;border-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;clear: both;border: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr>=0A =0A =0A <td class=
+=3D"wysija_content_container right" style=3D"border: 0;border-collapse: col=
+lapse;background-color: #ffffff;border: 0;padding-top: 10px;padding-right: =
+17px;padding-bottom: 10px;padding-left: 17px;" align=3D"left" >=0A =0A =0A =
+=0A <table style=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt;clear: both;" width=3D"1%" height=3D"186" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"right">=0A <tr style=3D"=
+font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px;">=0A <td clas=
+s=3D"wysija_image_container right" style=3D"border: 0;border-collapse: coll=
+apse;border: 1px solid #ffffff;display: block;margin-top: 0;margin-right: 0=
+;margin-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-bo=
+ttom: 0;padding-left: 10px;" width=3D"1%" height=3D"186" valign=3D"top">=0A=
+ <div align=3D"left" class=3D"wysija_image_placeholder right" style=3D"heig=
+ht:186px;width:325px;border: 0;display: block;margin-top: 0;margin-right: 0=
+;margin-bottom: 0;margin-left: 10px;padding-top: 0;padding-right: 0;padding=
+-bottom: 0;padding-left: 0;" >=0A =0A <a href=3D"https://www.photolari.com/=
+?email_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNv=
+bS9lbC1zdHJlYW1pbmctc2FsdmFyYS1sYXMtY2FtYXJhcy1kaWdpdGFsZXMtcGFyZWNlLXF1ZS1=
+lbi1jaGluYS1zaS8&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysija=
+p=3Dsubscriptions" class=3D"wysija_image_link" style=3D"height:186px;width:=
+325px;outline: 0;border: 0;display: block;margin-top: 0;margin-right: 0;mar=
+gin-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom=
+: 0;padding-left: 0;" ><img width=3D"325" height=3D"186" src=3D"https://www=
+.photolari.com/wp-content/uploads/2021/12/panasonic-streaming-600x346.jpg" =
+border=3D"0" alt=3D"Panasonic-streaming" class=3D"image_fix" style=3D"width=
+:325px; height:186px;text-decoration: none;outline: 0;border: 0;display: bl=
+ock;-ms-interpolation-mode: bicubic;" /></a>=0A </div>=0A </td>=0A </tr>=0A=
+ </table>=0A=0A <div class=3D"wysija_text_container"><h2 class=3D"align-lef=
+t" style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;fon=
+t-size: 26px;color: #000000;color: #000000 !important;background-color: #ff=
+ffff;border: 0;font-weight: normal;font-style: normal;letter-spacing: norma=
+l;mso-line-height-rule: exactly;-mso-line-height-rule: exactly;line-height:=
+ 125%;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;padding=
+-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;border: 0;text-a=
+lign: left;" ><a style=3D"color: #21759B;color: #21759B !important;backgrou=
+nd-color: #ffffff;text-decoration: none;border: 0;word-wrap: break-word;" h=
+ref=3D"https://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=
+=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9lbC1zdHJlYW1pbmctc2FsdmFyYS1sYXMtY2Ft=
+YXJhcy1kaWdpdGFsZXMtcGFyZWNlLXF1ZS1lbi1jaGluYS1zaS8&controller=3Dstats&acti=
+on=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" target=3D"_blank">&iq=
+uest;El streaming salvar&aacute; las c&aacute;maras digitales? Parece que e=
+n China s&iacute;</a></h2><p style=3D"font-family: Arial, 'Helvetica Neue',=
+ Helvetica, sans-serif;font-size: 12px;color: #000000;color: #000000 !impor=
+tant;background-color: #ffffff;border: 0;letter-spacing: normal;mso-line-he=
+ight-rule: exactly;-mso-line-height-rule: exactly;line-height: 150%;margin-=
+top: 1em;margin-right: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;p=
+adding-right: 0;padding-bottom: 0;padding-left: 0;vertical-align: top;word-=
+wrap: break-word;">Que el v&iacute;deo se ha convertido en una prestaci&oac=
+ute;n fundamental de muchas c&aacute;maras de foto no es ning&uacute;n secr=
+eto. Hace tiempo que los fabricantes entendieron que no s&oacute;lo hab&iac=
+ute;a un mercado interesante, sino que el margen de precios cuando se apost=
+aba por el v&iacute;deo era mucho m&aacute;s amplio. Pero la pandemia y el =
+confinamiento descubri&oacute; otro potencial de las c&aacute;maras &hellip=
+;</p>=0A<p style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-s=
+erif;font-size: 12px;color: #000000;color: #000000 !important;background-co=
+lor: #ffffff;border: 0;letter-spacing: normal;mso-line-height-rule: exactly=
+;-mso-line-height-rule: exactly;line-height: 150%;margin-top: 1em;margin-ri=
+ght: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0;pa=
+dding-bottom: 0;padding-left: 0;vertical-align: top;word-wrap: break-word;"=
+><a style=3D"color: #21759B;color: #21759B !important;background-color: #ff=
+ffff;text-decoration: none;border: 0;word-wrap: break-word;" href=3D"https:=
+//www.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93=
+d3cucGhvdG9sYXJpLmNvbS9lbC1zdHJlYW1pbmctc2FsdmFyYS1sYXMtY2FtYXJhcy1kaWdpdGF=
+sZXMtcGFyZWNlLXF1ZS1lbi1jaGluYS1zaS8&controller=3Dstats&action=3Danalyse&wy=
+sija-page=3D1&wysijap=3Dsubscriptions" target=3D"_blank">Leer m&aacute;s.</=
+a></p></div>=0A </td>=0A =0A </tr>=0A</table>=0A=0A<table class=3D"wysija_b=
+lock" style=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;clear: both;border: 0;min-width: 100%;" width=3D"100%"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr>=
+=0A =0A <td class=3D"wysija_content_container" style=3D"border: 0;border-co=
+llapse: collapse;background-color: #ffffff;border: 0;padding-top: 10px;padd=
+ing-right: 17px;padding-bottom: 10px;padding-left: 17px;" align=3D"left">=
+=0A <table class=3D"wysija_gallery_table center" style=3D"border: 0;border-=
+collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear: both=
+;border: 0;text-align: center;margin-top: 0;margin-right: auto;margin-botto=
+m: 0;margin-left: auto;" width=3D"562" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" align=3D"center">=0A <tr>=0A <td class=3D"wysija_cell_containe=
+r" style=3D"border: 0;border-collapse: collapse;background-color: #ffffff;b=
+order: 1px solid #ffffff;" width=3D"562" height=3D"270" valign=3D"top">=0A =
+<img width=3D"562" height=3D"270" src=3D"https://www.photolari.com/wp-conte=
+nt/uploads/2016/10/taza-newsletter.jpg" border=3D"0" alt=3D"" class=3D"imag=
+e_fix" style=3D"width:562px; height:270px;text-decoration: none;outline: 0;=
+border: 0;display: block;-ms-interpolation-mode: bicubic;" />=0A </td>=0A <=
+/tr>=0A </table>=0A </td>=0A =0A =0A </tr>=0A</table>=0A=0A<table class=3D"=
+wysija_block" style=3D"border: 0;border-collapse: collapse;mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt;clear: both;border: 0;min-width: 100%;" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=
+=0A <tr>=0A =0A =0A <td class=3D"wysija_content_container center" style=3D"=
+border: 0;border-collapse: collapse;background-color: #ff0000;border: 0;pad=
+ding-top: 10px;padding-right: 17px;padding-bottom: 10px;padding-left: 17px;=
+" align=3D"left" >=0A =0A <div class=3D"wysija_text_container"><h2 class=3D=
+"align-center" style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sa=
+ns-serif;font-size: 26px;color: #000000;color: #000000 !important;backgroun=
+d-color: #ff0000;border: 0;font-weight: normal;font-style: normal;letter-sp=
+acing: normal;mso-line-height-rule: exactly;-mso-line-height-rule: exactly;=
+line-height: 125%;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-lef=
+t: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;bord=
+er: 0;text-align: center;" ><a style=3D"color: #21759B;color: #21759B !impo=
+rtant;background-color: #ff0000;text-decoration: none;border: 0;word-wrap: =
+break-word;" href=3D"https://www.photolari.com/?email_id=3D240&user_id=3D82=
+45&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9iYXphci1waG90b2xhcmkv&con=
+troller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" t=
+arget=3D"_blank"><span style=3D"color: #ffffff;"><strong>COMPRA AQU&Iacute;=
+ LA TAZA DE PHOTOLARI</strong></span></a></h2></div>=0A </td>=0A =0A </tr>=
+=0A</table>=0A=0A<table class=3D"wysija_block" style=3D"border: 0;border-co=
+llapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear: both;b=
+order: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" align=3D"left">=0A <tr style=3D"font-size:1px; mso-line-hei=
+ght-alt:0; mso-margin-top-alt:1px;">=0A <td width=3D"100%" valign=3D"middle=
+" class=3D"wysija_divider_container" style=3D"height:24px;background-color:=
+ #ffffff;border: 0;padding-top: 15px;padding-right: 17px;padding-bottom: 15=
+px;padding-left: 17px;" align=3D"left">=0A <div align=3D"center">=0A <img s=
+rc=3D"https://www.photolari.com/wp-content/uploads/wysija/dividers/business=
+2.png" border=3D"0" width=3D"552" height=3D"24" alt=3D"---" class=3D"image_=
+fix" style=3D"width:552px; height:24px;text-decoration: none;outline: 0;bor=
+der: 0;display: block;-ms-interpolation-mode: bicubic;" />=0A </div>=0A </t=
+d>=0A </tr>=0A</table>=0A=0A=0A<table class=3D"wysija_block" style=3D"borde=
+r: 0;border-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;clear: both;border: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr>=0A =0A =0A <td class=
+=3D"wysija_content_container left" style=3D"border: 0;border-collapse: coll=
+apse;background-color: #ffffff;border: 0;padding-top: 10px;padding-right: 1=
+7px;padding-bottom: 10px;padding-left: 17px;" align=3D"left" >=0A =0A =0A =
+=0A <table style=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt;clear: both;" width=3D"1%" height=3D"182" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr style=3D"f=
+ont-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px;">=0A <td class=
+=3D"wysija_image_container left" style=3D"border: 0;border-collapse: collap=
+se;border: 1px solid #ffffff;display: block;margin-top: 0;margin-right: 0;m=
+argin-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 10px;padding-b=
+ottom: 0;padding-left: 0;" width=3D"1%" height=3D"182" valign=3D"top">=0A <=
+div align=3D"left" class=3D"wysija_image_placeholder left" style=3D"height:=
+182px;width:325px;border: 0;display: block;margin-top: 0;margin-right: 10px=
+;margin-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-bo=
+ttom: 0;padding-left: 0;" >=0A =0A <a href=3D"https://www.photolari.com/?em=
+ail_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9=
+zb255LWE3LWl2LWVsLXZpZGVvLWEtcHJ1ZWJhLw&controller=3Dstats&action=3Danalyse=
+&wysija-page=3D1&wysijap=3Dsubscriptions" class=3D"wysija_image_link" style=
+=3D"height:182px;width:325px;outline: 0;border: 0;display: block;margin-top=
+: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;padding-top: 0;padding-=
+right: 0;padding-bottom: 0;padding-left: 0;" ><img width=3D"325" height=3D"=
+182" src=3D"https://www.photolari.com/wp-content/uploads/2021/12/maxresdefa=
+ult-600x338.jpg" border=3D"0" alt=3D"50051" class=3D"image_fix" style=3D"wi=
+dth:325px; height:182px;text-decoration: none;outline: 0;border: 0;display:=
+ block;-ms-interpolation-mode: bicubic;" /></a>=0A </div>=0A </td>=0A </tr>=
+=0A </table>=0A=0A <div class=3D"wysija_text_container"><h2 class=3D"align-=
+left" style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;=
+font-size: 26px;color: #000000;color: #000000 !important;background-color: =
+#ffffff;border: 0;font-weight: normal;font-style: normal;letter-spacing: no=
+rmal;mso-line-height-rule: exactly;-mso-line-height-rule: exactly;line-heig=
+ht: 125%;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;padd=
+ing-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;border: 0;tex=
+t-align: left;" ><a style=3D"color: #21759B;color: #21759B !important;backg=
+round-color: #ffffff;text-decoration: none;border: 0;word-wrap: break-word;=
+" href=3D"https://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpasse=
+d=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9zb255LWE3LWl2LWVsLXZpZGVvLWEtcHJ1ZWJ=
+hLw&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscript=
+ions" target=3D"_blank">Sony A7 IV: el v&iacute;deo a prueba</a></h2><p sty=
+le=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size=
+: 12px;color: #000000;color: #000000 !important;background-color: #ffffff;b=
+order: 0;letter-spacing: normal;mso-line-height-rule: exactly;-mso-line-hei=
+ght-rule: exactly;line-height: 150%;margin-top: 1em;margin-right: 0;margin-=
+bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0;padding-bottom: =
+0;padding-left: 0;vertical-align: top;word-wrap: break-word;">Tras probarla=
+ el d&iacute;a de su estreno oficial centr&aacute;ndonos -principalmente- e=
+n su prestaciones fotogr&aacute;ficas, hoy volvemos a la carga con la Sony =
+A7 IV para analizar al detalle todo lo que puede dar de s&iacute; esta c&aa=
+cute;mara en el terreno del v&iacute;deo. Grabaci&oacute;n en 4K de gran ca=
+lidad con compresi&oacute;n 4:2:2 y 10 bits, pantalla desplegable lateralme=
+nte, estabilizaci&oacute;n de imagen &hellip;</p>=0A<p style=3D"font-family=
+: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size: 12px;color: #00=
+0000;color: #000000 !important;background-color: #ffffff;border: 0;letter-s=
+pacing: normal;mso-line-height-rule: exactly;-mso-line-height-rule: exactly=
+;line-height: 150%;margin-top: 1em;margin-right: 0;margin-bottom: 1em;margi=
+n-left: 0;padding-top: 0;padding-right: 0;padding-bottom: 0;padding-left: 0=
+;vertical-align: top;word-wrap: break-word;"><a style=3D"color: #21759B;col=
+or: #21759B !important;background-color: #ffffff;text-decoration: none;bord=
+er: 0;word-wrap: break-word;" href=3D"https://www.photolari.com/?email_id=
+=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9zb255L=
+WE3LWl2LWVsLXZpZGVvLWEtcHJ1ZWJhLw&controller=3Dstats&action=3Danalyse&wysij=
+a-page=3D1&wysijap=3Dsubscriptions" target=3D"_blank">Leer m&aacute;s.</a><=
+/p></div>=0A </td>=0A =0A </tr>=0A</table>=0A=0A<table class=3D"wysija_bloc=
+k" style=3D"border: 0;border-collapse: collapse;mso-table-lspace: 0pt; mso-=
+table-rspace: 0pt;clear: both;border: 0;min-width: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">=0A <tr>=0A =
+=0A =0A <td class=3D"wysija_content_container center" style=3D"border: 0;bo=
+rder-collapse: collapse;background-color: #ffffff;border: 0;padding-top: 10=
+px;padding-right: 17px;padding-bottom: 10px;padding-left: 17px;" align=3D"l=
+eft" >=0A =0A =0A <table class=3D"wysija_image_table center" style=3D"borde=
+r: 0;border-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;clear: both;border: 0;text-align: center;margin-top: 0;margin-right: auto;=
+margin-bottom: 0;margin-left: auto;" width=3D"562" height=3D"373" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">=0A <tr style=3D"f=
+ont-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px;">=0A <td class=
+=3D"wysija_image_container center" style=3D"border: 0;border-collapse: coll=
+apse;border: 1px solid #ffffff;text-align: left;display: block;margin-top: =
+0;margin-right: auto;margin-bottom: 0;margin-left: auto;padding-top: 0;padd=
+ing-right: 0;padding-bottom: 0;padding-left: 0;" width=3D"562" height=3D"37=
+3" valign=3D"top" align=3D"center">=0A <div class=3D"wysija_image_placehold=
+er center" align=3D"center" style=3D"height:373px;width:562px;">=0A =0A =0A=
+ <a href=3D"https://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpas=
+sed=3DaHR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9waG90b2xhcmktdmlhamVyb3MtZm9ybWVud=
+GVyYS1mb3RvZ3JhZmljYS8&controller=3Dstats&action=3Danalyse&wysija-page=3D1&=
+wysijap=3Dsubscriptions" class=3D"wysija_image_link" style=3D"height:373px;=
+width:562px;outline: 0;border: 0;display: block;margin-top: 0;margin-right:=
+ 0;margin-bottom: 0;margin-left: 0;padding-top: 0;padding-right: 0;padding-=
+bottom: 0;padding-left: 0;" ><img width=3D"562" height=3D"373" src=3D"https=
+://www.photolari.com/wp-content/uploads/2021/12/formentera-2021-600x400.jpg=
+" border=3D"0" alt=3D"Formentera-2021" class=3D"image_fix" style=3D"width:5=
+62px; height:373px;text-decoration: none;outline: 0;border: 0;display: bloc=
+k;-ms-interpolation-mode: bicubic;" /></a>=0A </div>=0A </td>=0A </tr>=0A <=
+/table>=0A=0A <div class=3D"wysija_text_container"><h2 class=3D"align-left"=
+ style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-=
+size: 26px;color: #000000;color: #000000 !important;background-color: #ffff=
+ff;border: 0;font-weight: normal;font-style: normal;letter-spacing: normal;=
+mso-line-height-rule: exactly;-mso-line-height-rule: exactly;line-height: 1=
+25%;margin-top: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;padding-t=
+op: 0;padding-right: 0;padding-bottom: 0;padding-left: 0;border: 0;text-ali=
+gn: left;" ><a style=3D"color: #21759B;color: #21759B !important;background=
+-color: #ffffff;text-decoration: none;border: 0;word-wrap: break-word;" hre=
+f=3D"https://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=3Da=
+HR0cHM6Ly93d3cucGhvdG9sYXJpLmNvbS9waG90b2xhcmktdmlhamVyb3MtZm9ybWVudGVyYS1m=
+b3RvZ3JhZmljYS8&controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=
+=3Dsubscriptions" target=3D"_blank">Photolari Viajeros: Formentera (fotogr&=
+aacute;fica)</a></h2><p style=3D"font-family: Arial, 'Helvetica Neue', Helv=
+etica, sans-serif;font-size: 12px;color: #000000;color: #000000 !important;=
+background-color: #ffffff;border: 0;letter-spacing: normal;mso-line-height-=
+rule: exactly;-mso-line-height-rule: exactly;line-height: 150%;margin-top: =
+1em;margin-right: 0;margin-bottom: 1em;margin-left: 0;padding-top: 0;paddin=
+g-right: 0;padding-bottom: 0;padding-left: 0;vertical-align: top;word-wrap:=
+ break-word;">Entre faros, playas de postal y una costa espectacular, la pe=
+que&ntilde;a isla de Formentera concentra en apenas 85 kil&oacute;metros cu=
+adrados muchos argumentos para ser un gran destino fotogr&aacute;fico. Y a =
+la lista habitual, sumamos uno que refuerza todav&iacute;a m&aacute;s esta =
+idea: Formentera Fotogr&aacute;fica. Una cita anual con la fotograf&iacute;=
+a de autor, el documentalismo o la foto de naturaleza que el &hellip;</p>=
+=0A<p style=3D"font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;=
+font-size: 12px;color: #000000;color: #000000 !important;background-color: =
+#ffffff;border: 0;letter-spacing: normal;mso-line-height-rule: exactly;-mso=
+-line-height-rule: exactly;line-height: 150%;margin-top: 1em;margin-right: =
+0;margin-bottom: 1em;margin-left: 0;padding-top: 0;padding-right: 0;padding=
+-bottom: 0;padding-left: 0;vertical-align: top;word-wrap: break-word;"><a s=
+tyle=3D"color: #21759B;color: #21759B !important;background-color: #ffffff;=
+text-decoration: none;border: 0;word-wrap: break-word;" href=3D"https://www=
+.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=3DaHR0cHM6Ly93d3cuc=
+GhvdG9sYXJpLmNvbS9waG90b2xhcmktdmlhamVyb3MtZm9ybWVudGVyYS1mb3RvZ3JhZmljYS8&=
+controller=3Dstats&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions=
+" target=3D"_blank">Leer m&aacute;s.</a></p></div>=0A </td>=0A =0A </tr>=0A=
+</table>=0A=0A<table class=3D"wysija_block" style=3D"border: 0;border-colla=
+pse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;clear: both;bord=
+er: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" align=3D"left">=0A <tr style=3D"font-size:1px; mso-line-height=
+-alt:0; mso-margin-top-alt:1px;">=0A <td width=3D"100%" valign=3D"middle" c=
+lass=3D"wysija_divider_container" style=3D"height:24px;background-color: #f=
+fffff;border: 0;padding-top: 15px;padding-right: 17px;padding-bottom: 15px;=
+padding-left: 17px;" align=3D"left">=0A <div align=3D"center">=0A <img src=
+=3D"https://www.photolari.com/wp-content/uploads/wysija/dividers/business2.=
+png" border=3D"0" width=3D"552" height=3D"24" alt=3D"---" class=3D"image_fi=
+x" style=3D"width:552px; height:24px;text-decoration: none;outline: 0;borde=
+r: 0;display: block;-ms-interpolation-mode: bicubic;" />=0A </div>=0A </td>=
+=0A </tr>=0A</table>=0A=0A                        </td>=0A                 =
+   </tr>=0A                    <tr>=0A                        <td width=3D"=
+600" style=3D"min-width:600px;" valign=3D"top" align=3D"center"   >=0A     =
+                       =0A<table class=3D"wysija_footer" style=3D"border: 0=
+;border-collapse: collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;cle=
+ar: both;border: 0;min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" align=3D"center">=0A <tr>=0A <td height=3D"1" ali=
+gn=3D"center" class=3D"wysija_footer_container" style=3D"font-size:1px;line=
+-height:1%;mso-line-height-rule:exactly;border: 0;min-width: 100%;backgroun=
+d-color: #cccccc;border: 0;" >=0A =0A <img width=3D"54" height=3D"54" src=
+=3D"http://photolari.com/wp-content/uploads/2016/10/cropped-photolari-logo-=
+cuadrado.png" border=3D"0" alt=3D"" class=3D"image_fix" style=3D"width:54px=
+; height:54px;text-decoration: none;outline: 0;border: 0;display: block;-ms=
+-interpolation-mode: bicubic;" />=0A </td>=0A </tr>=0A</table>=0A          =
+              </td>=0A                    </tr>=0A                    =0A  =
+                  <tr>=0A                        <td width=3D"600" style=3D=
+"min-width:600px;" valign=3D"top" align=3D"center"  >=0A                   =
+         <p class=3D"wysija_unsubscribe_container" style=3D"font-family: Ve=
+rdana, Geneva, sans-serif;font-size: 12px;color: #7f7f7f;color: #7f7f7f !im=
+portant;background-color: #ffffff;border: 0;text-align: center;padding-top:=
+ 8px;padding-right: 8px;padding-bottom: 8px;padding-left: 8px;" ><a style=
+=3D"color: #7f7f7f;color: #7f7f7f !important;background-color: #ffffff;bord=
+er: 0;" href=3D"https://www.photolari.com/?email_id=3D240&user_id=3D8245&ur=
+lpassed=3DW3Vuc3Vic2NyaWJlX2xpbmtd&controller=3Dstats&hash=3D56323b3a6245d0=
+ca5f23b4ab8b72c9a7&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions=
+" target=3D"_blank">Darse de Baja</a>&nbsp;-&nbsp;<a style=3D"color: #7f7f7=
+f;color: #7f7f7f !important;background-color: #ffffff;border: 0;" href=3D"h=
+ttps://www.photolari.com/?email_id=3D240&user_id=3D8245&urlpassed=3DW3N1YnN=
+jcmlwdGlvbnNfbGlua10&controller=3Dstats&hash=3D33d935e2b77eebb112ec2d869d17=
+79ea&action=3Danalyse&wysija-page=3D1&wysijap=3Dsubscriptions" target=3D"_b=
+lank">Editar tu suscripci&oacute;n</a><br /><br />Photolari Magazine<br />
+08005 Barcelona<br />
+hola@photolari.com</p>=0A                        </td>=0A                  =
+  </tr>=0A                    =0A                </table>=0A            </t=
+d>=0A        </tr>=0A    </table>=0A    </span>=0A<img alt=3D"" src=3D"http=
+s://www.photolari.com/?email_id=3D240&user_id=3D8245&controller=3Dstats&act=
+ion=3Danalyse&wysija-page=3D1&render=3D1&wysijap=3Dsubscriptions"  border=
+=3D"0"  height=3D"1"  width=3D"9" /></body>=0A</html>
+
+--b1_Vm8ZZmmSny4k94mtwQ2wAOmOkIC84frPJ8GvFjg4qg--
+

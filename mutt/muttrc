@@ -27,5 +27,15 @@ bind index,pager <down> sidebar-next
 bind index,pager <right> sidebar-open
 macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
 
+# Map dvorak
+bind index,pager t noop
+bind index,pager n noop
+bind pager t next-line
+bind index t next-undeleted
+bind pager n previous-line
+bind index n previous-undeleted
+bind index,pager N search
+
+
 source ~/.config/mutt/colors
 source ~/.config/mutt/credentials

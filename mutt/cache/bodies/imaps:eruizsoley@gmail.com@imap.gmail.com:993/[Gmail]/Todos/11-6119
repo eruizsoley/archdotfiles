@@ -1,0 +1,16 @@
+Return-Path: <eruizsoley@gmail.com>
+Received: from tardis (49.red-83-51-199.dynamicip.rima-tde.net. [83.51.199.49])
+        by smtp.gmail.com with ESMTPSA id z7sm12600575wmi.33.2021.12.10.13.39.52
+        for <nitrometano95@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 10 Dec 2021 13:39:53 -0800 (PST)
+Date: Fri, 10 Dec 2021 22:39:59 +0100
+From: Ernest Ruiz <eruizsoley@gmail.com>
+To: nitrometano95@gmail.com
+Subject: test mutt 
+Message-ID: <YbPJLxSQJj96J08d@tardis>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+esta es la prueba de concepto del editor neovim corriendo en mutt
